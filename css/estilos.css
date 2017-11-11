@@ -16,6 +16,18 @@
     justify-content: center;
     align-content: center;
     flex-direction: column;
+
+}
+
+#top_11 {
+	background: #545b61; 
+	height: 77px;	
+	text-align: left;
+	display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+width: 80px;	
 }
 
 .opcion-menu {
