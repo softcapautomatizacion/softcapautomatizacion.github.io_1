@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<title>SIAC- Actualizar Reporte 140636 </title>
+<title>SIAC- Actualizar Reporte 140636 en Detalle </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
  <link href="css/icon.css" rel="stylesheet">
@@ -567,27 +567,78 @@ td, th {
 		<a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">local_printshop</i></a>
                 <a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">mode_edit</i></a><p>
            <div id="tabla-reporte" class="card-content #00897b teal darken-1 white-text"></p>
-	      Reporte 140636 - Agregar una funcionalidad en la sección "Relación puesto" donde genere el historial del cargo, unidad y puesto del trabajador.<br> Dias de reporte: 10. Intalación: SPI Nomina . Status Actual: Revisando por el cliente
+	      Actualizar Reporte 140636 
 	    </div>
 <form class="col s11">
      <div class="row">
       <div class="input-field col s12">
+<div class="input-field col s2"> 
+        <i class="material-icons prefix">date_range</i>
+          <input id="icon_fecha" type="tel" disabled class="disabled ">         		  
+          <label for="icon_fecha">Fecha de Solicitud </label>
+        </div>      
+ <div class="input-field col s4"> 
+        <i class="material-icons prefix">accessibility</i>
+          <input id="icon_cliente" type="tel" disabled class="disabled ">         		  
+          <label for="icon_cliente">Nombre de Cliente</label>
+        </div>
+
+ <div class="input-field col s3"> 
+        <i class="material-icons prefix">free_breakfast</i>
+          <input id="icon_lenguaje" type="tel" disabled class="disabled ">         		  
+          <label for="icon_lenguaje">Leguaje</label>
+        </div>
+ <div class="input-field col s3"> 
+        <i class="material-icons prefix">airplay</i>
+          <input id="icon_prioridad" type="tel" disabled class="disabled ">         		  
+          <label for="icon_prioridad">Prioridad</label>
+        </div>
+ <div class="input-field col s4"> 
+        <i class="material-icons prefix">hourglass_full</i>
+          <input id="icon_actual" type="tel" disabled class="disabled ">         		  
+          <label for="icon_actual">Status actual </label>
+        </div>
+
     
-       <div class="input-field col s3"> 
+       <div class="input-field col s4"> 
         <i class="material-icons prefix">book</i>
           <input id="icon_book" type="tel" disabled class="disabled ">         		  
           <label for="icon_book">Tipo de Reporte</label>
         </div>
+ <div class="input-field col s4"> 
+        <i class="material-icons prefix">art_track</i>
+          <input id="icon_menu" type="tel" disabled class="disabled ">         		  
+          <label for="icon_menu">Opción Menu</label>
+        </div>
     
-        <div id="atencion1" class="input-field col s3">
-        <i class="material-icons prefix">contact_mail</i> 
-          <input id="atencion" type="tel" disabled class="disabled ">         		  
-          <label for="atencion">Atención</label>
+       <div class="input-field col s4"> 
+        <i class="material-icons prefix">confirmation_number</i>
+          <input id="icon_book" type="tel" disabled class="disabled ">         		  
+          <label for="icon_book">Codigo de Programa</label>
+        </div>
+ <div class="input-field col s4"> 
+        <i class="material-icons prefix">contact_mail</i>
+          <input id="icon_solicitado" type="tel" disabled class="disabled ">         		  
+          <label for="icon_solicitado">Solitado</label>
+        </div>
+       <div class="input-field col s4"> 
+        <i class="material-icons prefix">border_color</i>
+          <input id="icon_elaborado" type="tel" disabled class="disabled ">         		  
+          <label for="icon_elaborado">Elaborado</label>
+        </div>
+ 
+        <div id="atencion1" class="input-field col s12"> 
+        <i class="material-icons prefix">event_note</i>
+          <input id="atenciond" type="tel" disabled class="disabled ">         		  
+          <label for="atenciond">Descripcion</label>
+
         </div>
 
-        <div class="input-field col s3">
+
+        <div class="input-field col s4">
         <i class="material-icons prefix">hourglass_empty</i>
 	<select>
+
       <option value="" >Selecciona status</option>
       <option value="1">Aprobado por el cliente</option>
       <option value="2">No Aprobado por costo muy altos</option>
@@ -596,9 +647,21 @@ td, th {
    
     </select>
   <label>Status</label>
-  </div>
-      <div class="input-field col s3">
-        <i class="material-icons prefix">face</i>
+
+         </div>
+           <div class="input-field col s4">
+  <i class="material-icons prefix">add_to_queue</i>
+	<select>
+      <option value="" >Selecciona Complejidad</option>
+      <option value="1">Alta</option>
+      <option value="2">Moderada</option>
+      <option value="3">Baja</option>  
+     <option value="4">No aplica</option>
+    </select>
+  <label>Complejidad</label>
+  </div>   
+      <div class="input-field col s4">
+ <i class="material-icons prefix">face</i>
 	<select>
       <option value="" >Selecciona contacto</option>
       <option value="1">Morela Diaz</option>
@@ -621,9 +684,7 @@ td, th {
         </div>
       </div>
 	     <a id="update" class="waves-effect waves-light btn ">Actualizar</a>
-	     <a id="agregar" class="waves-effect waves-light btn ">Nuevo Reporte</a>
-	     <a id="ver" class="waves-effect waves-light btn ">Ver Requerimiento</a>
-	     <a id="seguimiento" class="waves-effect waves-light btn ">Ver Seguimiento</a>
+	     <a id="ver" class="waves-effect waves-light btn ">Ver Seguimiento</a>
     </form></div>	      
 	    </div>
 	  </div>
@@ -768,10 +829,7 @@ $( "#listar" ).on( "click", function() {
 $( "#guardar" ).on( "click", function() {
    location.href = "buzon_entrada_modulo_general_consulta.html";
 });
-
-$( "#ver" ).on( "click", function() {
-   location.href = "buzon_entrada_actualizar_Requerimiento.html";
-});	
+	
 
 $("#c1").click(function(){
 	     location.href = "configuracion.html";
@@ -817,6 +875,15 @@ $(".button-collapse").sideNav();
   );
   
 $('#icon_book').val('Mejoras de desarrollo');
+$('#icon_fecha').val('25/10/2017');
+$('#icon_cliente').val('Fama de America');
+$('#icon_lenguaje').val('Java');
+$('#atenciond').val('Agregar una funcionalidad en la sección "Relación puesto" donde genere el historial del cargo, unidad y puesto del trabajador.');
+$('#icon_menu').val('Talento-Relación Laboral');
+$('#icon_solicitado').val('Cherry Landaeta');
+$('#icon_elaborado').val('Morela Diaz');
+$('#icon_actual').val('Revisando por el cliente');
+$('#icon_prioridad').val('alta');
     $('#atencion').val('correo');
 
 </script>
