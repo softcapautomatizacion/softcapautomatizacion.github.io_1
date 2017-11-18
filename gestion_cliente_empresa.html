@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<title>SIAC- Actualizar Reporte 140636 </title>
+<title>SIAC- Crear Reporte - Menu - Empresa </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
  <link href="css/icon.css" rel="stylesheet">
@@ -78,7 +78,10 @@ td, th {
     width: 100%;
     z-index: 1001;
 }
+#popop1{
+    margin: 0px;
 
+}
 .content1-popup1 {
     margin:0px auto;
     margin-top:200px;
@@ -161,7 +164,7 @@ td, th {
         </div>
 
         <div id="top_8" class="col s1 m1 ubuntu-medium-12">          
-          <i class="material-icons">&#xf08b;</i>
+          <i class="material-icons">close</i>
           Cerrar sesión
         </div>
       </div>
@@ -270,7 +273,7 @@ td, th {
         </div>
 
         <div  class="col s2 ubuntu-medium-12 top_20"> 
-          <i class="small material-icons">laptop</i>          
+          <i class="small material-icons">person</i>          
           Contacto
         </div>
          <div  class="col s2 ubuntu-medium-12 top_20">           
@@ -322,10 +325,13 @@ td, th {
 <form >
      
         <div class="input-field col s1 m2">
+	  <i class="material-icons prefix">date_range</i>
           <input  id="fecha" type="text" disabled class="validate" >
+
           <label for="fecha">Fecha de Registro</label>
         </div>
         <div class="input-field col s1 m2">
+	  <i class="material-icons prefix">store</i>
           <input id="rif" type="text" disabled class="validate">
           <label for="rif">Rif</label>
         </div>
@@ -334,34 +340,42 @@ td, th {
           <label for="cliente">Nombre de Empresa</label>
         </div>
 		<div class="input-field col s1 m3">
+	  <i class="material-icons prefix">chrome_reader_mode</i>
           <input  id="segmento" type="text" disabled class="validate ">
           <label for="segmento">Segmento</label>
         </div>
         <div class="input-field col s1 m2">
+	  <i class="material-icons prefix">phone</i>
           <input id="telefono" type="text" disabled class="validate">
           <label for="telefono">Telefono</label>
         </div>
          <div class="input-field col s2 m4">
+	  <i class="material-icons prefix">drafts</i>
           <input id="correo" type="text" disabled class="validate">
           <label for="correo">Correo</label>
         </div>        
 
          <div class="input-field col s2 m3">
+	  <i class="material-icons prefix">perm_contact_calendar</i>
           <input id="ejecutivo" type="text" disabled class="validate">
           <label for="ejecutivo"> Ejecutivo de Venta</label>
         </div>
         <div class="input-field col s2 m3">
+	  <i class="material-icons prefix">local_library</i>
           <input id="consultor" type="text" disabled class="validate">
           <label for="consultor">Consultor</label>
-        </div>
+        </div>	
+
      
         <div class="input-field col s10 m12">
+	  <i class="material-icons prefix">location_off</i>
           <input id="fiscal" type="text" disabled class="validate">
           <label for="fiscal">Dirección Fiscal</label>
         </div>
      
      
         <div class="input-field col s10 m12">
+	  <i class="material-icons prefix">location_on</i>
           <input id="comercial" type="email" disabled class="validate">
           <label for="comercial">Dirección Comercial</label>
         </div>
@@ -399,6 +413,7 @@ td, th {
 
      
 	  <i class="material-icons prefix">book</i>
+
     <select>
       <option value="" >Seleccionar reporte</option>
       <option value="1">Error Siac</option>
@@ -410,7 +425,7 @@ td, th {
   </div>
       
 	 <div class="input-field col s3">
-	  <i class="material-icons prefix">account_circle</i>
+	  <i class="material-icons prefix">person</i>
     <select>
       <option value="" >Seleccionar contacto</option>
       <option value="1">Marcos Rodriguez</option>
@@ -421,6 +436,7 @@ td, th {
   </div>
 
         <div class="input-field col s3">
+<i class="material-icons prefix">perm_phone_msg</i>
     <select>
       <option value="" >Seleccionar atención</option>
       <option value="1">correo</option>
@@ -432,7 +448,7 @@ td, th {
     <label>Atención</label>
   </div>
  <div class="input-field col s3">
-	  <i class="material-icons prefix">account_circle</i>
+	  <i class="material-icons prefix">dvr</i>
     <select>
       <option value="" >Seleccionar Instalación</option>
       <option value="1">Nomina 10.7.0</option>
@@ -455,7 +471,7 @@ td, th {
           <label for="textarea1">Seguimiento</label>
         </div>
       </div>
-	     <a id="guardar"  class="waves-effect btn left"><i class="material-icons left">sd_card</i>Guardar</a>
+	     <a id="guardar"  class="waves-effect btn left"><i class="material-icons left">save</i>Guardar</a>
 	    
     </form></div>	      
 	    </div>
@@ -537,28 +553,29 @@ td, th {
 	  <div class="content1-popup1">
 			<div class="close11"><a href="#" id="close11"><img src=""/></a></div>
 		<div>
-       
-	  <input placeholder="Conectado a: Infocent" id="empresa1" disabled type="text" class="">
-		  
-                 
-	
-		 <input placeholder="Usuario: Morella Urella" id="usuario1" disabled type="text" class="">
-		  
-       
-        
-		   <input placeholder="Empresa: Fama de America" id="empresa2" disabled type="text" class="">		
-         
-        
-		    <input placeholder="Segmento: Black" id="segmento" disabled type="text" class="">		
-          
-        
-		   <input placeholder=" Satifacción: No Contiene" id="satisfaccion" disabled type="text" class="">		
-        
-       
-		    <input placeholder="Satifacción: Solvente" id="status" disabled type="text" class="">		
-        
 
-		   <input placeholder="Condición: Activo" id="condicion" disabled type="text" class="">		
+                 
+		  <div class="input-field col s12"> 
+	              <i class="material-icons prefix">perm_identity</i>
+		 	<input placeholder="Usuario: Alejandra Rodriguez" id="usuario1" disabled type="text" class="">
+		  </div>
+       
+        	<div class="input-field col s12"> 
+	              <i class="material-icons prefix">store</i>
+		      <input placeholder="Empresa: Fama de America" id="empresa2" disabled type="text" class="">		
+                </div>
+                <div class="input-field col s12"> 
+	            <i class="material-icons prefix">chrome_reader_mode</i>
+		    <input placeholder="Segmento: Black" id="segmento" disabled type="text" class="">		
+		</div>      
+             <div class="input-field col s12"> 
+           	     <i class="material-icons prefix">hourglass_empty</i>
+		    <input placeholder="Status: Solvente" id="status" disabled type="text" class="">
+	    </div>      		
+              <div class="input-field col s12"> 
+	            <i class="material-icons prefix">add_alert</i>
+		   <input placeholder="Condición: Activo" id="condicion" disabled type="text" class="">
+	     </div>      		
          
 </div>
 
