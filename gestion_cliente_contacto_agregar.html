@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<title>SIAC- Crear Reporte - Menu - Contacto </title>
+<title>SIAC- Crear Reporte - Menu - Agregar Contacto </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
  <link href="css/icon.css" rel="stylesheet">
@@ -54,7 +54,7 @@ form input:required {
  border:1px solid gray;
  /* otras propiedades */
 }
-
+a {font-weight: bold;  cursor: hand; cursor:pointer}
 #tabla-reporte{   height:1px;  display: flex;
     justify-content: center;
     align-content: center;
@@ -233,7 +233,7 @@ td, th {
  	
   <div class="col s9"> 
 <div class="row">
-<div class="col s11">
+<div class="col s10">
 
 <div class="row">
         
@@ -286,154 +286,104 @@ td, th {
    
 
 <div class="row">
-<div class="col s10">
+<div class="col s12">
 	  <div class="card">
          
 	    <div id="reporte" class="card-content #424242 grey darken-3 white-text">
-	      Contacto
+	      Agregar Contacto
 	    </div>
 	    
  
 <form >
      
-      <a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">cached</i></a>
-		<a  id="bo" class="waves-effect waves-light btn cambiar"><i class="material-icons left">add</i></a>
-		<a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">local_printshop</i></a>
-                <a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">mode_edit</i></a><p>
-            <table id="example" class="striped" cellspacing="0" width="100%">
-               <thead class=" #ffffff black-text card-content #4db6ac teal lighten-2 white-text">
-                  <div class="row ">
-                     <tr>
-                        <th>Nombre</th>                      
-                        <th>Area</th>
-                         <th>Cargo</th>
-                        <th>Correo</th>
-                        <th>Telefono</th>                        
-                        <th>Celular</th>
-                        <th>Ext</th>
-                        <th>Act</th>
-                        <th>Prin</th>
-                        <th>Pro</th>
-                        <th>Select</th>						
-                     </tr>
-                  </div>
-               </thead>
-               <tbody>
-                                  <tr>
-                   
-                     <td >María Alejandra Diaz</td> 
-                     <td>Tecnologia</td>
-                     <td>Ingeniero </td>
-                     <td>automatizacion@gmail.com</td>
-                     <td>(0212)-3115959</td>
-                     <td>(0412)-7311628</td>
-              
-      <td>276</td>
-                     <td>Si</td>
-                     <td>Si</td>
-                      <td>Si</td>
-                   <td><input type="checkbox" class="filled-in" id="filled-in-box1"  /> <label class="label-t" for="filled-in-box1"></label></td>    
-                  </tr>
-                  <tr>                   
-                     <td >Alejandra Perez</td> 
-                     <td>Recursos Humanos</td>
-                     <td>Licenciada </td>
-                     <td>aperez@gmail.com</td>
-                     <td>(0212)-3445959</td>
-                     <td>(0416)-0311621</td>
-                     <td>211</td>
-                     <td>Si</td>
-                     <td>Si</td>
-                      <td>No</td>
-                   <td><input type="checkbox" class="filled-in" id="filled-in-box9"  /> <label class="label-t" for="filled-in-box9"></label></td>    
-                  </tr>
-                    <tr>
-                   
-                     <td >Manuel Aponte</td> 
-                     <td>Tecnologia</td>
-                     <td>Ingeniero </td>
-                     <td>maponte@gmail.com</td>
-                     <td>(0212)-3111177</td>
-                     <td>(0414)-4516281</td>
-                     <td>303</td>
-                     <td>Si</td>
-                     <td>Si</td>
-                      <td>Si</td>
-                   <td><input type="checkbox" class="filled-in" id="filled-in-box3"  /> <label class="label-t" for="filled-in-box3"></label></td>    
-                  </tr>
-                          <tr>
-                   
-                     <td >Mario José Pio</td> 
-                     <td>Dirección General</td>
-                     <td>Gerente </td>
-                     <td>mpio@gmail.com</td>
-                     <td>(0212)-3128951</td>
-                     <td>(0412)-7235555</td>
-                     <td>444</td>
-                     <td>Si</td>
-                     <td>No</td>
-                      <td>No</td>
-                   <td><input type="checkbox" class="filled-in" id="filled-in-box4"  /> <label class="label-t" for="filled-in-box4"></label></td>    
-                  </tr>
-                  <tr>                   
-                     <td >Genesis Limada</td> 
-                     <td>Compras</td>
-                     <td>Licenciada </td>
-                     <td>glimada@gmail.com</td>
-                     <td>(0212)-3445959</td>
-                     <td>(0414)-2115987</td>
-                     <td>551</td>
-                     <td>Si</td>
-                     <td>Si</td>
-                      <td>No</td>
-                   <td><input type="checkbox" class="filled-in" id="filled-in-box5"  /> <label class="label-t" for="filled-in-box5"></label></td>    
-                  </tr>
-                    <tr>
-                   
-                     <td >angela Aponte</td> 
-                     <td>Tecnologia</td>
-                     <td>Ingeniero </td> 
-	  
-                     <td>aponte@gmail.com</td>
-                     <td>(0212)-3111177</td>
-                     <td>(0412)-0516281</td>
-                     <td>305</td>
-                     <td>Si</td>
-                     <td>No</td>
-                     <td>Si</td>
-                    <td><input type="checkbox" class="filled-in" id="filled-in-box6"  /> <label class="label-t" for="filled-in-box6"></label></td>    
-                  </tr>
-                   <tr>                   
-                     <td >Ana Urbina</td> 
-                     <td>Servicio Técnico</td>
-                     <td>Ingeniero </td>
-                     <td>aurbina@gmail.com</td>
-                     <td>(0212)-0115951</td>
-                     <td>(0414)-2115981</td>
-                     <td>511</td>
-                     <td>No</td>
-                     <td>Si</td>
-                      <td>No</td>
-                   <td><input type="checkbox" class="filled-in" id="filled-in-box7"  /> <label class="label-t" for="filled-in-box7"></label></td>    
-                  </tr>
-                    <tr>
-                   
-                     <td >Luis Acuña</td> 
-                     <td>Tecnologia</td>
-                     <td>Ingeniero </td>
-                     <td>acuna@gmail.com</td>
-                     <td>(0212)-5551177</td>
-                     <td>(0416)-0416283</td>
-                     <td>305</td>
-                     <td>Si</td>
-                     <td>Si</td>
-                     <td>Si</td>
-                    <td><input type="checkbox" class="filled-in" id="filled-in-box8"  /> <label class="label-t" for="filled-in-box8"></label></td>    
-                  </tr>
-               </tbody>
-            </table>
-  </form >
+   
+            <div id="test5">
 
+  
+      <div class="input-field col s6"> 
+      <i class="material-icons prefix">person</i>
+          <input id="icon_telephone" type="tel" class="validate">
+          <label for="icon_telephone">  Nombre</label>
+        </div>
+
+ <div class="input-field col s5"> 
+      <i class="material-icons prefix">contact_mail</i>
+          <input id="icon_telephone" type="tel" class="validate">
+          <label for="icon_telephone">  Correo</label>
+        </div>
+     <div class="input-field col s2"> 
+      <i class="material-icons prefix">contact_phone</i>
+          <input id="icon_telephone" type="tel" class="validate">
+          <label for="icon_telephone">  Telefono</label>
+        </div>
+     <div class="input-field col s2"> 
+          <input id="icon_telephone" type="tel" class="validate">
+        </div>	
+   <div class="input-field col s2"> 
+      <i class="material-icons prefix">phonelink_ring</i>
+          <input type="tel" class="validate">
+          <label >  Celular</label>
+        </div>
+
+     <div class="input-field col s2"> 
+          <input  type="tel" class="validate">
+        </div>	
+      <div class="input-field col s3"> 
+      <i class="material-icons prefix">phonelink</i>
+          <input type="tel" class="validate">
+          <label >  Extensión</label>
+        </div>
+	 <div class="input-field col s4">
+	  <i class="material-icons prefix">person</i>
+    <select>
+      <option value="" >Seleccionar Cargo</option>
+      <option value="1">Ingeniero</option>
+      <option value="2">Licenciada</option>
+      <option value="3">contador</option>
+    </select>
+    <label>Cargo</label>
+  </div>
+ <div class="input-field col s2">
+ <div class="chip">
+
+    <a> agregar cargo  </a>
+  </div>
+
+ </div>
+  	 <div class="input-field col s4">
+	  <i class="material-icons prefix">person</i>
+    <select>
+      <option value="" >Seleccionar Area</option>
+      <option value="1">Recursos Humanos</option>
+      <option value="2">Tecnologia</option>
+      <option value="3">Administracion</option>
+    </select>
+    <label>Area</label>
+  </div>
+ <div class="input-field col s2">
+ <div class="chip">
+
+   <a>  agregar area </a>
+  </div>
+
+ </div>
+<div class="row">
+    <form class="col s11">
+      <div class="row">
+        <div class="input-field col s11">
+ <div class="input-field col s3">
+		 <a id="bo1"  class="waves-effect btn left"><i class="material-icons left">save</i>Guardar</a>
+  </div>
+ <div class="input-field col s3">
+                 <a id="bo2"  class="waves-effect btn left"><i class="material-icons left">arrow_back</i>Volver</a>
+  </div>
+        </div>
+      </div>
+	    
+	    
+           </div>	      
+	    </div>
+	  </div>
 </div > 
 
 	      
@@ -721,8 +671,12 @@ $( "#ver" ).on( "click", function() {
 $("#pol5").click(function(){
 	     location.href = "gestion_cliente_horas.html";
       });
-$("#bo").click(function(){
-	     location.href = "gestion_cliente_contacto_agregar.html";
+
+$("#bo1").click(function(){
+	     location.href = "gestion_cliente_contacto.html";
+      });
+$("#bo2").click(function(){
+	     location.href = "gestion_cliente_contacto.html";
       });
 
 $("#c1").click(function(){
