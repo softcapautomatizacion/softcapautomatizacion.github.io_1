@@ -197,54 +197,34 @@ td, th {
    
   </ul>	 
 	   <div class="fixed-action-btn horizontal">
-    <a id="pol" class="btn-floating btn-large po4 #757575 grey darken-1">
+    <a id="pol1" class="btn-floating btn-large po4 #757575 grey darken-1">
       <i class="large material-icons">store</i>
     </a>
     
   </div>
     <div class="fixed-action-btn horizontal">
-    <a  class="btn-floating btn-large po #757575 grey darken-1">
+    <a id="pol2" class="btn-floating btn-large po #757575 grey darken-1">
       <i class="large material-icons">phone</i>
     </a>
-    <ul>
-      <li><a class="btn-floating po red"><i class="material-icons">insert_chart</i></a></li>
-      <li><a class="btn-floating po yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-      <li><a class="btn-floating po green"><i class="material-icons">publish</i></a></li>
-      <li><a class="btn-floating po blue"><i class="material-icons">attach_file</i></a></li>
-    </ul>
+   
   </div>
       <div class="fixed-action-btn horizontal">
-    <a  class="btn-floating btn-large po1 #757575 grey darken-1">
-      <i class="large material-icons">people</i>
+    <a id="pol3" class="btn-floating btn-large po1 #757575 grey darken-1">
+      <i class="large material-icons">book</i>
     </a>
-    <ul>
-      <li><a class="btn-floating po1 red"><i class="material-icons">insert_chart</i></a></li>
-      <li><a class="btn-floating po1 yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-      <li><a class="btn-floating po1 green"><i class="material-icons">publish</i></a></li>
-      <li><a class="btn-floating po1 blue"><i class="material-icons">attach_file</i></a></li>
-    </ul>
+  
   </div>
       <div class="fixed-action-btn horizontal">
-    <a  class="btn-floating btn-large po2 #757575 grey darken-1">
-      <i class="large material-icons">laptop</i>
+    <a  id="pol4" class="btn-floating btn-large po2 #757575 grey darken-1">
+      <i class="large material-icons">mood</i>
     </a>
-    <ul>
-      <li><a class="btn-floating po2 red"><i class="material-icons">insert_chart</i></a></li>
-      <li><a class="btn-floating po2 yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-      <li><a class="btn-floating po2 green"><i class="material-icons">publish</i></a></li>
-      <li><a class="btn-floating po2 blue"><i class="material-icons">attach_file</i></a></li>
-    </ul>
+  
   </div>
-      <div class="fixed-action-btn horizontal">
+      <div id="pol5" class="fixed-action-btn horizontal">
     <a  class="btn-floating btn-large po3 #757575 grey darken-1">
       <i class="large material-icons">subject</i>
     </a>
-    <ul>
-      <li><a class="btn-floating po3 red"><i class="material-icons">insert_chart</i></a></li>
-      <li><a class="btn-floating po3 yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-      <li><a class="btn-floating po3 green"><i class="material-icons">publish</i></a></li>
-      <li><a class="btn-floating po3 blue"><i class="material-icons">attach_file</i></a></li>
-    </ul>
+   
   </div>
 
  
@@ -639,6 +619,26 @@ $( "#ver" ).on( "click", function() {
       $("#to_4").click(function(){
 	      location.href = "gestion_cliente_historico_cliente.html";
       });
+ $("#pol1").click(function(){
+	     location.href = "gestion_cliente_empresa.html";
+      });
+
+      $("#pol2").click(function(){
+	      location.href = "gestion_cliente_cuentasxcobrar.html";
+      });
+
+      $("#pol3").click(function(){
+	      location.href = "gestion_cliente_reporte_pendiente.html";
+      });
+
+      $("#pol4").click(function(){
+	      location.href = "gestion_cliente_encuesta.html";
+      });
+
+$("#pol5").click(function(){
+	     location.href = "gestion_cliente_horas.html";
+      });
+
 
 $("#c1").click(function(){
 	     location.href = "configuracion.html";
