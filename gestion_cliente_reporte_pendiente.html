@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<title>SIAC- Crear Reporte - Menu - Usuario SPI </title>
+<title>SIAC- Crear Reporte - Menu - Reporte Pendiente </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
  <link href="css/icon.css" rel="stylesheet">
@@ -19,7 +19,7 @@
 
 
 .collection {margin-top:0; margin-left:-10px; width:350px;}
- table {margin-left:35px; font-size: small}
+ table {margin-left:0px; font-size: small}
 #modal1 {margin-left:300px; }
 #modal2 {margin-left:300px; }
 .modal-footer{margin-left:-450px;}
@@ -55,6 +55,7 @@ form input:required {
  /* otras propiedades */
 }
 
+a {font-weight: bold;  cursor: hand; cursor:pointer}
 #tabla-reporte{   height:1px;  display: flex;
     justify-content: center;
     align-content: center;
@@ -71,50 +72,6 @@ td, th {
 .cambiar{width:10px; padding-left:5px;}
 
 .cambiar1{width:10px; margin-bottom:10px; margin-right:1px; padding-left:5px;}
-#popup1 {
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1001;
-}
-
-.content1-popup1 {
-    margin:0px auto;
-    margin-top:200px;
-	margin-left:20px;
-    position:relative;
-    padding:10px;
-    width:300px;
-    min-height:400px;
-    border-radius:4px;
-    background-color:#FFFFFF;
-    box-shadow: 0 2px 5px #666666;
-}
-
-.content1-popup1 h2 {
-    color:#48484B;
-    border-bottom: 1px solid #48484B;
-    margin-top: 0;
-    padding-bottom: 4px;
-}
-
-.popup1-overlay {
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    display:none;
-    background-color: #777777;
-    cursor: pointer;
-    opacity: 0.7;
-}
-
-.close11 {
-    position: absolute;
-    right: 15px;
-}
  </style>
 
  
@@ -123,7 +80,7 @@ td, th {
 
 <div class="col s3 ">
 	<div class="row">  
-         <div id="top_1" class="col s1 m1">                              
+        <div id="top_1" class="col s1 m1">                              
            <img  src="img/logoindex2.png"  alt="" height="90%" width="90%"/>
         </div>
 
@@ -168,7 +125,8 @@ td, th {
 		 
         
      </div>
-  
+
+
 <div class="row">  
  
 
@@ -179,9 +137,7 @@ td, th {
                   <a href="#!" id="crear"  class="collection-item active"><i class="material-icons prefix waves-effect waves-light-blue lighten-1 ">work</i>  Gestión de Cliente</a>
                   <a href="#!" id="listar" class="collection-item "><i class="material-icons prefix waves-effect waves-light-blue lighten-1">email</i>  Gestión General</a>    
                </div>
-      
-
-
+         
 
  	 <a class='dropdown-button btn transparent  black-text hide' id="cambiar" href='#' data-activates='dropdown1'>Cambiar Empresa</a> 
 
@@ -249,7 +205,6 @@ td, th {
     </ul>
   </div>
 
- 
    </div>
  
    </div>     
@@ -264,28 +219,21 @@ td, th {
         
 
        
-        <div  class="col s2 ubuntu-medium-12 top_20">           
-          <i class="small material-icons">store</i>            
-          Datos de la Empresa        
+        <div id="top_20" class="col s2 ubuntu-medium-12 top_20">           
+          <i class="small material-icons">book</i>            
+         Reporte Pendiente       
         </div>
 
         <div  class="col s2 ubuntu-medium-12 top_20"> 
-          <i class="small material-icons">person</i>          
-          Contacto
+          <i class="small material-icons">photo_album</i>          
+          Reportes Resuelto
         </div>
          <div  class="col s2 ubuntu-medium-12 top_20">           
-          <i class="material-icons">people</i>       
-		Ficha Técnica         
+          <i class="material-icons">phonelink_setup</i>       
+	Reporte Asociados         
         </div>
 
-        <div   id="top_20" class="col s2 ubuntu-medium-12 top_20"> 
-          <i class="material-icons">assignment</i>Usuario SPI
-        </div>
-
-        <div  class="col s2 ubuntu-medium-12 top_20">          
-          <i class="material-icons">check</i>
-         Historico de cliente
-        </div> 
+       
 <ul id="slide-out" class="side-nav ">             
             <li><div class="chip" onclick="alert('¡No tienes permiso para este modulo!')">  Modulo: Venta </div> 
             <li><div id="auto" class="chip">  Modulo: Automatización </div> 
@@ -315,36 +263,254 @@ td, th {
 	  <div class="card">
          
 	    <div id="reporte" class="card-content #424242 grey darken-3 white-text">
-	      Usuario SPI
+	     Reporte Pendiente
 	    </div>
 	    
  
 <form >
      
-      <a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">cached</i></a>
+   <a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">cached</i></a>
 		<a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">add</i></a>
 		<a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">local_printshop</i></a>
                 <a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">mode_edit</i></a><p>
-            <table id="example" class="striped" cellspacing="0" width="100%">
+           <div id="tabla-reporte" class="card-content #00897b teal darken-1 white-text"></p>
+	       Buzon de Casos: Fama de America - Ficha: 1261
+	    </div>
+              <table id="example" class="striped" cellspacing="0" width="100%">
                <thead class=" #ffffff black-text card-content #4db6ac teal lighten-2 white-text">
                   <div class="row ">
                      <tr>
-                                          
-                        <th>Tipo de Usuario</th>
-                        <th>Nombre del Usuario</th>
-                       	<th>Comentarios</th>				
+                        <th>Orden</th>                      
+                        <th>Fecha</th>
+                        <th>Tipo de Reporte</th>
+                        <th>Status</th>
+                        <th>Persona Contacto</th>
+                        <th>Consultor</th>
+                        <th>N°.OC</th>
+                        <th>Select</th>						
                      </tr>
                   </div>
                </thead>
                <tbody>
+                  <tr>
+                   
+                     <td ><a >140636 </a></td> 
+                     <td>25/10/2017</td>
+                     <td>Mejora de desarrollo e Innovaciones</td>
+                     <td>Esperando Respuesta de Cliente </td>
+                     <td>Raul Jardines</td>
+                     <td>Luisana Pedrozo</td>
+                     <td>15449</td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box1"  /> <label class="label-t" for="filled-in-box1"></label></td>    
+                  </tr>
+                  <tr>
+                     <td><a>744447</a></td>                     
+                     <td>15/09/2017</td>
+                     <td>Incidencia Técnica Funcional </td>
+                     <td>Por definir</td>
+                     <td>Leudis Velasquez</td>
+	             <td>Luisana Pedrozo</td>
+                     <td></td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box2"  /> <label class="label-t" for="filled-in-box2"></label></td>    		
+                  </tr>
+                  <tr>
+                     <td><a>189754</a></td>                     
+                     <td>10/11/2017</td>
+                     <td>Soporte</td>
+                     <td>Esperando fatibilidad</td>
+                     <td>Juan Perez</td>
+		     <td>Luisana Velasquez</td>
+                     <td></td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box3"  /> <label class="label-t" for="filled-in-box3"></label></td>    			  
+                  </tr>
+                  <tr>
+                     <td><a>105426</a></td>                    
+                     <td>01/10/2017</td>
+                     <td>Desarrollo</td>
+                     <td>No clasificado</td>
+                     <td>Jaime de Abreu</td>
+	             <td>Luisana Pedrozo</td>
+                     <td></td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box4"  /> <label class="label-t" for="filled-in-box4"></label></td>    		
+                  </tr>
+                   <tr>
+                   
+                     <td ><a>139553 </a></td> 
+                     <td>21/10/2017</td>
+                     <td>Error siac </td>
+                     <td>No Clasificado </td>
+                     <td>Cherry delgado</td>
+                     <td>Luisana Pedrozo</td>
+		     <td></td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box5"  /> <label class="label-t" for="filled-in-box5"></label></td>    
+                  </tr>
+                  <tr>
+                      <td><a>744447</a></td>                     
+                     <td>15/09/2017</td>
+                     <td>Soporte</td>
+                     <td>Revisando por el cliente</td>
+                     <td>Lucia Abreu</td>
+		     <td>Luisana Pedrozo</td>
+                     <td></td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box6"  /> <label class="label-t" for="filled-in-box6"></label></td>    		
+                  </tr>
+                  <tr>
+                    <td><a>189755</a></td>                     
+                     <td>10/11/2017</td>
+                     <td>Soporte</td>
+                     <td>No aplica</td>
+                     <td>Julia Mora</td>
+                     <td>Luisana Pedrozo</td>	
+	             <td></td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box7"  /> <label class="label-t" for="filled-in-box7"></label></td>    		
+                  </tr>
+                  <tr>
+                     <td><a>105555<a></td>                    
+                     <td>01/10/2017</td>
+                     <td>Solicitud de soporte</td>
+                     <td>Por Definir</td>
+                     <td>Jose Aguilar</td>
+		     <td>Morela Pedrozo</td>
+		     <td>45879</td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box8"  /> <label class="label-t" for="filled-in-box8"></label></td>    		
+                  </tr>
+                    <tr>                   
+                     <td ><a>22222 </a></td> 
+                     <td>01/10/2017</td>
+                     <td>Error siac  </td>
+                     <td>No Clasificado </td>
+                     <td>Juana Paz</td>                   
+                      <td>Luisana Pedrozo</td>
+	             <td></td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box9"  /> <label class="label-t" for="filled-in-box9"></label></td>    		
+                  </tr>
+                  <tr>
+                      <td><a>222211</a></td>                     
+                     <td>15/09/2017</td>
+                     <td>Error siac</td>
+                     <td>No clasificado</td>
+                     <td>Edison Flores</td>
+		     <td>Luisana Pedrozo</td>
+	             <td></td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box10"  /> <label class="label-t" for="filled-in-box10"></label></td>    				
+                  </tr>
+                  <tr>
+                    <td><a>166666</a></td>                    
+                     <td>10/11/2017</td>
+                     <td>Error siac</td>
+                     <td>Revisando la Solicitud</td>                     
+                     <td>Juana Mora</td>
+		     <td>Luisana Pedrozo</td>
+	             <td></td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box11"  /> <label class="label-t" for="filled-in-box11"></label></td>    				  
+                  </tr>
+                  <tr>
+                 <td><a>165555</a></td>                    
+                     <td>10/11/2017</td>
+                     <td>Error siac</td>
+                     <td>Revisando la Solicitud</td>                     
+                     <td>Juana Mora</td>
+		     <td>Luisana Pedrozo</td>
+	             <td></td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box12"  /> <label class="label-t" for="filled-in-box12 "></label></td>    			
+                  </tr>
+                     <tr>
+                   
+                     <td><a>7895214</a></td>                    
+                     <td>10/11/2017</td>
+                     <td>Error siac</td>
+                     <td>Revisando la Solicitud</td>                     
+                     <td>Juana Mora</td>
+		     <td>Luisana Pedrozo</td>
+	             <td></td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box13"  /> <label class="label-t" for="filled-in-box13"></label></td>    			
+                  </tr>
+                  <tr>
+                      <td><a>1000000</a></td>                    
+                     <td>10/11/2017</td>
+                     <td>Error siac</td>
+                     <td>Revisando la Solicitud</td>                     
+                     <td>Juana Mora</td>
+		     <td>Luisana Pedrozo</td>
+	             <td></td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box14"  /> <label class="label-t" for="filled-in-box14"></label></td>    					
+                  </tr>
+                  <tr>
+                    <td><a>1000045</a></td>                    
+                     <td>10/11/2017</td>
+                     <td>Error siac</td>
+                     <td>Moderada</td>
+                     <td>7</td>
+                     <td>Revisando la Solicitud</td>                     
+                     <td>Juana Mora</td>
+		     <td>Luisana Pedrozo</td>
+	             <td></td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box15"  /> <label class="label-t" for="filled-in-box15"></label></td>    				  
+                  </tr>
+                  <tr>
+                   <td><a>1010234</a></td>                    
+                     <td>10/11/2017</td>
+                     <td>Error siac</td>
+                     <td>Revisando la Solicitud</td>                     
+                     <td>Juana Mora</td>
+		     <td>Luisana Pedrozo</td>
+	             <td></td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box16"  /> <label class="label-t" for="filled-in-box16"></label></td>    		
+                  </tr>
+                   <tr>                   
+                     <td><a>15100</a></td>                    
+                     <td>10/11/2017</td>
+                     <td>Error siac</td>
+                     <td>Revisando la Solicitud</td>                     
+                     <td>Juana Mora</td>
+		     <td>Luisana Pedrozo</td>
+                     <td>15975</td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box17"  /> <label class="label-t" for="filled-in-box17"></label></td>    		
+                  </tr>
+                  <tr>
+                     <td><a>101234</a></td>                    
+                     <td>10/11/2017</td>
+                     <td>Error siac</td>
+                     <td>Revisando la Solicitud</td>                     
+                     <td>Juana Mora</td>
+		     <td>Luisana Pedrozo</td>
+	             <td></td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box18"  /> <label class="label-t" for="filled-in-box18"></label></td>    				
+                  </tr>
+                  <tr>
+                  <td><a>108771</a></td>                    
+                     <td>10/11/2017</td>
+                     <td>Error siac</td>
+                     <td>Revisando la Solicitud</td>                     
+                     <td>Juana Mora</td>
+		     <td>Luisana Pedrozo</td>
+	             <td></td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box19"  /> <label class="label-t" for="filled-in-box19"></label></td>    				  
+                  </tr>
+                  <tr>
+                      <td><a>111118</a></td>                    
+                     <td>10/11/2017</td>
+                     <td>Error siac</td>
+                     <td>Revisando la Solicitud</td>                     
+                     <td>Juana Mora</td>
+		     <td>Luisana Pedrozo</td>
+	             <td></td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box20"  /> <label class="label-t" for="filled-in-box20"></label></td>    				
+                  </tr>
                   
                </tbody>
             </table>
-  </form >
+      
+      <div class="row">
+        <div class="col s12">
+          
+         
+        </div>
+      </div>
+  
 
 </div > 
-	      
-<div class="row">
+	   <div class="row">
 <div class="col s12">
 	  <div class="card">
          
@@ -396,7 +562,7 @@ td, th {
     <label>Atención</label>
   </div>
  <div class="input-field col s3">
-	  <i class="material-icons prefix">dvr</i>
+	  <i class="material-icons prefix">account_circle</i>
     <select>
       <option value="" >Seleccionar Instalación</option>
       <option value="1">Nomina 10.7.0</option>
@@ -504,22 +670,6 @@ td, th {
 
   <script src="js/materialize1.min.js"></script>
 	<script>
-$(document).ready(function() {
-				setTimeout(function() {
-			        $('#popup1').fadeIn(1500);
-				},2000);
-				$('.popup1-overlay').fadeIn(1500);
-				},2000);
-
-
-                              $('.popup1-overlay').height($(window).height());
-
-
-				$("#btnCerrar1").click(function () {
-					setTimeout(function() {
-					$(".popup1-overlay").fadeOut(1500);
-				   	},500);
-});
    $(document).ready(function(){
       $('.carousel').carousel();
 	  
@@ -637,20 +787,17 @@ $(".button-collapse").sideNav();
   );
   
 $('#icon_book').val('Mejoras de desarrollo');
-$('#atencion').val('correo');
-$('#fecha').val('25/10/2017');
-$('#rif').val('V132370890');
-$('#cliente').val('Fama America c.a');  
-$('#segmento').val('Industria/Acero/Hierro'); 
-$('#telefono').val('(0414)1955577');
-$('#correo').val('automatizacion@gmail.com');
-$('#ejecutivo').val('José Altuve');  
-$('#consultor').val('Juan Perez'); 
-$('#fiscal').val('Los cortijos, edificio BOD, Piso 5 oficina 555');  
-$('#comercial').val('Los cortijos, edificio BOD, Piso 5 oficina 555'); 
-
-
-
+    $('#atencion').val('correo');
+   $('#fecha').val('25/10/2017');
+  $('#rif').val('V132370890');
+  $('#cliente').val('Fama America c.a');  
+ $('#segmento').val('Industria/Acero/Hierro'); 
+ $('#telefono').val('(0414)1955577');
+  $('#correo').val('automatizacion@gmail.com');
+  $('#ejecutivo').val('José Altuve');  
+ $('#consultor').val('Juan Perez'); 
+  $('#fiscal').val('Los cortijos, edificio BOD, Piso 5 oficina 555');  
+ $('#comercial').val('Los cortijos, edificio BOD, Piso 5 oficina 555'); 
 
 </script>
 </body>
