@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<title>SIAC- Crear Reporte - Menu - Reporte Resuelto </title>
+<title>SIAC- Crear Reporte - Menu - Contrato </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
  <link href="css/icon.css" rel="stylesheet">
@@ -19,7 +19,7 @@
 
 
 .collection {margin-top:0; margin-left:-10px; width:350px;}
- table {margin-left:0px; font-size: small}
+ table {margin-left:35px; font-size: small}
 #modal1 {margin-left:300px; }
 #modal2 {margin-left:300px; }
 .modal-footer{margin-left:-450px;}
@@ -55,7 +55,6 @@ form input:required {
  /* otras propiedades */
 }
 
-a {font-weight: bold;  cursor: hand; cursor:pointer}
 #tabla-reporte{   height:1px;  display: flex;
     justify-content: center;
     align-content: center;
@@ -72,6 +71,50 @@ td, th {
 .cambiar{width:10px; padding-left:5px;}
 
 .cambiar1{width:10px; margin-bottom:10px; margin-right:1px; padding-left:5px;}
+#popup1 {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+.content1-popup1 {
+    margin:0px auto;
+    margin-top:200px;
+	margin-left:20px;
+    position:relative;
+    padding:10px;
+    width:300px;
+    min-height:400px;
+    border-radius:4px;
+    background-color:#FFFFFF;
+    box-shadow: 0 2px 5px #666666;
+}
+
+.content1-popup1 h2 {
+    color:#48484B;
+    border-bottom: 1px solid #48484B;
+    margin-top: 0;
+    padding-bottom: 4px;
+}
+
+.popup1-overlay {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display:none;
+    background-color: #777777;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.close11 {
+    position: absolute;
+    right: 15px;
+}
  </style>
 
  
@@ -80,7 +123,7 @@ td, th {
 
 <div class="col s3 ">
 	<div class="row">  
-        <div id="top_1" class="col s1 m1">                              
+         <div id="top_1" class="col s1 m1">                              
            <img  src="img/logoindex2.png"  alt="" height="90%" width="90%"/>
         </div>
 
@@ -118,15 +161,14 @@ td, th {
         </div>
 
         <div id="top_8" class="col s1 m1 ubuntu-medium-12">          
-          <i class="material-icons">close</i>
+          <i class="material-icons">clear</i>
           Cerrar sesión
         </div>
       </div>
 		 
         
      </div>
-
-
+  
 <div class="row">  
  
 
@@ -137,7 +179,9 @@ td, th {
                   <a href="#!" id="crear"  class="collection-item active"><i class="material-icons prefix waves-effect waves-light-blue lighten-1 ">work</i>  Gestión de Cliente</a>
                   <a href="#!" id="listar" class="collection-item "><i class="material-icons prefix waves-effect waves-light-blue lighten-1">email</i>  Gestión General</a>    
                </div>
-         
+      
+
+
 
  	 <a class='dropdown-button btn transparent  black-text hide' id="cambiar" href='#' data-activates='dropdown1'>Cambiar Empresa</a> 
 
@@ -205,6 +249,7 @@ td, th {
     </ul>
   </div>
 
+ 
    </div>
  
    </div>     
@@ -219,21 +264,28 @@ td, th {
         
 
        
-        <div id="to_1" class="col s2 ubuntu-medium-12 top_20">           
-          <i class="small material-icons">book</i>            
-         Reporte Pendiente       
+        <div   class="col s2 ubuntu-medium-12 top_20">           
+          <i class="small material-icons">closed_caption</i>            
+          Cuentas por Cobrar       
         </div>
 
-        <div id="top_20" class="col s2 ubuntu-medium-12 top_20"> 
-          <i class="small material-icons">photo_album</i>          
-          Reportes Resuelto
+        <div  class="col s2 ubuntu-medium-12 top_20"> 
+          <i class="small material-icons">add_shopping_cart</i>          
+          Productos Adquiridos
         </div>
-         <div id="to_2" class="col s2 ubuntu-medium-12 top_20">           
-          <i class="material-icons">phonelink_setup</i>       
-	Reporte Asociados         
+         <div   class="col s2 ubuntu-medium-12 top_20">           
+          <i class="material-icons">local_grocery_store</i>       
+	  Proceso de Ventas        
         </div>
 
-       
+        <div  class="col s2 ubuntu-medium-12 top_20"> 
+          <i class="material-icons">assignment</i>Forma de Pago
+        </div>
+
+        <div id="top_20" class="col s2 ubuntu-medium-12 top_20">          
+          <i class="material-icons">check</i>
+         Contrato
+        </div> 
 <ul id="slide-out" class="side-nav ">             
             <li><div class="chip" onclick="alert('¡No tienes permiso para este modulo!')">  Modulo: Venta </div> 
             <li><div id="auto" class="chip">  Modulo: Automatización </div> 
@@ -259,234 +311,119 @@ td, th {
    
 
 <div class="row">
-<div class="col s10">
+<div class="col s12">
 	  <div class="card">
          
 	    <div id="reporte" class="card-content #424242 grey darken-3 white-text">
-	     Reporte Resulto
+	     Contrato
 	    </div>
 	    
  
 <form >
      
-   <a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">cached</i></a>
+      <a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">cached</i></a>
 		<a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">add</i></a>
 		<a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">local_printshop</i></a>
                 <a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">mode_edit</i></a><p>
-           <div id="tabla-reporte" class="card-content #00897b teal darken-1 white-text"></p>
-	       Buzon de Casos: Fama de America - Ficha: 1261
+            <div id="tabla-reporte" class="card-content #00897b teal darken-1 white-text"></p>
+	       Contratos  
 	    </div>
-              <table id="example" class="striped" cellspacing="0" width="100%">
+            <table id="example" class="striped" cellspacing="0" width="100%">
                <thead class=" #ffffff black-text card-content #4db6ac teal lighten-2 white-text">
                   <div class="row ">
                      <tr>
-                        <th>Orden</th>                      
-                        <th>Fecha</th>
-                        <th>Tipo de Reporte</th>
-                        <th>Fecha de Cierre</th>
-                        <th>Persona Contacto</th>
-                        <th>Consultor</th>
-                        <th>Activar Reporte</th>						
+                        <th>N°</th>                       
+                        <th>Producto</th>
+                        <th>Firmado</th>
+                        <th>Cedula</th>                  
+                        <th>Fecha Envio</th>
+                        <th>Recepcion</th>
+                        <th>Estandar</th> 
+                        <th>Correo</th>
+                        <th>Select</th>						
                      </tr>
                   </div>
                </thead>
                <tbody>
-                  <tr>
-                    <td ><a >140636 </a></td> 
-                     <td>25/10/2017</td>
-                     <td>Mejora de desarrollo e Innovaciones</td>
-                     <td>01/11/2017           </td>
-                     <td>Raul Jardines Morales</td>
-                     <td>Luisana Pedrozo</td>
-                      <td><a id="activar"  class="waves-effect btn left">Activar</a></td>
+                  <tr>                    
+                     <td>Ser-2013-10-5530</td>
+                     <td>SPI Organizacion </td>
+                     <td>Alejandra Rodríguez</td>
+                      <td>13.237.089</td>                      
+                     <td >01/11/2013</td>
+                     <td >05/11/2013</td>                   
+                     <td><input type="checkbox" class="filled-in" id="filled-1"  checked="checked"  /> <label class="label-t" for="filled-1"></label></td>    
+                     <td><input type="checkbox" class="filled-in" id="filled-in-1"  checked="checked"  /> <label class="label-t" for="filled-in-1"></label></td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box1"  /> <label class="label-t" for="filled-in-box1"></label></td>    
                   </tr>
-                  <tr>
-                     <td><a>744447</a></td>                     
-                     <td>15/09/2017</td>
-                     <td>Incidencia Técnica Funcional </td>
-                     <td>20/09/2017</td>
-                     <td>Leudis Velasquez</td>
-	             <td>Luisana Pedrozo</td>
-                     <td><a id="activar1"  class="waves-effect btn left">Activar</a></td>
+                  <tr>                   
+                     <td>Ser-2015-10-812</td>
+                     <td>SPI Seguridad </td> 
+                     <td>Juana Perez</td>
+                     <td>14.238.345</td>
+                     <td >15/11/2015</td>
+                     <td >19/11/2015</td>                        
+                     <td><input type="checkbox" class="filled-in" id="filled-2"  /> <label class="label-t" for="filled-2"></label></td>    
+                     <td><input type="checkbox" class="filled-in" id="filled-in-2"  checked="checked"  /> <label class="label-t" for="filled-in-2"></label></td> 
+                   <td><input type="checkbox" class="filled-in" id="filled-in-box2"  /> <label class="label-t" for="filled-in-box2"></label></td>    
                   </tr>
-                  <tr>
-                     <td><a>189754</a></td>                     
-                     <td>10/11/2017</td>
-                     <td>Soporte</td>
-                     <td>11/11/2017</td>
-                     <td>Juan Perez</td>
-		     <td>Luisana Velasquez</td>
-                     <td><a id="activar2"  class="waves-effect btn left">Activar</a></td>
-                  </tr>
-                  <tr>
-                     <td><a>105426</a></td>                    
-                     <td>01/10/2017</td>
-                     <td>Desarrollo</td>
-                     <td>03/10/2017</td>
-                     <td>Jaime de Abreu</td>
-	             <td>Luisana Pedrozo</td>
-                     <td><a id="activar3"  class="waves-effect btn left">Activar</a></td>
-                  </tr>
-                   <tr>
+                    <tr> 
+
+                     <td>Ser-1997-10-001</td>
+                     <td>SPI Talento </td>
+                      <td>Luisa Rojas</td>
+                     <td>10.009.877</td>  
+                    <td >13/02/1997</td>                                                          
+                    <td >23/02/1997</td>
+                     <td><input type="checkbox" class="filled-in" id="filled-3"  checked="checked"   /> <label class="label-t" for="filled-3"></label></td>    
+                     <td><input type="checkbox" class="filled-in" id="filled-in-3"  /> <label class="label-t" for="filled-in-3"></label></td>
+                   <td><input type="checkbox" class="filled-in" id="filled-in-box3"  /> <label class="label-t" for="filled-in-box3"></label></td>    
                    
-                     <td ><a>139553 </a></td> 
-                     <td>21/10/2017</td>
-                     <td>Error siac </td>
-                     <td>22/10/2017</td>
-                     <td>Luis Angel Rodriguez Velasquez</td>
-                     <td>Luisana Pedrozo</td>
-                     <td><a id="activar4"  class="waves-effect btn left">Activar</a></td>
                   </tr>
-                  <tr>
-                      <td><a>744447</a></td>                     
-                     <td>15/09/2017</td>
-                     <td>Soporte</td>
-                     <td>26/09/2017</td>
-                     <td>Lucia Abreu</td>
-		     <td>Luisana Pedrozo</td>
-                     <td><a id="activar5"  class="waves-effect btn left">Activar</a></td>
-                  </tr>
-                  <tr>
-                    <td><a>189755</a></td>                     
-                     <td>10/11/2017</td>
-                     <td>Soporte</td>
-                     <td>12/11/2017</td>
-                     <td>Julia Mora</td>
-                     <td>Luisana Pedrozo</td>	
-                     <td><a id="activar6"  class="waves-effect btn left">Activar</a></td>
-                  </tr>
-                  <tr>
-                     <td><a>105555<a></td>                    
-                     <td>01/10/2017</td>
-                     <td>Solicitud de soporte</td>
-                     <td>08/10/2017</td>
-                     <td>Jose Aguilar</td>
-		     <td>Morela Pedrozo</td>
-                     <td><a id="activar7"  class="waves-effect btn left">Activar</a></td>
-                  </tr>
-                    <tr>                   
-                     <td ><a>22222 </a></td> 
-                     <td>01/10/2017</td>
-                     <td>Error siac  </td>
-                     <td>02/10/2017</td>
-                     <td>Juana Paz</td>                   
-                      <td>Luisana Pedrozo</td>
-                     <td><a id="activar8"  class="waves-effect btn left">Activar</a></td>
-                  </tr>
-                  <tr>
-                      <td><a>222211</a></td>                     
-                     <td>15/09/2017</td>
-                     <td>Error siac</td>
-                     <td>15/09/2017</td>
-                     <td>Edison Flores</td>
-		     <td>Luisana Pedrozo</td>
-                     <td><a id="activar9"  class="waves-effect btn left">Activar</a></td>
-                  </tr>
-                  <tr>
-                    <td><a>166666</a></td>                    
-                     <td>10/11/2017</td>
-                     <td>Error siac</td>
-                     <td>13/11/2017</td>                     
-                     <td>Juana Mora</td>
-		     <td>Luisana Pedrozo</td>
-                     <td><a id="activar10"  class="waves-effect btn left">Activar</a></td>
-                  </tr>
-                  <tr>
-                 <td><a>165555</a></td>                    
-                     <td>10/11/2017</td>
-                     <td>Error siac</td>
-                     <td>01/12/2017</td>                     
-                     <td>Juana Mora</td>
-		     <td>Luisana Pedrozo</td>
-                     <td><a id="activar11"  class="waves-effect btn left">Activar</a></td>
-                  </tr>
-                     <tr>
+                          <tr>
                    
-                     <td><a>7895214</a></td>                    
-                     <td>10/11/2017</td>
-                     <td>Error siac</td>
-                     <td>11/11/2017</td>                     
-                     <td>Juana Mora</td>
-		     <td>Luisana Pedrozo</td>
-                     <td><a id="activar12"  class="waves-effect btn left">Activar</a></td>
-                  </tr>
-                  <tr>
-                      <td><a>1000000</a></td>                    
-                     <td>10/11/2017</td>
-                     <td>Error siac</td>
-                     <td>05/12/2017</td>                     
-                     <td>Juana Mora</td>
-		     <td>Luisana Pedrozo</td>
-                     <td><a id="activar13"  class="waves-effect btn left">Activar</a></td>
-                  </tr>
-                  <tr>
-                    <td><a>1000045</a></td>                    
-                     <td>10/11/2017</td>
-                     <td>Error siac</td>
-                     <td>30/11/2017</td>
-                     <td>Juana Mora</td>
-		     <td>Luisana Pedrozo</td>
-                     <td><a id="activar14"  class="waves-effect btn left">Activar</a></td>
-                  </tr>
-                  <tr>
-                   <td><a>1010234</a></td>                    
-                     <td>10/11/2017</td>
-                     <td>Error siac</td>
-                     <td>25/11/2017</td>                     
-                     <td>Juana Mora</td>
-		     <td>Luisana Pedrozo</td>
-                     <td><a id="activar15"  class="waves-effect btn left">Activar</a></td>
-                  </tr>
-                   <tr>                   
-                     <td><a id="to_4">15100</a></td>                    
-                     <td>10/11/2017</td>
-                     <td>Error siac</td>
-                     <td>02/12/2017</td>                     
-                     <td>Juana Mora</td>
-		     <td>Luisana Pedrozo</td>
-                     <td><a id="activar16"  class="waves-effect btn left">Activar</a></td>
-                  </tr>
-                  <tr>
-                     <td><a>101234</a></td>                    
-                     <td>10/11/2017</td>
-                     <td>Error siac</td>
-                     <td>25/11/2017</td>                     
-                     <td>Juana Mora</td>
-		     <td>Luisana Pedrozo</td>
-                     <td><a id="activar17"  class="waves-effect btn left">Activar</a></td>
-                  </tr>
-                  <tr>
-                  <td><a>108771</a></td>                    
-                     <td>10/11/2017</td>
-                     <td>Error siac</td>
-                     <td>21/11/2017</td>                     
-                     <td>Juana Mora</td>
-		     <td>Luisana Pedrozo</td>
-                     <td><a id="activar18"  class="waves-effect btn left">Activar</a></td>
-                  </tr>
-                  <tr>
-                      <td><a>111118</a></td>                    
-                     <td>10/11/2017</td>
-                     <td>Error siac</td>
-                     <td>10/11/2017</td>                     
-                     <td>Juana Mora</td>
-		     <td>Luisana Pedrozo</td>
-                     <td><a id="activar19"  class="waves-effect btn left">Activar</a></td>
-                  </tr>
-                  
+
+                     <td>Ser-2016-10-511</td>
+                     <td>SPI Autoservicio </td>
+                     <td>Luisa Rojas</td>
+                     <td>10.009.877</td>
+                     <td >11/11/2016</td>                     
+                     <td >11/11/2016</td>                     
+                     <td><input type="checkbox" class="filled-in" id="filled-4"  checked="checked"   /> <label class="label-t" for="filled-4"></label></td>    
+                     <td><input type="checkbox" class="filled-in" id="filled-in-4"  checked="checked"  /> <label class="label-t" for="filled-in-4"></label></td>
+                    <td><input type="checkbox" class="filled-in" id="filled-in-box4"  /> <label class="label-t" for="filled-in-box4"></label></td>    
+                </tr>
+                  <tr>                   
+                    
+                     <td>Ser-2017-10-515</td>
+                     <td>SPI Autoservicio Avanzado </td>
+                     <td>Martin Carvajal</td>
+                     <td>2.500.159</td>
+                     <td >03/03/2017</td>                     
+                     <td >13/03/2017</td>                     
+                     <td><input type="checkbox" class="filled-in" id="filled-5"  checked="checked"  /> <label class="label-t" for="filled-5"></label></td>    
+                     <td><input type="checkbox" class="filled-in" id="filled-in-5"  /> <label class="label-t" for="filled-in-5"></label></td>
+                   <td><input type="checkbox" class="filled-in" id="filled-in-box5"  /> <label class="label-t" for="filled-in-box5"></label></td>    
+                 </tr>
+                    <tr>
+                   
+                     <td>Ser-2014-10-4321</td>
+                     <td>SPI Nomina </td>
+                     <td>Martin Rodriguez</td>
+                     <td>12.500.899</td>
+                     <td >06/07/2014</td>                     
+                    <td >06/08/2014</td> 
+                     <td><input type="checkbox" class="filled-in" id="filled-6"  /> <label class="label-t" for="filled-6"></label></td>    
+                     <td><input type="checkbox" class="filled-in" id="filled-in-6"  checked="checked"  /> <label class="label-t" for="filled-in-6"></label></td>
+                   <td><input type="checkbox" class="filled-in" id="filled-in-box6"  /> <label class="label-t" for="filled-in-box6"></label></td>    
+                </tr>
                </tbody>
             </table>
-      
-      <div class="row">
-        <div class="col s12">
-          
-         
-        </div>
-      </div>
-  
+  </form >
 
 </div > 
-	   <div class="row">
+	      
+<div class="row">
 <div class="col s12">
 	  <div class="card">
          
@@ -559,7 +496,7 @@ td, th {
 		 <i class="material-icons prefix">touch_app</i>
           <textarea id="textarea1" class="materialize-textarea validate"></textarea>
           <label for="textarea1">Seguimiento</label>
- <a id="guardar"  class="waves-effect btn left"><i class="material-icons left">save</i>Guardar</a>
+ <a id="guardar"  class="waves-effect btn left"><i class="material-icons left">sd_card</i>Guardar</a>
         </div>
       </div>
 	    
@@ -646,6 +583,22 @@ td, th {
 
   <script src="js/materialize1.min.js"></script>
 	<script>
+$(document).ready(function() {
+				setTimeout(function() {
+			        $('#popup1').fadeIn(1500);
+				},2000);
+				$('.popup1-overlay').fadeIn(1500);
+				},2000);
+
+
+                              $('.popup1-overlay').height($(window).height());
+
+
+				$("#btnCerrar1").click(function () {
+					setTimeout(function() {
+					$(".popup1-overlay").fadeOut(1500);
+				   	},500);
+});
    $(document).ready(function(){
       $('.carousel').carousel();
 	  
@@ -719,16 +672,6 @@ $( "#ver" ).on( "click", function() {
    location.href = "buzon_entrada_actualizar_Requerimiento.html";
 });	
 
-$("#to_1").click(function(){
-	     location.href = "gestion_cliente_reporte_pendiente.html";
-      });
-
-    
-
-      $("#to_4").click(function(){
-	      location.href = "gestion_cliente_actulizar_reporte_resuelto.html";
-      });
-
 $("#c1").click(function(){
 	     location.href = "configuracion.html";
       });
@@ -773,17 +716,20 @@ $(".button-collapse").sideNav();
   );
   
 $('#icon_book').val('Mejoras de desarrollo');
-    $('#atencion').val('correo');
-   $('#fecha').val('25/10/2017');
-  $('#rif').val('V132370890');
-  $('#cliente').val('Fama America c.a');  
- $('#segmento').val('Industria/Acero/Hierro'); 
- $('#telefono').val('(0414)1955577');
-  $('#correo').val('automatizacion@gmail.com');
-  $('#ejecutivo').val('José Altuve');  
- $('#consultor').val('Juan Perez'); 
-  $('#fiscal').val('Los cortijos, edificio BOD, Piso 5 oficina 555');  
- $('#comercial').val('Los cortijos, edificio BOD, Piso 5 oficina 555'); 
+$('#atencion').val('correo');
+$('#fecha').val('25/10/2017');
+$('#rif').val('V132370890');
+$('#cliente').val('Fama America c.a');  
+$('#segmento').val('Industria/Acero/Hierro'); 
+$('#telefono').val('(0414)1955577');
+$('#correo').val('automatizacion@gmail.com');
+$('#ejecutivo').val('José Altuve');  
+$('#consultor').val('Juan Perez'); 
+$('#fiscal').val('Los cortijos, edificio BOD, Piso 5 oficina 555');  
+$('#comercial').val('Los cortijos, edificio BOD, Piso 5 oficina 555'); 
+
+
+
 
 </script>
 </body>
