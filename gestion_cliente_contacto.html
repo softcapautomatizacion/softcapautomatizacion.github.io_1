@@ -115,6 +115,30 @@ td, th {
     position: absolute;
     right: 15px;
 }
+input[type=text]{
+  height: 20px;
+}
+ .textbox
+  {
+  border: 1px solid #DBE1EB;
+  font-size: 8px;
+  font-family: Arial, Verdana;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+    
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  background: #FFFFFF;
+  background: linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -moz-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -webkit-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -o-linear-gradient(left, #FFFFFF, #F7F9FA);
+  color: #2E3133;
+  }
  </style>
 
  
@@ -300,16 +324,20 @@ td, th {
 		<a  id="bo" class="waves-effect waves-light btn cambiar"><i class="material-icons left">add</i></a>
 		<a id="bo1" class="waves-effect waves-light btn cambiar"><i class="material-icons left">local_printshop</i></a>
                 <a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">mode_edit</i></a><p>
+
+
             <table id="example" class="striped" cellspacing="0" width="100%">
                <thead class=" #ffffff black-text card-content #4db6ac teal lighten-2 white-text">
-                  <div class="row ">
+                        
+                     <div class="row ">
+                     
                      <tr>
-                        <th>Nombre</th>                      
-                        <th>Area</th>
-                         <th>Cargo</th>
-                        <th>Correo</th>
-                        <th>Telefono</th>                        
-                        <th>Celular</th>
+                        <th><label class="white-text" for="num">  Nombre</label><input class="textbox" type="text" name="num" > </th>                
+                        <th><label class="white-text" for="area">  Area</label><input class="textbox" type="text" name="area" ></th>
+                         <th><label class="white-text" for="cargo">  Cargo</label><input class="textbox" type="text" name="cargo" ></th>
+                        <th><label class="white-text" for="correo">  Correo</label><input class="textbox" type="text" name="correo" ></th>
+                        <th><label class="white-text" for="tel">  Telefono</label><input class="textbox" type="text" name="tel" ></th>                        
+                        <th><label class="white-text" for="cel">  Celular</label><input class="textbox" type="text" name="cel" ></th>
                         <th>Ext</th>
                         <th>Act</th>
                         <th>Prin</th>
