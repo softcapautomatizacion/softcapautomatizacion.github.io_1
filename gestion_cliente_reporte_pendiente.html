@@ -224,11 +224,11 @@ td, th {
          Reporte Pendiente       
         </div>
 
-        <div  class="col s2 ubuntu-medium-12 top_20"> 
+        <div  id="to_1" class="col s2 ubuntu-medium-12 top_20"> 
           <i class="small material-icons">photo_album</i>          
           Reportes Resuelto
         </div>
-         <div  class="col s2 ubuntu-medium-12 top_20">           
+         <div id="to_2" class="col s2 ubuntu-medium-12 top_20">           
           <i class="material-icons">phonelink_setup</i>       
 	Reporte Asociados         
         </div>
@@ -458,7 +458,7 @@ td, th {
                      <td><input type="checkbox" class="filled-in" id="filled-in-box16"  /> <label class="label-t" for="filled-in-box16"></label></td>    		
                   </tr>
                    <tr>                   
-                     <td><a>15100</a></td>                    
+                     <td><a id="to_4">15100</a></td>                    
                      <td>10/11/2017</td>
                      <td>Error siac</td>
                      <td>Revisando la Solicitud</td>                     
@@ -583,7 +583,7 @@ td, th {
 		 <i class="material-icons prefix">touch_app</i>
           <textarea id="textarea1" class="materialize-textarea validate"></textarea>
           <label for="textarea1">Seguimiento</label>
- <a id="guardar"  class="waves-effect btn left"><i class="material-icons left">save</i>Guardar</a>
+ <a id="guardar1"  class="waves-effect btn left"><i class="material-icons left">save</i>Guardar</a>
         </div>
       </div>
 	    
@@ -743,6 +743,15 @@ $( "#ver" ).on( "click", function() {
    location.href = "buzon_entrada_actualizar_Requerimiento.html";
 });	
 
+$("#to_1").click(function(){
+	     location.href = "gestion_cliente_reporte_resuelto.html";
+      });
+
+    
+
+      $("#to_4").click(function(){
+	      location.href = "gestion_cliente_actualizar_reporte_pendiente.html";
+      });
 $("#c1").click(function(){
 	     location.href = "configuracion.html";
       });

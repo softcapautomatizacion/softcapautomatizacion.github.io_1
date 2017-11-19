@@ -219,7 +219,7 @@ td, th {
         
 
        
-        <div  class="col s2 ubuntu-medium-12 top_20">           
+        <div id="to_1" class="col s2 ubuntu-medium-12 top_20">           
           <i class="small material-icons">book</i>            
          Reporte Pendiente       
         </div>
@@ -228,7 +228,7 @@ td, th {
           <i class="small material-icons">photo_album</i>          
           Reportes Resuelto
         </div>
-         <div  class="col s2 ubuntu-medium-12 top_20">           
+         <div id="to_2" class="col s2 ubuntu-medium-12 top_20">           
           <i class="material-icons">phonelink_setup</i>       
 	Reporte Asociados         
         </div>
@@ -438,7 +438,7 @@ td, th {
                      <td><a id="activar15"  class="waves-effect btn left">Activar</a></td>
                   </tr>
                    <tr>                   
-                     <td><a>15100</a></td>                    
+                     <td><a id="to_4">15100</a></td>                    
                      <td>10/11/2017</td>
                      <td>Error siac</td>
                      <td>02/12/2017</td>                     
@@ -718,6 +718,16 @@ $( "#guardar" ).on( "click", function() {
 $( "#ver" ).on( "click", function() {
    location.href = "buzon_entrada_actualizar_Requerimiento.html";
 });	
+
+$("#to_1").click(function(){
+	     location.href = "gestion_cliente_reporte_pendiente.html";
+      });
+
+    
+
+      $("#to_4").click(function(){
+	      location.href = "gestion_cliente_actulizar_reporte_resuelto.html";
+      });
 
 $("#c1").click(function(){
 	     location.href = "configuracion.html";

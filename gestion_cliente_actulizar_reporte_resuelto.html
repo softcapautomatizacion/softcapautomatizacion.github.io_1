@@ -219,7 +219,7 @@ td, th {
         
 
        
-        <div  class="col s2 ubuntu-medium-12 top_20">           
+        <div id="to_1" class="col s2 ubuntu-medium-12 top_20">           
           <i class="small material-icons">book</i>            
          Reporte Pendiente       
         </div>
@@ -228,7 +228,7 @@ td, th {
           <i class="small material-icons">photo_album</i>          
           Reportes Resuelto
         </div>
-         <div  class="col s2 ubuntu-medium-12 top_20">           
+        <div  id="to_2" class="col s2 ubuntu-medium-12 top_20">           
           <i class="material-icons">phonelink_setup</i>       
 	Reporte Asociados         
         </div>
@@ -499,7 +499,7 @@ td, th {
 	     
 	      <div id="test5">
    <div id="tabla-reporte" class="card-content #00897b teal darken-1 white-text"></p>
-	      Reporte 140636 - Agregar una funcionalidad en la sección "Relación puesto" donde genere el historial del cargo, unidad y puesto del trabajador.Dias de reporte: 10. Intalación: SPI Nomina . Solitado por: Luisana Perez Atendido: Francisco Andaluz
+	      Reporte 15100 - Agregar una funcionalidad en la sección "Relación puesto" donde genere el historial del cargo, unidad y puesto del trabajador.Dias de reporte: 10. Intalación: SPI Nomina . Solitado por: Luisana Perez Atendido: Francisco Andaluz
 	    </div>
               <table id="example1" class="striped" cellspacing="0" width="100%">
                <thead class=" #ffffff black-text card-content #4db6ac teal lighten-2 white-text">
@@ -723,6 +723,16 @@ $( "#guardar" ).on( "click", function() {
 $( "#ver" ).on( "click", function() {
    location.href = "buzon_entrada_actualizar_Requerimiento.html";
 });	
+
+
+$("#to_1").click(function(){
+	     location.href = "gestion_cliente_reporte_pendiente.html";
+      });
+
+    
+      $("#update").click(function(){
+	      location.href = "gestion_cliente_reporte_resuelto.html";
+      });
 
 $("#c1").click(function(){
 	     location.href = "configuracion.html";
