@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<title>SIAC- Crear Reporte - Menu - Ficha Tecnica </title>
+<title>SIAC- Crear Reporte - Menu - Empresa </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
  <link href="css/icon.css" rel="stylesheet">
@@ -78,7 +78,10 @@ td, th {
     width: 100%;
     z-index: 1001;
 }
+#popop1{
+    margin: 0px;
 
+}
 .content1-popup1 {
     margin:0px auto;
     margin-top:200px;
@@ -115,7 +118,6 @@ td, th {
     position: absolute;
     right: 15px;
 }
-.label-t {margin-left:30px;}
  </style>
 
  
@@ -198,12 +200,7 @@ td, th {
     <a id="pol" class="btn-floating btn-large po4 #757575 grey darken-1">
       <i class="large material-icons">store</i>
     </a>
-    <ul>
-      <li><a  class="btn-floating po4 red"><i class="material-icons">insert_chart</i></a></li>
-      <li><a class="btn-floating po4 yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-      <li><a class="btn-floating po4 green"><i class="material-icons">publish</i></a></li>
-      <li><a class="btn-floating po4 blue"><i class="material-icons">attach_file</i></a></li>
-    </ul>
+    
   </div>
     <div class="fixed-action-btn horizontal">
     <a  class="btn-floating btn-large po #757575 grey darken-1">
@@ -265,25 +262,25 @@ td, th {
         
 
        
-        <div  id="to_1" class="col s2 ubuntu-medium-12 top_20">           
+        <div id="top_20" class="col s2 ubuntu-medium-12 top_20">           
           <i class="small material-icons">store</i>            
           Datos de la Empresa        
         </div>
 
-        <div  id="to_2" class="col s2 ubuntu-medium-12 top_20"> 
+        <div  id="to_1" class="col s2 ubuntu-medium-12 top_20"> 
           <i class="small material-icons">person</i>          
           Contacto
         </div>
-         <div id="top_20" class="col s2 ubuntu-medium-12 top_20">           
+         <div  id="to_2" class="col s2 ubuntu-medium-12 top_20">           
           <i class="material-icons">people</i>       
 		Ficha Técnica         
         </div>
 
-        <div   id="to_3" class="col s2 ubuntu-medium-12 top_20"> 
+        <div  id="to_3" class="col s2 ubuntu-medium-12 top_20"> 
           <i class="material-icons">assignment</i>Usuario SPI
         </div>
 
-        <div   id="to_4" class="col s2 ubuntu-medium-12 top_20">          
+        <div  id="to_4" class="col s2 ubuntu-medium-12 top_20">          
           <i class="material-icons">check</i>
          Historico de cliente
         </div> 
@@ -316,82 +313,74 @@ td, th {
 	  <div class="card">
          
 	    <div id="reporte" class="card-content #424242 grey darken-3 white-text">
-	      Ficha Tecnica
+	      Datos de la Empresa
 	    </div>
 	    
  
 <form >
      
-      <a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">cached</i></a>
-		<a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">add</i></a>
-		<a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">local_printshop</i></a>
-                <a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">mode_edit</i></a><p>
-             <div id="tabla-reporte" class="card-content #00897b teal darken-1 white-text"></p>
-	       Ficha Técnica: Fama de America  - Empresa MultiPais
-	    </div>
-            <table id="example" class="striped" cellspacing="0" width="100%">
-               <thead class=" #ffffff black-text card-content #4db6ac teal lighten-2 white-text">
-                  <div class="row ">
-                     <tr>
-                        <th>Fecha</th>                                            
-                        <th>Producto</th>
-                        <th>Multipais</th>
-                        <th>S.O</th>                  
-                        <th>Enviar Correo</th>
-                        <th>Act</th>
-                       	<th>Select</th>				
-                     </tr>
-                  </div>
-               </thead>
-               <tbody>
-                  <tr>                   
-                     <td>15/04/2012</td>                    
-                     <td>SPI Organización Java</td>
-                     <td> <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" /> <label class="label-t" for="filled-in-box"></label> </td>
-                     <td>Windows</td>
-                     <td><input type="checkbox" class="filled-in" id="filled-in-box1" checked="checked" /> <label class="label-t" for="filled-in-box1"></label></td>
-                     <td>Si</td>
-                     <td><input type="checkbox" class="filled-in" id="filled-in-box2"  /> <label class="label-t" for="filled-in-box2"></label></td>                     
-                  </tr>
-                  <tr>                   
-                     <td>10/11/2012</td>                     
-                     <td>SPI Seguridad Java</td>
-                     <td> <input type="checkbox" class="filled-in" id="filled-in-box3"  /> <label class="label-t" for="filled-in-box3"></label> </td>
-                     <td>Windows</td>
-                     <td><input type="checkbox" class="filled-in" id="filled-in-box4" checked="checked"/> <label class="label-t" for="filled-in-box4"></label></td>
-                     <td>Si</td>
-                     <td><input type="checkbox" class="filled-in" id="filled-in-box5"  /> <label class="label-t" for="filled-in-box5"></label></td>                                          
-                  </tr>
-                  <tr>                   
-                     <td>15/09/2013</td>                     
-                     <td>SPI Talento Java</td>
-                     <td> <input type="checkbox" class="filled-in"  /> <label class="label-t" for="filled-in-box6"></label> </td>
-                     <td>Linux</td>
-                     <td><input type="checkbox" class="filled-in" id="filled-in-box7" checked="checked" /> <label class="label-t" for="filled-in-box7"></label></td>
-                     <td>Si</td>
-		     <td><input type="checkbox" class="filled-in" id="filled-in-box8"  /> <label class="label-t" for="filled-in-box8"></label></td>                                          
-                  </tr>
-<tr>                   
-                     <td>10/11/2017</td>                     
-                     <td>SPI Autoservicios Java</td>
-                     <td> <input type="checkbox" class="filled-in" id="filled-in-box9"  /> <label class="label-t" for="filled-in-box9"></label> </td>
-                     <td>MAC</td>
-                     <td><input type="checkbox" class="filled-in" id="filled-in-box10" /> <label class="label-t" for="filled-in-box10"></label></td>
-                     <td>Si</td> 
-		     <td><input type="checkbox" class="filled-in" id="filled-in-box11"  /> <label class="label-t" for="filled-in-box11"></label></td>                                         
-                  </tr>
-<tr>                   
-                     <td>05/03/2014</td>                     
-                     <td>SPI Nomina Java</td>
-                     <td> <input type="checkbox" class="filled-in" id="filled-in-box12"  checked="checked" /> <label class="label-t" for="filled-in-box12"></label> </td>
-                     <td>MAC</td>
-                     <td><input type="checkbox" class="filled-in" id="filled-in-box13" checked="checked" /> <label class="label-t" for="filled-in-box13"></label></td>
-                     <td>Si</td> 
-		     <td><input type="checkbox" class="filled-in" id="filled-in-box14"  /> <label class="label-t" for="filled-in-box14"></label></td>                                         
-                  </tr>
+        <div class="input-field col s1 m2">
+	  <i class="material-icons prefix">date_range</i>
+          <input  id="fecha" type="text" disabled class="validate" >
 
-               </tbody>
-            </table>
+          <label for="fecha">Fecha de Registro</label>
+        </div>
+        <div class="input-field col s1 m2">
+	  <i class="material-icons prefix">store</i>
+          <input id="rif" type="text" disabled class="validate">
+          <label for="rif">Rif</label>
+        </div>
+        <div class="input-field col s3 m5">
+          <input id="cliente" type="text" disabled class="validate ">
+          <label for="cliente">Nombre de Empresa</label>
+        </div>
+		<div class="input-field col s1 m3">
+	  <i class="material-icons prefix">chrome_reader_mode</i>
+          <input  id="segmento" type="text" disabled class="validate ">
+          <label for="segmento">Segmento</label>
+        </div>
+        <div class="input-field col s1 m2">
+	  <i class="material-icons prefix">phone</i>
+          <input id="telefono" type="text" disabled class="validate">
+          <label for="telefono">Telefono</label>
+        </div>
+         <div class="input-field col s2 m4">
+	  <i class="material-icons prefix">drafts</i>
+          <input id="correo" type="text" disabled class="validate">
+          <label for="correo">Correo</label>
+        </div>        
+
+         <div class="input-field col s2 m3">
+	  <i class="material-icons prefix">perm_contact_calendar</i>
+          <input id="ejecutivo" type="text" disabled class="validate">
+          <label for="ejecutivo"> Ejecutivo de Venta</label>
+        </div>
+        <div class="input-field col s2 m3">
+	  <i class="material-icons prefix">local_library</i>
+          <input id="consultor" type="text" disabled class="validate">
+          <label for="consultor">Consultor</label>
+        </div>	
+
+     
+        <div class="input-field col s10 m12">
+	  <i class="material-icons prefix">location_off</i>
+          <input id="fiscal" type="text" disabled class="validate">
+          <label for="fiscal">Dirección Fiscal</label>
+        </div>
+     
+     
+        <div class="input-field col s10 m12">
+	  <i class="material-icons prefix">location_on</i>
+          <input id="comercial" type="email" disabled class="validate">
+          <label for="comercial">Dirección Comercial</label>
+        </div>
+      
+      <div class="row">
+        <div class="col s12">
+          
+         
+        </div>
+      </div>
   </form >
 
 </div > 
@@ -403,10 +392,15 @@ td, th {
 	    <div id="reporte" class="card-content #424242 grey darken-3 white-text">
 	      Agregar Reporte 
 	    </div>
-	   
+	    <div class="card-tabs">
+	      
+	    </div>
 	    <div class="card-content grey lighten-4 ">
 	     
-	      <div id="test5">
+	      <div id="test5"><form >
+
+
+      <div class="row">
 
   
        <div class="input-field  col s6"> 
@@ -414,6 +408,7 @@ td, th {
 
      
 	  <i class="material-icons prefix">book</i>
+
     <select>
       <option value="" >Seleccionar reporte</option>
       <option value="1">Error Siac</option>
@@ -437,21 +432,7 @@ td, th {
 
         <div class="input-field col s3">
 <i class="material-icons prefix">perm_phone_msg</i>
-    <select> $("#to_1").click(function(){
-	     location.href = "gestion_cliente_empresa.html";
-      });
-
-      $("#to_2").click(function(){
-	      location.href = "gestion_cliente_ficha_tecnica.html";
-      });
-
-      $("#to_3").click(function(){
-	      location.href = "gestion_cliente_usuario_SPI.html";
-      });
-
-      $("#to_4").click(function(){
-	      location.href = "gestion_cliente_historico_cliente.htmll";
-      });
+    <select>
       <option value="" >Seleccionar atención</option>
       <option value="1">correo</option>
       <option value="2">telefono</option>
@@ -483,12 +464,11 @@ td, th {
 		 <i class="material-icons prefix">touch_app</i>
           <textarea id="textarea1" class="materialize-textarea validate"></textarea>
           <label for="textarea1">Seguimiento</label>
- <a id="guardar"  class="waves-effect btn left"><i class="material-icons left">save</i>Guardar</a>
         </div>
       </div>
+	     <a id="guardar"  class="waves-effect btn left"><i class="material-icons left">save</i>Guardar</a>
 	    
-	    
-           </div>	      
+    </form></div>	      
 	    </div>
 	  </div>
 
@@ -564,7 +544,35 @@ td, th {
  
 </div>
  </div>
+  <div id="popup1" style="display: none;">
+	  <div class="content1-popup1">
+			<div class="close11"><a href="#" id="close11"><img src=""/></a></div>
+		<div>
 
+                 
+		  <div class="input-field col s12"> 
+	              <i class="material-icons prefix">perm_identity</i>
+		 	<input placeholder="Usuario: Alejandra Rodriguez" id="usuario1" disabled type="text" class="">
+		  </div>
+       
+        	<div class="input-field col s12"> 
+	              <i class="material-icons prefix">store</i>
+		      <input placeholder="Empresa: Fama de America" id="empresa2" disabled type="text" class="">		
+                </div>
+                <div class="input-field col s12"> 
+	            <i class="material-icons prefix">chrome_reader_mode</i>
+		    <input placeholder="Segmento: Black" id="segmento" disabled type="text" class="">		
+		</div>      
+             <div class="input-field col s12"> 
+           	     <i class="material-icons prefix">hourglass_empty</i>
+		    <input placeholder="Status: Solvente" id="status" disabled type="text" class="">
+	    </div>      		
+              <div class="input-field col s12"> 
+	            <i class="material-icons prefix">add_alert</i>
+		   <input placeholder="Condición: Activo" id="condicion" disabled type="text" class="">
+	     </div>      		
+         
+</div>
 
 </body>
 
@@ -658,21 +666,23 @@ $( "#guardar" ).on( "click", function() {
 $( "#ver" ).on( "click", function() {
    location.href = "buzon_entrada_actualizar_Requerimiento.html";
 });	
- $("#to_1").click(function(){
-	     location.href = "gestion_cliente_empresa.html";
+
+     $("#to1").click(function(){
+	     location.href = "gestion_cliente_contacto.html";
       });
 
-      $("#to_2").click(function(){
-	      location.href = "gestion_cliente_contacto.html";
+      $("#to2").click(function(){
+	      location.href = "gestion_cliente_ficha_tecnica.html";
       });
 
-      $("#to_3").click(function(){
+      $("#to3").click(function(){
 	      location.href = "gestion_cliente_usuario_SPI.html";
       });
 
-      $("#to_4").click(function(){
-	      location.href = "gestion_cliente_historico_cliente.html";
+      $("#to4").click(function(){
+	      location.href = "gestion_cliente_historico_cliente.htmll";
       });
+
 $("#c1").click(function(){
 	     location.href = "configuracion.html";
       });
@@ -701,6 +711,7 @@ $("#c1").click(function(){
       });
                    
        });
+
  $(document).ready(function() {
     $('select').material_select();
   });

@@ -264,16 +264,16 @@ td, th {
         
 
        
-        <div  class="col s2 ubuntu-medium-12 top_20">           
+        <div  id="to_1" class="col s2 ubuntu-medium-12 top_20">           
           <i class="small material-icons">store</i>            
           Datos de la Empresa        
         </div>
 
-        <div  class="col s2 ubuntu-medium-12 top_20"> 
+        <div  id="to_2" class="col s2 ubuntu-medium-12 top_20"> 
           <i class="small material-icons">person</i>          
           Contacto
         </div>
-         <div  class="col s2 ubuntu-medium-12 top_20">           
+         <div   id="to_3" class="col s2 ubuntu-medium-12 top_20">           
           <i class="material-icons">people</i>       
 		Ficha Técnica         
         </div>
@@ -282,7 +282,7 @@ td, th {
           <i class="material-icons">assignment</i>Usuario SPI
         </div>
 
-        <div  class="col s2 ubuntu-medium-12 top_20">          
+        <div  id="to_4" class="col s2 ubuntu-medium-12 top_20">          
           <i class="material-icons">check</i>
          Historico de cliente
         </div> 
@@ -593,6 +593,21 @@ $( "#ver" ).on( "click", function() {
    location.href = "buzon_entrada_actualizar_Requerimiento.html";
 });	
 
+ $("#to_1").click(function(){
+	     location.href = "gestion_cliente_empresa.html";
+      });
+
+      $("#to_2").click(function(){
+	      location.href = "gestion_cliente_contacto.html";
+      });
+
+      $("#to_3").click(function(){
+	      location.href = "gestion_cliente_ficha_tecnica.html";
+      });
+
+      $("#to_4").click(function(){
+	      location.href = "gestion_cliente_historico_cliente.html";
+      });
 $("#c1").click(function(){
 	     location.href = "configuracion.html";
       });

@@ -200,12 +200,7 @@ td, th {
     <a id="pol" class="btn-floating btn-large po4 #757575 grey darken-1">
       <i class="large material-icons">store</i>
     </a>
-    <ul>
-      <li><a  class="btn-floating po4 red"><i class="material-icons">insert_chart</i></a></li>
-      <li><a class="btn-floating po4 yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-      <li><a class="btn-floating po4 green"><i class="material-icons">publish</i></a></li>
-      <li><a class="btn-floating po4 blue"><i class="material-icons">attach_file</i></a></li>
-    </ul>
+    
   </div>
     <div class="fixed-action-btn horizontal">
     <a  class="btn-floating btn-large po #757575 grey darken-1">
@@ -272,20 +267,20 @@ td, th {
           Datos de la Empresa        
         </div>
 
-        <div  class="col s2 ubuntu-medium-12 top_20"> 
+        <div  id="to_1" class="col s2 ubuntu-medium-12 top_20"> 
           <i class="small material-icons">person</i>          
           Contacto
         </div>
-         <div  class="col s2 ubuntu-medium-12 top_20">           
+         <div  id="to_2" class="col s2 ubuntu-medium-12 top_20">           
           <i class="material-icons">people</i>       
 		Ficha Técnica         
         </div>
 
-        <div  class="col s2 ubuntu-medium-12 top_20"> 
+        <div  id="to_3" class="col s2 ubuntu-medium-12 top_20"> 
           <i class="material-icons">assignment</i>Usuario SPI
         </div>
 
-        <div  class="col s2 ubuntu-medium-12 top_20">          
+        <div  id="to_4" class="col s2 ubuntu-medium-12 top_20">          
           <i class="material-icons">check</i>
          Historico de cliente
         </div> 
@@ -549,56 +544,13 @@ td, th {
  
 </div>
  </div>
-  <div id="popup1" style="display: none;">
-	  <div class="content1-popup1">
-			<div class="close11"><a href="#" id="close11"><img src=""/></a></div>
-		<div>
 
-                 
-		  <div class="input-field col s12"> 
-	              <i class="material-icons prefix">perm_identity</i>
-		 	<input placeholder="Usuario: Alejandra Rodriguez" id="usuario1" disabled type="text" class="">
-		  </div>
-       
-        	<div class="input-field col s12"> 
-	              <i class="material-icons prefix">store</i>
-		      <input placeholder="Empresa: Fama de America" id="empresa2" disabled type="text" class="">		
-                </div>
-                <div class="input-field col s12"> 
-	            <i class="material-icons prefix">chrome_reader_mode</i>
-		    <input placeholder="Segmento: Black" id="segmento" disabled type="text" class="">		
-		</div>      
-             <div class="input-field col s12"> 
-           	     <i class="material-icons prefix">hourglass_empty</i>
-		    <input placeholder="Status: Solvente" id="status" disabled type="text" class="">
-	    </div>      		
-              <div class="input-field col s12"> 
-	            <i class="material-icons prefix">add_alert</i>
-		   <input placeholder="Condición: Activo" id="condicion" disabled type="text" class="">
-	     </div>      		
-         
-</div>
 
 </body>
 
   <script src="js/materialize1.min.js"></script>
 	<script>
-$(document).ready(function() {
-				setTimeout(function() {
-			        $('#popup1').fadeIn(1500);
-				},2000);
-				$('.popup1-overlay').fadeIn(1500);
-				},2000);
 
-
-                              $('.popup1-overlay').height($(window).height());
-
-
-				$("#btnCerrar1").click(function () {
-					setTimeout(function() {
-					$(".popup1-overlay").fadeOut(1500);
-				   	},500);
-});
    $(document).ready(function(){
       $('.carousel').carousel();
 	  
@@ -672,6 +624,22 @@ $( "#ver" ).on( "click", function() {
    location.href = "buzon_entrada_actualizar_Requerimiento.html";
 });	
 
+     $("#to_1").click(function(){
+	     location.href = "gestion_cliente_contacto.html";
+      });
+
+      $("#to_2").click(function(){
+	      location.href = "gestion_cliente_ficha_tecnica.html";
+      });
+
+      $("#to_3").click(function(){
+	      location.href = "gestion_cliente_usuario_SPI.html";
+      });
+
+      $("#to_4").click(function(){
+	      location.href = "gestion_cliente_historico_cliente.html";
+      });
+
 $("#c1").click(function(){
 	     location.href = "configuracion.html";
       });
@@ -700,6 +668,7 @@ $("#c1").click(function(){
       });
                    
        });
+
  $(document).ready(function() {
     $('select').material_select();
   });
