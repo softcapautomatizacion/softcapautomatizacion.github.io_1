@@ -27,12 +27,7 @@
  width:350px;
  height:63px;
 }
-.po{margin-top:-700px; }
 
-.po1{margin-top:-550px;}
-.po2{margin-top:-400px;}
-.po3{margin-top:-250px;}
-.po4{margin-top:-850px;}
 
 #guardar{margin-right:90px;}
 #reporte{height:3px;  display: flex;
@@ -115,96 +110,135 @@ td, th {
     position: absolute;
     right: 15px;
 }
+table {
+    width: 85%;
+    margin-left: 0;
+}
  </style>
 
  
 </head>
 <body>
-
-<div class="col s3 ">
-	<div class="row">  
-         <div id="top_1" class="col s1 m1">                              
-           <img  src="img/logoindex2.png"  alt="" height="90%" width="90%"/>
+ <div class="row">  
+     
+       <div  id="to_1"  class="col s2 ubuntu-medium-12 top_20">           
+          <i class="small material-icons">closed_caption</i>            
+          Cuentas por Cobrar       
         </div>
 
-       
-        
-        <div id="top_2" class="col s2 m2 l2 lx3">
-
-          <div class="ubuntu-bold-26">Sistema SIAC</div>
-		
-          <div class="ubuntu-medium-14-26">Versión V1.0.0</div>
+        <div id="top_20" class="col s2 ubuntu-medium-12 top_20"> 
+          <i class="small material-icons">add_shopping_cart</i>          
+          Productos Adquiridos
+        </div>
+         <div id="to_2" class="col s2 ubuntu-medium-12 top_20">           
+          <i class="material-icons">local_grocery_store</i>       
+	  Proceso de Ventas        
         </div>
 
-        <div id="top_3" class="col s1 m1">        
-          <div class="ubuntu-medium-14">Usuario: INFOCENT</div>                    
+
+        <div  id="to_3" class="col s2 ubuntu-medium-12 top_20"> 
+          <i class="material-icons">assignment</i>Forma de Pago
         </div>
 
-        <div id="top_4" class="col s1 m1  ubuntu-medium-12">           
-          <i class="small material-icons">home</i>            
-          Inicio         
-        </div>
+        <div id="to_4" class="col s2 ubuntu-medium-12 top_20">          
+          <i class="material-icons">check</i>
+         Contrato
+        </div>  </div> 
+	<a  id="bo" class="waves-effect waves-light btn cambiar"><i class="material-icons left">add</i></a>
+		<a id="bo1" class="waves-effect waves-light btn cambiar"><i class="material-icons left">local_printshop</i></a>
+             
+<p>
+            <table id="example2" class="striped" cellspacing="0" width="100%">
+               <thead class=" #ffffff black-text card-content #4db6ac teal lighten-2 white-text">
+                  <div class="row ">
+                     <tr>
+                        <th>Fecha OC</th>
+                        <th>Id</th>
+                        <th>Producto</th>                                               
+                        <th>Modalidad</th>                        
+                        <th>Licencia</th>
+                        <th>Multipais</th>
+                        <th>Reactivado</th>                       
+                      					
+                     </tr>
+                  </div>
+               </thead>
+               <tbody>
+                  <tr>
+                   
+                     <td >01/11/2013</td> 
+                     <td>5412</td>
+                     <td>SPI Organizacion </td>                    
+                     <td>Licencia en Uso</td>
+                     <td>Licencia 1</td>
+                     <td><input type="checkbox" class="filled-in" id="filled-1"  /> <label class="label-t" for="filled-1"></label></td>    
+                     <td><input type="checkbox" class="filled-in" id="filled-in-1"  /> <label class="label-t" for="filled-in-1"></label></td>    
+                     
+                  </tr>
+                  <tr>                   
+                     <td >15/11/2015</td> 
+                     <td>812</td>
+                     <td>SPI Seguridad </td>                    
+                     <td>Licencia en Uso</td>
+                     <td>Licencia 1</td>
+                     <td><input type="checkbox" class="filled-in" id="filled-2"  /> <label class="label-t" for="filled-2"></label></td>    
+                     <td><input type="checkbox" class="filled-in" id="filled-in-2"  /> <label class="label-t" for="filled-in-2"></label></td>    
+                 
+                  </tr>
+                    <tr>
+                   
+                     <td >13/02/1997</td> 
+                     <td>4789</td>
+                     <td>SPI Talento </td>                    
+                     <td>Licencia en Uso</td>
+                     <td>Licencia 1</td>
+                     <td><input type="checkbox" class="filled-in" id="filled-3"  /> <label class="label-t" for="filled-3"></label></td>    
+                     <td><input type="checkbox" class="filled-in" id="filled-in-3"  /> <label class="label-t" for="filled-in-3"></label></td>    
+                
+                  </tr>
+                          <tr>
+                   
+                     <td >11/11/2016</td> 
+                     <td>511</td>
+                     <td>SPI Autoservicio </td>                    
+                     <td>Licencia en Uso</td>
+                     <td>Licencia 2</td>
+                     <td><input type="checkbox" class="filled-in" id="filled-4"  /> <label class="label-t" for="filled-4"></label></td>    
+                     <td><input type="checkbox" class="filled-in" id="filled-in-4"  /> <label class="label-t" for="filled-in-4"></label></td>    
+                   
+                </tr>
+                  <tr>                   
+                     <td >03/03/2017</td> 
+                     <td>515</td>
+                     <td>SPI Autoservicio Avanzado </td>                    
+                     <td>Licencia en Uso</td>
+                     <td>Licencia 3</td>
+                     <td><input type="checkbox" class="filled-in" id="filled-5"  /> <label class="label-t" for="filled-5"></label></td>    
+                     <td><input type="checkbox" class="filled-in" id="filled-in-5"  /> <label class="label-t" for="filled-in-5"></label></td>    
+                     
+                 </tr>
+                    <tr>
+                   
+                     <td >06/07/2014</td> 
+                      <td>4321</td>
+                     <td>SPI Nomina </td>                    
+                     <td>Licencia en Uso</td>
+                     <td>Licencia 2</td>
+                     <td><input type="checkbox" class="filled-in" id="filled-6"  /> <label class="label-t" for="filled-6"></label></td>    
+                     <td><input type="checkbox" class="filled-in" id="filled-in-6"  /> <label class="label-t" for="filled-in-6"></label></td>    
+                
+                </tr>
+               </tbody>
+            </table>
+</div > 
 
-        <div id="top_5" class="col s1 m1  ubuntu-medium-12"> 
-          <i class="small material-icons">person</i>          
-          Mi perfil
-        </div>
-         <div id="top_6" class="col s1 m1 l1 xl1  ubuntu-medium-12">           
-          <i class="material-icons">store</i>
-        <div id="l" >
-    infocent   
-  </div>      
-        </div>
 
-        <div id="top_7" class="col s1 m1  ubuntu-medium-12"> 
-         <a  href="#" data-activates="slide-out" class="button-collapse"> <i class="material-icons">dehaze</i>Automatizacion</br> </a> 
-        </div>
-
-        <div id="top_8" class="col s1 m1 ubuntu-medium-12">          
-          <i class="material-icons">clear</i>
-          Cerrar sesión
-        </div>
-      </div>
-		 
-        
-     </div>
-  
-<div class="row">  
- 
-
-   
-	  <div class="col s3 ">
-            <div class="row">
-               <div class="collection">
-                  <a href="#!" id="crear"  class="collection-item active"><i class="material-icons prefix waves-effect waves-light-blue lighten-1 ">work</i>  Gestión de Cliente</a>
-                  <a href="#!" id="listar" class="collection-item "><i class="material-icons prefix waves-effect waves-light-blue lighten-1">email</i>  Gestión General</a>    
-               </div>
-      
-
-
-
- 	 <a class='dropdown-button btn transparent  black-text hide' id="cambiar" href='#' data-activates='dropdown1'>Cambiar Empresa</a> 
-
-  <!-- Dropdown Structure -->
- 
-  <ul id='dropdown1' class='dropdown-content'>
-    <li><a id="l1" href="#!">infocent</a></li>
-    <li><a href="#!">nomisistemas</a></li>
-    <li class="divider">softcap</li>
-   
-  </ul>	 
-	  <div class="fixed-action-btn horizontal">
-    <a id="pol1" class="btn-floating btn-large po4 #757575 grey darken-1">
+<div class="fixed-action-btn horizontal">
+    <a id="pol1" class="btn-floating btn-large po #757575 grey darken-1">
       <i class="large material-icons">store</i>
     </a>
-    
-  </div>
-    <div class="fixed-action-btn horizontal">
-    <a id="pol2" class="btn-floating btn-large po #757575 grey darken-1">
-      <i class="large material-icons">phone</i>
-    </a>
    
-  </div>
+</div>
       <div class="fixed-action-btn horizontal">
     <a id="pol3" class="btn-floating btn-large po1 #757575 grey darken-1">
       <i class="large material-icons">book</i>
@@ -223,326 +257,6 @@ td, th {
     </a>
    
   </div>
- 
-   </div>
- 
-   </div>     
-  
-
- 	
-  <div class="col s9"> 
-<div class="row">
-<div class="col s11">
-
-<div class="row">
-        
-
-       
-        <div   class="col s2 ubuntu-medium-12 top_20">           
-          <i class="small material-icons">closed_caption</i>            
-          Cuentas por Cobrar       
-        </div>
-
-        <div id="top_20" class="col s2 ubuntu-medium-12 top_20"> 
-          <i class="small material-icons">add_shopping_cart</i>          
-          Productos Adquiridos
-        </div>
-         <div  class="col s2 ubuntu-medium-12 top_20">           
-          <i class="material-icons">local_grocery_store</i>       
-	  Proceso de Ventas        
-        </div>
-
-        <div  class="col s2 ubuntu-medium-12 top_20"> 
-          <i class="material-icons">assignment</i>Forma de Pago
-        </div>
-
-        <div  class="col s2 ubuntu-medium-12 top_20">          
-          <i class="material-icons">check</i>
-         Contrato
-        </div> 
-<ul id="slide-out" class="side-nav ">             
-            <li><div class="chip" onclick="alert('¡No tienes permiso para este modulo!')">  Modulo: Venta </div> 
-            <li><div id="auto" class="chip">  Modulo: Automatización </div> 
-            <li><div class="chip">  Modulo: Logistica </div> 
-            <li><div class="chip">  Modulo: Proceso </div>
-            <li><div class="chip">  Modulo: Automatización </div>
-            <li><div class="chip">  Modulo: Gestión de Ambiente </div>
-            <li><div class="chip">  Modulo: General de Consulta </div> 
-            <li><div class="chip">  Modulo: Venta </div> 
-            <li><div class="chip">  Modulo: Atención telefonica </div> 
-            <li><div class="chip">  Modulo: Logistica </div> 
-            <li><div class="chip">  Modulo: Proceso </div>
-            <li><div class="chip">  Modulo: Automatización </div>
-            <li><div class="chip">  Modulo: Gestión de Ambiente </div>
-            <li><div class="chip">  Modulo: General de Consulta </div> 
-            <li><div class="chip">  Modulo: Venta </div> 
-            <li><div class="chip">  Modulo: Atención telefonica </div> 
-            <li><div class="chip">  Modulo: Logistica </div> 
-            <li><div class="chip">  Modulo: Proceso </div>
-            <li><div class="chip">  Modulo: Automatización </div>
-            <li><div class="chip">  Modulo: Gestión de Ambiente </div>
-            </ul>
-   
-
-<div class="row">
-<div class="col s12">
-	  <div class="card">
-         
-	    <div id="reporte" class="card-content #424242 grey darken-3 white-text">
-	     Productos Adquiridos
-	    </div>
-	    
- 
-<form >
-     
-      <a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">cached</i></a>
-		<a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">add</i></a>
-		<a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">local_printshop</i></a>
-                <a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">mode_edit</i></a><p>
-            <div id="tabla-reporte" class="card-content #00897b teal darken-1 white-text"></p>
-	       Producto Adquirido por: Fama de America 
-	    </div>
-            <table id="example" class="striped" cellspacing="0" width="100%">
-               <thead class=" #ffffff black-text card-content #4db6ac teal lighten-2 white-text">
-                  <div class="row ">
-                     <tr>
-                        <th>Fecha OC</th>
-                        <th>Id</th>
-                        <th>Producto</th>                                               
-                        <th>Modalidad</th>                        
-                        <th>Licencia</th>
-                        <th>Multipais</th>
-                        <th>Reactivado</th>                       
-                        <th>Select</th>						
-                     </tr>
-                  </div>
-               </thead>
-               <tbody>
-                  <tr>
-                   
-                     <td >01/11/2013</td> 
-                     <td>5412</td>
-                     <td>SPI Organizacion </td>                    
-                     <td>Licencia en Uso</td>
-                     <td>Licencia 1</td>
-                     <td><input type="checkbox" class="filled-in" id="filled-1"  /> <label class="label-t" for="filled-1"></label></td>    
-                     <td><input type="checkbox" class="filled-in" id="filled-in-1"  /> <label class="label-t" for="filled-in-1"></label></td>    
-                   <td><input type="checkbox" class="filled-in" id="filled-in-box1"  /> <label class="label-t" for="filled-in-box1"></label></td>    
-                  </tr>
-                  <tr>                   
-                     <td >15/11/2015</td> 
-                     <td>812</td>
-                     <td>SPI Seguridad </td>                    
-                     <td>Licencia en Uso</td>
-                     <td>Licencia 1</td>
-                     <td><input type="checkbox" class="filled-in" id="filled-2"  /> <label class="label-t" for="filled-2"></label></td>    
-                     <td><input type="checkbox" class="filled-in" id="filled-in-2"  /> <label class="label-t" for="filled-in-2"></label></td>    
-                   <td><input type="checkbox" class="filled-in" id="filled-in-box2"  /> <label class="label-t" for="filled-in-box2"></label></td>    
-                  </tr>
-                    <tr>
-                   
-                     <td >13/02/1997</td> 
-                     <td>4789</td>
-                     <td>SPI Talento </td>                    
-                     <td>Licencia en Uso</td>
-                     <td>Licencia 1</td>
-                     <td><input type="checkbox" class="filled-in" id="filled-3"  /> <label class="label-t" for="filled-3"></label></td>    
-                     <td><input type="checkbox" class="filled-in" id="filled-in-3"  /> <label class="label-t" for="filled-in-3"></label></td>    
-                   <td><input type="checkbox" class="filled-in" id="filled-in-box3"  /> <label class="label-t" for="filled-in-box3"></label></td>    
-                   
-                  </tr>
-                          <tr>
-                   
-                     <td >11/11/2016</td> 
-                     <td>511</td>
-                     <td>SPI Autoservicio </td>                    
-                     <td>Licencia en Uso</td>
-                     <td>Licencia 2</td>
-                     <td><input type="checkbox" class="filled-in" id="filled-4"  /> <label class="label-t" for="filled-4"></label></td>    
-                     <td><input type="checkbox" class="filled-in" id="filled-in-4"  /> <label class="label-t" for="filled-in-4"></label></td>    
-                   <td><input type="checkbox" class="filled-in" id="filled-in-box4"  /> <label class="label-t" for="filled-in-box4"></label></td>    
-                </tr>
-                  <tr>                   
-                     <td >03/03/2017</td> 
-                     <td>515</td>
-                     <td>SPI Autoservicio Avanzado </td>                    
-                     <td>Licencia en Uso</td>
-                     <td>Licencia 3</td>
-                     <td><input type="checkbox" class="filled-in" id="filled-5"  /> <label class="label-t" for="filled-5"></label></td>    
-                     <td><input type="checkbox" class="filled-in" id="filled-in-5"  /> <label class="label-t" for="filled-in-5"></label></td>    
-                   <td><input type="checkbox" class="filled-in" id="filled-in-box5"  /> <label class="label-t" for="filled-in-box5"></label></td>    
-                 </tr>
-                    <tr>
-                   
-                     <td >06/07/2014</td> 
-                      <td>4321</td>
-                     <td>SPI Nomina </td>                    
-                     <td>Licencia en Uso</td>
-                     <td>Licencia 2</td>
-                     <td><input type="checkbox" class="filled-in" id="filled-6"  /> <label class="label-t" for="filled-6"></label></td>    
-                     <td><input type="checkbox" class="filled-in" id="filled-in-6"  /> <label class="label-t" for="filled-in-6"></label></td>    
-                   <td><input type="checkbox" class="filled-in" id="filled-in-box6"  /> <label class="label-t" for="filled-in-box6"></label></td>    
-                </tr>
-               </tbody>
-            </table>
-  </form >
-
-</div > 
-	      
-<div class="row">
-<div class="col s12">
-	  <div class="card">
-         
-	    <div id="reporte" class="card-content #424242 grey darken-3 white-text">
-	      Agregar Reporte 
-	    </div>
-	   
-	    <div class="card-content grey lighten-4 ">
-	     
-	      <div id="test5">
-
-  
-       <div class="input-field  col s6"> 
-
-
-     
-	  <i class="material-icons prefix">book</i>
-    <select>
-      <option value="" >Seleccionar reporte</option>
-      <option value="1">Error Siac</option>
-      <option value="2">Soporte Técnico</option>
-      <option value="3">Innovación</option>
-    </select>
-    <label>Tipo de Reporte</label>
- 
-  </div>
-      
-	 <div class="input-field col s3">
-	  <i class="material-icons prefix">person</i>
-    <select>
-      <option value="" >Seleccionar contacto</option>
-      <option value="1">Marcos Rodriguez</option>
-      <option value="2">Ronald Capetillo</option>
-      <option value="3">Kelia Martinez</option>
-    </select>
-    <label>Contacto</label>
-  </div>
-
-        <div class="input-field col s3">
-<i class="material-icons prefix">perm_phone_msg</i>
-    <select>
-      <option value="" >Seleccionar atención</option>
-      <option value="1">correo</option>
-      <option value="2">telefono</option>
-      <option value="3">encuesta</option>
-	  <option value="4">reunión de avance</option>
-      <option value="5">dpto de ventas</option>    
-    </select>
-    <label>Atención</label>
-  </div>
- <div class="input-field col s3">
-	  <i class="material-icons prefix">dvr</i>
-    <select>
-      <option value="" >Seleccionar Instalación</option>
-      <option value="1">Nomina 10.7.0</option>
-      <option value="2">PHP 10.7.1</option>
-      <option value="3">Java 10.7.2</option>
-    </select>
-    <label>Instalación</label>
-  </div>
-  <div class="input-field col s9"> 
-      <i class="material-icons prefix">announcement</i>
-          <input id="icon_telephone" type="tel" class="validate">
-          <label for="icon_telephone">  Descripción</label>
-        </div>	
-<div class="row">
-    <form class="col s11">
-      <div class="row">
-        <div class="input-field col s11">
-		 <i class="material-icons prefix">touch_app</i>
-          <textarea id="textarea1" class="materialize-textarea validate"></textarea>
-          <label for="textarea1">Seguimiento</label>
- <a id="guardar"  class="waves-effect btn left"><i class="material-icons left">sd_card</i>Guardar</a>
-        </div>
-      </div>
-	    
-	    
-           </div>	      
-	    </div>
-	  </div>
-
-</div>
-</div>        
-	 
-  </div>
-
- 
-   </div> 
-
-
-</div>        
-	 
-  </div>
-
- 
-   </div> 
-
-
-
-  
-   
-  <!-- Modal Structure -->
-
-  <div id="modal1" class="modal bottom-sheet">
-    <div class="modal-content">
-      <h5>Seleccionar el Modulo</h5>     
-	  <div class="col s2 "> 
-	<div class="row">     
-
-	  <div class="collection">
-	  
-		<a href="#!" class="collection-item active">Atención Telefonica</a>
-		<a href="#!" class="collection-item">Control de Mantenimiento</a>
-		<a href="#!" class="collection-item">Control de Horas de Asesoría</a>
-		<a href="#!" class="collection-item">Control de Proyecto</a>	
-        <a href="#!" class="collection-item ">General de Consulta</a>
-		<a href="#!" class="collection-item">Automatización</a>
-		<a href="#!" class="collection-item">Control de Calidad</a>
-		<a href="#!" class="collection-item">Atención al Cliente</a>			
-	  </div>       
-        </div>     
-   
- </div>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close  waves-effect waves-light btn"> <i class="Tiny material-icons">close</i></a>
-    </div>
-  </div>
- 
-
-
- <div id="modal2" class="modal bottom-sheet">
-    <div class="modal-content">
-      <h5>Seleccionar el Cliente</h5>     
-	  <div class="col s2 "> 
-	<div class="row">     
-
-	  <div class="collection">
-	  
-		<a href="#!" class="collection-item active">Buscar Cliente</a>
-			
-	  </div>       
-        </div>     
-   
- </div>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close  waves-effect waves-light btn"> <i class="Tiny material-icons">close</i></a>
-    </div>
-  </div>
- 
-</div>
- </div>
 
 
 </body>
@@ -626,6 +340,22 @@ $("#l").click(function(){
       });
 
 $(document).ready(function() {
+
+  $("#to_1").click(function(){
+	     location.href = "gestion_cliente_cuentasxcobrar.html";
+      });
+
+      $("#to_2").click(function(){
+	      location.href = "gestion_cliente_proceso_venta.html";
+      });
+
+      $("#to_3").click(function(){
+	      location.href = "gestion_cliente_forma_pago.html";
+      });
+
+      $("#to_4").click(function(){
+	      location.href = "gestion_cliente_contrato.html";
+      }); 
 
 $( "#listar" ).on( "click", function() {
    location.href = "buzon_entrada_modulo_general_consulta.html";

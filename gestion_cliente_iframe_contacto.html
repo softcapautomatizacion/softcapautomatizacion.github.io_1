@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<title>SIAC- Crear Reporte - Menu - Empresa </title>
+<title>SIAC- Crear Reporte - Menu - Contacto </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
  <link href="css/icon.css" rel="stylesheet">
@@ -73,10 +73,7 @@ td, th {
     width: 100%;
     z-index: 1001;
 }
-#popop1{
-    margin: 0px;
 
-}
 .content1-popup1 {
     margin:0px auto;
     margin-top:200px;
@@ -113,9 +110,38 @@ td, th {
     position: absolute;
     right: 15px;
 }
+input[type=text]{
+  height: 20px;
+}
+ .textbox
+  {
+  border: 1px solid #DBE1EB;
+  font-size: 8px;
+  font-family: Arial, Verdana;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+    
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  background: #FFFFFF;
+  background: linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -moz-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -webkit-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -o-linear-gradient(left, #FFFFFF, #F7F9FA);
+  color: #2E3133;
+  }
+
 .chip {
     margin-top: 0px;
     margin-bottom: 0px;
+}
+table {
+    width: 85%;
+    margin-left: 0;
 }
  </style>
 
@@ -123,30 +149,18 @@ td, th {
 </head>
 <body>
 
-  
+	
 
-
- 	
-
-        
-
-       
-       
-
-<div class="row">
-<div class="col s11">
-	  <div class="card">
- 
  
  
  <div class="row">  
      
-        <div  id="top_20"  class="col s1 ubuntu-medium-12 top_20">           
+        <div  id="to_1"  class="col s1 ubuntu-medium-12 top_20 ">           
           <i class="small material-icons">store</i>            
           Datos de la Empresa        
         </div>
 
-        <div id="to_1"   class="col s1 ubuntu-medium-12 top_20"> 
+        <div  id="top_20" class="col s1 ubuntu-medium-12 top_20"> 
           <i class="small material-icons">person</i>          
           Contacto
         </div>
@@ -163,86 +177,94 @@ td, th {
           <i class="material-icons">check</i>
          Historico de cliente
 </div> </div> 
-         
-	    <div id="reporte" class="card-content #424242 grey darken-3 white-text">
-	      Datos de la Empresa
-	    </div>
-	    
- 
-<form >
-     
-        <div class="input-field col s1 m2">
-	  <i class="material-icons prefix">date_range</i>
-          <input  id="fecha" type="text" disabled class="validate" >
+	<a  id="bo" class="waves-effect waves-light btn cambiar"><i class="material-icons left">add</i></a>
+		<a id="bo1" class="waves-effect waves-light btn cambiar"><i class="material-icons left">local_printshop</i></a>
+             
+<p>
 
-          <label for="fecha">Fecha de Registro</label>
-        </div>
-        <div class="input-field col s1 m2">
-	  <i class="material-icons prefix">store</i>
-          <input id="rif" type="text" disabled class="validate">
-          <label for="rif">Rif</label>
-        </div>
-        <div class="input-field col s3 m5">
-          <input id="cliente" type="text" disabled class="validate ">
-          <label for="cliente">Nombre de Empresa</label>
-        </div>
-		<div class="input-field col s1 m3">
-	  <i class="material-icons prefix">chrome_reader_mode</i>
-          <input  id="segmento" type="text" disabled class="validate ">
-          <label for="segmento">Segmento</label>
-        </div>
-        <div class="input-field col s1 m2">
-	  <i class="material-icons prefix">phone</i>
-          <input id="telefono" type="text" disabled class="validate">
-          <label for="telefono">Telefono</label>
-        </div>
-         <div class="input-field col s2 m4">
-	  <i class="material-icons prefix">drafts</i>
-          <input id="correo" type="text" disabled class="validate">
-          <label for="correo">Correo</label>
-        </div>        
 
-         <div class="input-field col s2 m3">
-	  <i class="material-icons prefix">perm_contact_calendar</i>
-          <input id="ejecutivo" type="text" disabled class="validate">
-          <label for="ejecutivo"> Ejecutivo de Venta</label>
-        </div>
-        <div class="input-field col s2 m3">
-	  <i class="material-icons prefix">local_library</i>
-          <input id="consultor" type="text" disabled class="validate">
-          <label for="consultor">Consultor</label>
-        </div>	
+            <table id="example1" class="striped" cellspacing="0" width="50%">
+               <thead class=" #ffffff black-text card-content #4db6ac teal lighten-2 white-text">
+                        
+                    
+                     <tr>
+					
+                        <th>  Nombre </th>
+						
+                        <th>  Area</th>
+                        <th> Correo</th>
+						<div class="col s1">
+                        <th>Act</th>
+                       </div > 
+                       					
+                     </tr>
 
-     
-        <div class="input-field col s10 m12">
-	  <i class="material-icons prefix">location_off</i>
-          <input id="fiscal" type="text" disabled class="validate">
-          <label for="fiscal">Dirección Fiscal</label>
-        </div>
-     
-     
-        <div class="input-field col s10 m12">
-	  <i class="material-icons prefix">location_on</i>
-          <input id="comercial" type="email" disabled class="validate">
-          <label for="comercial">Dirección Comercial</label>
-        </div>
-      
-      <div class="row">
-        <div class="col s12">
-          
-         
-        </div>
-      </div>
-  </form >
+               </thead>
+               <tbody>
+               <tr>                   
+                     <td  >María Alejandra Diaz</td>
+                     <td>Tecnologia</td>
+                     <td>automatizacion@gmail.com</td>
+                     <td>Si</td>                  
+
+                  </tr>
+                  <tr>                   
+                     <td id="bo5"><a  >Alejandra Perez</a></td> 
+                     <td>Recursos Humanos</td>
+                     <td>aperez@gmail.com</td>                    
+                     <td>Si</td>
+                   
+                  </tr>
+                    <tr>
+                   
+                     <td >Manuel Aponte</td> 
+                     <td>Tecnologia</td>
+                     <td>maponte@gmail.com</td>                    
+                     <td>Si</td>
+                   
+                  </tr>
+                 <tr>
+                   
+                     <td >Mario José Pio</td> 
+                     <td>Dirección General</td>
+                     <td>mpio@gmail.com</td>                    
+                     <td>Si</td>
+                
+                  </tr>
+                  <tr>                   
+                     <td >Genesis Limada</td> 
+                     <td>Compras</td>
+                     <td>glimada@gmail.com</td>                     
+                     <td>Si</td>
+                  
+                  </tr>
+                    <tr>
+                   
+                     <td >angela Aponte</td> 
+                     <td>Tecnologia</td>
+                     <td>aponte@gmail.com</td>                    
+                     <td>Si</td>
+                  </tr>
+                   <tr>                   
+                     <td >Ana Urbina</td> 
+                     <td>Servicio Técnico</td>
+                     <td>aurbina@gmail.com</td>                    
+                     <td>No</td>
+                  </tr>
+                    <tr>
+                   
+                     <td >Luis Acuña</td> 
+                     <td>Tecnologia</td>
+                     <td>acuna@gmail.com</td>
+                     <td>Si</td>
+                   </tr>
+               </tbody>
+            </table>
 
 </div > 
-	      
-<div class="fixed-action-btn horizontal">
-    <a id="pol1" class="btn tooltipped btn-floating btn-large po4 #757575 grey darken-1 " data-position="bottom" data-delay="50" data-tooltip="Menu empresa">
-      <i class="large material-icons">store</i>
-    </a>
-    
-</div>
+
+
+
 <div class="fixed-action-btn horizontal">
     <a id="pol2" class="btn-floating btn-large po #757575 grey darken-1">
       <i class="large material-icons">phone</i>
@@ -267,20 +289,33 @@ td, th {
     </a>
    
   </div>
-
- 
-   </div> 
-
-
-
-  
-   
-
 </body>
 
   <script src="js/materialize1.min.js"></script>
 	<script>
+$(document).ready(function(){
+    $('.tooltipped').tooltip({delay: 50});
 
+  });
+
+
+
+$(document).ready(function() {
+				setTimeout(function() {
+			        $('#popup1').fadeIn(1500);
+				},2000);
+				$('.popup1-overlay').fadeIn(1500);
+				},2000);
+
+
+                              $('.popup1-overlay').height($(window).height());
+
+
+				$("#btnCerrar1").click(function () {
+					setTimeout(function() {
+					$(".popup1-overlay").fadeOut(1500);
+				   	},500);
+});
    $(document).ready(function(){
       $('.carousel').carousel();
 	  
@@ -353,9 +388,16 @@ $( "#guardar" ).on( "click", function() {
 $( "#ver" ).on( "click", function() {
    location.href = "buzon_entrada_actualizar_Requerimiento.html";
 });	
+    $("#bo").click(function(){
+	     location.href = "gestion_cliente_contacto_agregar.html";
+      });
+$("#bo5").click(function(){
+	     location.href = "gestion_cliente_contacto_agregar.html";
+      });
+
 
      $("#to_1").click(function(){
-	     location.href = "gestion_cliente_iframe_contacto.html";
+	     location.href = "gestion_cliente_empresa.html";
       });
 
       $("#to_2").click(function(){
@@ -368,7 +410,8 @@ $( "#ver" ).on( "click", function() {
 
       $("#to_4").click(function(){
 	      location.href = "gestion_cliente_historico_cliente.html";
-      });
+      }); 
+
  $("#pol1").click(function(){
 	     location.href = "gestion_cliente_empresa.html";
       });
@@ -389,6 +432,9 @@ $("#pol5").click(function(){
 	     location.href = "gestion_cliente_horas.html";
       });
 
+$("#bo1").click(function(){
+	     location.href = "listado_contacto.pdf";
+      });
 
 $("#c1").click(function(){
 	     location.href = "configuracion.html";
@@ -418,7 +464,6 @@ $("#c1").click(function(){
       });
                    
        });
-
  $(document).ready(function() {
     $('select').material_select();
   });

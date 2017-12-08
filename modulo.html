@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
   <html>
     <head>
       <title>SIAC- Seleccionar el modulo</title>
@@ -30,7 +30,15 @@
 
 .card-image img {height:150px; }
 
-
+.row .col.m3 {
+   
+    margin-left: 20px;
+    
+}
+.row .col.m1 {
+    width: 9.6333333333%;
+  
+}
 
  </style> 
     </head>
@@ -39,14 +47,12 @@
       <!-- Encabezado -->
       <div class="row">
         <div id="top_1" class="col s2 m1">                              
-          <img src="img/infocent_logo_fondo_oscuro.svg" alt="" height="90%" width="90%" />
+          <img src="img/logoindex2.png" alt="" height="90%" width="50%" />
 
 		
 		
         </div>
-       <div id="top_11" class="col s1 m1"> 
-        <img id="logo" src="img/logoindex2.png" class="logoSiac" alt="" height="70%" width="70%"/>
-       </div>
+      
         
         <div id="top_2" class="col s2 m2 l3 lx4">
 
@@ -78,32 +84,32 @@
       
       <!-- Subsistemas SPI  -->
       <div class="row">
-        <h6 class="white-text-module">SELECCIONAR MODULO</h6>
+      
 			<div class="row">
-				<div  class="col s4 m4">
+				<div  class="col s3 m3">
 					<div class="card ">
 						<div class="card-image">
 							<img src="img/siac_gc.jpg">
 						</div>
 						<div class="card-action">
-						  <a id="siac_gc" href="#">General de Consulta</a>
+						  <a id="siac_gc" href="#">Atención Telefonica </a>
 						</div>
 					</div>
 				</div>
 
-				<div  class="col s4 m4">
+				<div  class="col s3 m3">
 					<div class="card ">
 						<div class="card-image">
 						  <img src="img/siac_c.jpg">
 						  <span class="card-title"></span>
 						</div>           
 						<div class="card-action">
-						  <a id="siac_c" href="#">Configuracion</a>
+						  <a id="siac_c" href="#">Configuracion  de Flujo</a>
 						</div>
 					</div>
 				</div> 
     
-				<div class="col s4 m4">
+				<div class="col s3 m3">
 					<div class="card ">
 						<div class="card-image">
 						  <img src="img/spi-tal.jpg">
@@ -114,19 +120,22 @@
 						  <a id="spi-tal" href="#"> Ventas</a>
 						</div>
 					</div>
-				</div> 
-				<div  class="col s4 m4">
+				</div>
+                               
+                          <div  class="col s1 m1">.
+                        </div>
+				<div  class="col s3 m3">
 					<div class="card ">
 						<div class="card-image">
 						  <img src="img/siac_at.jpg">
 						  <span class="card-title"></span>
 						</div>					   
 						<div class="card-action">
-						  <a id="siac_at" href="#"> Atención telefonica</a>
+						  <a id="siac_at" href="#"> General de Consulta</a>
 						</div>
 					</div>
 				</div> 
-				<div id="r2" class="col s4 m4">
+				<div id="r2" class="col s3 m3">
 					<div class="card ">
 						<div class="card-image">
 						  <img src="img/spi_org.jpg">
@@ -137,7 +146,7 @@
 						</div>
 					</div>
 				</div> 
-				<div  class="col s4 m4">
+				<div  class="col s3 m3">
 					<div class="card ">
 						<div class="card-image">
 						  <img src="img/spi_seg.jpg">
@@ -188,22 +197,14 @@
 	  $(document).ready(function() {
 
 		$( "#siac_gc" ).on( "click", function() {
-			if( $('#test2').prop('checked') ) {
-			   location.href = "buzon_entrada_modulo_general_consulta.html";
-			}
-			if( $('#test1').prop('checked') && $('.c').prop('checked') ) {
-			   location.href = "opcion1.html";
-			}
-			if(  $('#test1').prop('checked') && !($('.c').prop('checked') )) { 
-			  alert("Seleccione un cliente por favor");
-			 }	
+			
+			   location.href = "buzon_entrada.html";
+			
 		});
 		$( "#siac_c" ).on( "click", function() {
-		   location.href = "configuracion.html";
+		   location.href = "gestion_administracion_configuracion_flujo.html";
 		});
-		$( "#siac_at" ).on( "click", function() {
-		   location.href = "buzon_entrada_modulo_general_consulta.html";
-		});
+		
 		
 		 var table = $('#example').DataTable();
       
