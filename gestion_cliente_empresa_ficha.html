@@ -1,0 +1,748 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>SIAC- Crear Reporte - Menu - Empresa </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+ <link href="css/icon.css" rel="stylesheet">
+ <link type="text/css" rel="stylesheet" href="css/estilos.css"  media="screen,projection"/>
+
+      <link href="css/materialize.min.css" rel="stylesheet" >
+      <link rel="stylesheet" href="css/materialize.min.css">
+      <script src="js/jquery-2.1.4.js"></script>
+      <link href="css/jquery.dataTables.min.css" rel="stylesheet"/>
+      <script src="js/jquery.dataTables.min.js"></script>
+      <script src="js/materialize1.min.js"></script>
+	  <link rel="stylesheet" href="css/style.css">
+ <style>
+
+
+
+.collection {margin-top:0; margin-left:-10px; width:350px;}
+ table {margin-left:35px; font-size: small}
+#modal1 {margin-left:300px; }
+#modal2 {margin-left:300px; }
+.modal-footer{margin-left:-450px;}
+#logo {
+ width:350px;
+ height:63px;
+}
+.po{margin-top:-700px; }
+
+.po1{margin-top:-550px;}
+.po2{margin-top:-400px;}
+.po3{margin-top:-250px;}
+.po4{margin-top:-850px;}
+
+#guardar{margin-right:90px;}
+#reporte{height:3px;  display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;}
+.chip{margin-top:20px; margin-bottom:40px}
+
+.tabs .indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: gray;
+    will-change: left, right;
+}
+
+
+form input:required {
+ border:1px solid gray;
+ /* otras propiedades */
+}
+
+#tabla-reporte{   height:1px;  display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+margin-top:5px;}
+
+table.dataTable thead th, table.dataTable thead td {    
+    border-bottom: 1px solid white;
+}
+td, th {
+  
+     border-radius: 0px; 
+}
+.cambiar{width:10px; padding-left:5px;}
+
+.cambiar1{width:10px; margin-bottom:10px; margin-right:1px; padding-left:5px;}
+#popup1 {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+#popop1{
+    margin: 0px;
+
+}
+.content1-popup1 {
+    margin:0px auto;
+    margin-top:200px;
+	margin-left:20px;
+    position:relative;
+    padding:10px;
+    width:300px;
+    min-height:400px;
+    border-radius:4px;
+    background-color:#FFFFFF;
+    box-shadow: 0 2px 5px #666666;
+}
+
+.content1-popup1 h2 {
+    color:#48484B;
+    border-bottom: 1px solid #48484B;
+    margin-top: 0;
+    padding-bottom: 4px;
+}
+
+.popup1-overlay {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display:none;
+    background-color: #777777;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.close11 {
+    position: absolute;
+    right: 15px;
+}
+ </style>
+
+ 
+</head>
+<body>
+
+<div class="col s3 ">
+	<div class="row">  
+         <div id="top_1" class="col s1 m1">                              
+           <img  src="img/logoindex2.png"  alt="" height="90%" width="90%"/>
+        </div>
+
+       
+        
+        <div id="top_2" class="col s2 m2 l2 lx3">
+
+          <div class="ubuntu-bold-26">Sistema SIAC</div>
+		
+          <div class="ubuntu-medium-14-26">Versión V1.0.0</div>
+        </div>
+
+        <div id="top_3" class="col s1 m1">        
+          <div class="ubuntu-medium-14">Usuario: INFOCENT</div>                    
+        </div>
+
+        <div id="top_4" class="col s1 m1  ubuntu-medium-12">           
+          <i class="small material-icons">home</i>            
+          Inicio         
+        </div>
+
+        <div id="top_5" class="col s1 m1  ubuntu-medium-12"> 
+          <i class="small material-icons">person</i>          
+          Mi perfil
+        </div>
+         <div id="top_6" class="col s1 m1 l1 xl1  ubuntu-medium-12">           
+          <i class="material-icons">store</i>
+        <div id="l" >
+    infocent   
+  </div>      
+        </div>
+
+        <div id="top_7" class="col s1 m1  ubuntu-medium-12"> 
+         <a  href="#" data-activates="slide-out" class="button-collapse"> <i class="material-icons">dehaze</i>Automatizacion</br> </a> 
+        </div>
+
+        <div id="top_8" class="col s1 m1 ubuntu-medium-12">          
+          <i class="material-icons">close</i>
+          Cerrar sesión
+        </div>
+      </div>
+		 
+        
+     </div>
+  
+<div class="row">  
+ 
+
+   
+	  <div class="col s3 ">
+            <div class="row">
+               <div class="collection">
+                  <a href="#!" id="crear"  class="collection-item active"><i class="material-icons prefix waves-effect waves-light-blue lighten-1 ">work</i>  Gestión de Cliente</a>
+                  <a href="#!" id="listar" class="collection-item "><i class="material-icons prefix waves-effect waves-light-blue lighten-1">email</i>  Gestión General</a>    
+               </div>
+      
+
+
+
+ 	 <a class='dropdown-button btn transparent  black-text hide' id="cambiar" href='#' data-activates='dropdown1'>Cambiar Empresa</a> 
+
+  <!-- Dropdown Structure -->
+ 
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><a id="l1" href="#!">infocent</a></li>
+    <li><a href="#!">nomisistemas</a></li>
+    <li class="divider">softcap</li>
+   
+  </ul>	 
+	   <div class="fixed-action-btn horizontal">
+    <a id="pol" class="btn-floating btn-large po4 #757575 grey darken-1">
+      <i class="large material-icons">store</i>
+    </a>
+    
+  </div>
+    <div class="fixed-action-btn horizontal">
+    <a  class="btn-floating btn-large po #757575 grey darken-1">
+      <i class="large material-icons">phone</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating po red"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating po yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating po green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating po blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div>
+      <div class="fixed-action-btn horizontal">
+    <a  class="btn-floating btn-large po1 #757575 grey darken-1">
+      <i class="large material-icons">people</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating po1 red"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating po1 yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating po1 green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating po1 blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div>
+      <div class="fixed-action-btn horizontal">
+    <a  class="btn-floating btn-large po2 #757575 grey darken-1">
+      <i class="large material-icons">laptop</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating po2 red"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating po2 yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating po2 green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating po2 blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div>
+      <div class="fixed-action-btn horizontal">
+    <a  class="btn-floating btn-large po3 #757575 grey darken-1">
+      <i class="large material-icons">subject</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating po3 red"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating po3 yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating po3 green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating po3 blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div>
+
+ 
+   </div>
+ 
+   </div>     
+  
+
+ 	
+  <div class="col s9"> 
+<div class="row">
+<div class="col s11">
+
+<div class="row">
+        
+
+       
+        <div id="top_20" class="col s2 ubuntu-medium-12 top_20">           
+          <i class="small material-icons">store</i>            
+          Datos de la Empresa        
+        </div>
+
+        <div  id="to_1" class="col s2 ubuntu-medium-12 top_20"> 
+          <i class="small material-icons">person</i>          
+          Contacto
+        </div>
+         <div  id="to_2" class="col s2 ubuntu-medium-12 top_20">           
+          <i class="material-icons">people</i>       
+		Ficha Técnica         
+        </div>
+
+        <div  id="to_3" class="col s2 ubuntu-medium-12 top_20"> 
+          <i class="material-icons">assignment</i>Usuario SPI
+        </div>
+
+        <div  id="to_4" class="col s2 ubuntu-medium-12 top_20">          
+          <i class="material-icons">check</i>
+         Historico de cliente
+        </div> 
+<ul id="slide-out" class="side-nav ">             
+            <li><div class="chip" onclick="alert('¡No tienes permiso para este modulo!')">  Modulo: Venta </div> 
+            <li><div id="auto" class="chip">  Modulo: Automatización </div> 
+            <li><div class="chip">  Modulo: Logistica </div> 
+            <li><div class="chip">  Modulo: Proceso </div>
+            <li><div class="chip">  Modulo: Automatización </div>
+            <li><div class="chip">  Modulo: Gestión de Ambiente </div>
+            <li><div class="chip">  Modulo: General de Consulta </div> 
+            <li><div class="chip">  Modulo: Venta </div> 
+            <li><div class="chip">  Modulo: Atención telefonica </div> 
+            <li><div class="chip">  Modulo: Logistica </div> 
+            <li><div class="chip">  Modulo: Proceso </div>
+            <li><div class="chip">  Modulo: Automatización </div>
+            <li><div class="chip">  Modulo: Gestión de Ambiente </div>
+            <li><div class="chip">  Modulo: General de Consulta </div> 
+            <li><div class="chip">  Modulo: Venta </div> 
+            <li><div class="chip">  Modulo: Atención telefonica </div> 
+            <li><div class="chip">  Modulo: Logistica </div> 
+            <li><div class="chip">  Modulo: Proceso </div>
+            <li><div class="chip">  Modulo: Automatización </div>
+            <li><div class="chip">  Modulo: Gestión de Ambiente </div>
+            </ul>
+   
+
+<div class="row">
+<div class="col s10">
+	  <div class="card">
+         
+	    <div id="reporte" class="card-content #424242 grey darken-3 white-text">
+	      Datos de la Empresa
+	    </div>
+	    
+ 
+<form >
+     
+        <div class="input-field col s1 m2">
+	  <i class="material-icons prefix">date_range</i>
+          <input  id="fecha" type="text" disabled class="validate" >
+
+          <label for="fecha">Fecha de Registro</label>
+        </div>
+        <div class="input-field col s1 m2">
+	  <i class="material-icons prefix">store</i>
+          <input id="rif" type="text" disabled class="validate">
+          <label for="rif">Rif</label>
+        </div>
+        <div class="input-field col s3 m5">
+          <input id="cliente" type="text" disabled class="validate ">
+          <label for="cliente">Nombre de Empresa</label>
+        </div>
+		<div class="input-field col s1 m3">
+	  <i class="material-icons prefix">chrome_reader_mode</i>
+          <input  id="segmento" type="text" disabled class="validate ">
+          <label for="segmento">Segmento</label>
+        </div>
+        <div class="input-field col s1 m2">
+	  <i class="material-icons prefix">phone</i>
+          <input id="telefono" type="text" disabled class="validate">
+          <label for="telefono">Telefono</label>
+        </div>
+         <div class="input-field col s2 m4">
+	  <i class="material-icons prefix">drafts</i>
+          <input id="correo" type="text" disabled class="validate">
+          <label for="correo">Correo</label>
+        </div>        
+
+         <div class="input-field col s2 m3">
+	  <i class="material-icons prefix">perm_contact_calendar</i>
+          <input id="ejecutivo" type="text" disabled class="validate">
+          <label for="ejecutivo"> Ejecutivo de Venta</label>
+        </div>
+        <div class="input-field col s2 m3">
+	  <i class="material-icons prefix">local_library</i>
+          <input id="consultor" type="text" disabled class="validate">
+          <label for="consultor">Consultor</label>
+        </div>	
+
+     
+        <div class="input-field col s10 m12">
+	  <i class="material-icons prefix">location_off</i>
+          <input id="fiscal" type="text" disabled class="validate">
+          <label for="fiscal">Dirección Fiscal</label>
+        </div>
+     
+     
+        <div class="input-field col s10 m12">
+	  <i class="material-icons prefix">location_on</i>
+          <input id="comercial" type="email" disabled class="validate">
+          <label for="comercial">Dirección Comercial</label>
+        </div>
+      
+      <div class="row">
+        <div class="col s12">
+          
+         
+        </div>
+      </div>
+  </form >
+
+</div > 
+	      
+<div class="row">
+<div class="col s12">
+	  <div class="card">
+         
+	    <div id="reporte" class="card-content #424242 grey darken-3 white-text">
+	      Agregar Reporte 
+	    </div>
+	    <div class="card-tabs">
+	      
+	    </div>
+	    <div class="card-content grey lighten-4 ">
+	     
+	      <div id="test5"><form >
+
+
+      <div class="row">
+
+  
+       <div class="input-field  col s6"> 
+
+
+     
+	  <i class="material-icons prefix">book</i>
+
+    <select>
+      <option value="" >Seleccionar reporte</option>
+      <option value="1">Error Siac</option>
+      <option value="2">Soporte Técnico</option>
+      <option value="3">Innovación</option>
+    </select>
+    <label>Tipo de Reporte</label>
+ 
+  </div>
+      
+	 <div class="input-field col s3">
+	  <i class="material-icons prefix">person</i>
+    <select>
+      <option value="" >Seleccionar contacto</option>
+      <option value="1">Marcos Rodriguez</option>
+      <option value="2">Ronald Capetillo</option>
+      <option value="3">Kelia Martinez</option>
+    </select>
+    <label>Contacto</label>
+  </div>
+
+        <div class="input-field col s3">
+<i class="material-icons prefix">perm_phone_msg</i>
+    <select>
+      <option value="" >Seleccionar atención</option>
+      <option value="1">correo</option>
+      <option value="2">telefono</option>
+      <option value="3">encuesta</option>
+	  <option value="4">reunión de avance</option>
+      <option value="5">dpto de ventas</option>    
+    </select>
+    <label>Atención</label>
+  </div>
+ <div class="input-field col s3">
+	  <i class="material-icons prefix">dvr</i>
+    <select>
+      <option value="" >Seleccionar Instalación</option>
+      <option value="1">Nomina 10.7.0</option>
+      <option value="2">PHP 10.7.1</option>
+      <option value="3">Java 10.7.2</option>
+    </select>
+    <label>Instalación</label>
+  </div>
+  <div class="input-field col s9"> 
+      <i class="material-icons prefix">announcement</i>
+          <input id="icon_telephone" type="tel" class="validate">
+          <label for="icon_telephone">  Descripción</label>
+        </div>	
+<div class="row">
+    <form class="col s11">
+      <div class="row">
+        <div class="input-field col s11">
+		 <i class="material-icons prefix">touch_app</i>
+          <textarea id="textarea1" class="materialize-textarea validate"></textarea>
+          <label for="textarea1">Seguimiento</label>
+        </div>
+      </div>
+	     <a id="guardar"  class="waves-effect btn left"><i class="material-icons left">save</i>Guardar</a>
+	    
+    </form></div>	      
+	    </div>
+	  </div>
+
+</div>
+</div>        
+	 
+  </div>
+
+ 
+   </div> 
+
+
+</div>        
+	 
+  </div>
+
+ 
+   </div> 
+
+
+
+  
+   
+  <!-- Modal Structure -->
+
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h5>Seleccionar el Modulo</h5>     
+	  <div class="col s2 "> 
+	<div class="row">     
+
+	  <div class="collection">
+	  
+		<a href="#!" class="collection-item active">Atención Telefonica</a>
+		<a href="#!" class="collection-item">Control de Mantenimiento</a>
+		<a href="#!" class="collection-item">Control de Horas de Asesoría</a>
+		<a href="#!" class="collection-item">Control de Proyecto</a>	
+        <a href="#!" class="collection-item ">General de Consulta</a>
+		<a href="#!" class="collection-item">Automatización</a>
+		<a href="#!" class="collection-item">Control de Calidad</a>
+		<a href="#!" class="collection-item">Atención al Cliente</a>			
+	  </div>       
+        </div>     
+   
+ </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close  waves-effect waves-light btn"> <i class="Tiny material-icons">close</i></a>
+    </div>
+  </div>
+ 
+
+
+ <div id="modal2" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h5>Seleccionar el Cliente</h5>     
+	  <div class="col s2 "> 
+	<div class="row">     
+
+	  <div class="collection">
+	  
+		<a href="#!" class="collection-item active">Buscar Cliente</a>
+			
+	  </div>       
+        </div>     
+   
+ </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close  waves-effect waves-light btn"> <i class="Tiny material-icons">close</i></a>
+    </div>
+  </div>
+ 
+</div>
+ </div>
+  <div id="popup1" style="display: none;">
+	  <div class="content1-popup1">
+			<div class="close11"><a href="#" id="close11"><img src=""/></a></div>
+		<div>
+
+                 
+		  <div class="input-field col s12"> 
+	              <i class="material-icons prefix">perm_identity</i>
+		 	<input placeholder="Usuario: Alejandra Rodriguez" id="usuario1" disabled type="text" class="">
+		  </div>
+       
+        	<div class="input-field col s12"> 
+	              <i class="material-icons prefix">store</i>
+		      <input placeholder="Empresa: Fama de America" id="empresa2" disabled type="text" class="">		
+                </div>
+                <div class="input-field col s12"> 
+	            <i class="material-icons prefix">chrome_reader_mode</i>
+		    <input placeholder="Segmento: Black" id="segmento" disabled type="text" class="">		
+		</div>      
+             <div class="input-field col s12"> 
+           	     <i class="material-icons prefix">hourglass_empty</i>
+		    <input placeholder="Status: Solvente" id="status" disabled type="text" class="">
+	    </div>      		
+              <div class="input-field col s12"> 
+	            <i class="material-icons prefix">add_alert</i>
+		   <input placeholder="Condición: Activo" id="condicion" disabled type="text" class="">
+	     </div>      		
+         
+</div>
+
+</body>
+
+  <script src="js/materialize1.min.js"></script>
+	<script>
+$(document).ready(function() {
+				setTimeout(function() {
+			        $('#popup1').fadeIn(1500);
+				},2000);
+				$('.popup1-overlay').fadeIn(1500);
+				},2000);
+
+
+                              $('.popup1-overlay').height($(window).height());
+
+
+				$("#btnCerrar1").click(function () {
+					setTimeout(function() {
+					$(".popup1-overlay").fadeOut(1500);
+				   	},500);
+});
+   $(document).ready(function(){
+      $('.carousel').carousel();
+	  
+	    $('#modal1').modal('open');
+		$('#modal1').modal('close');
+		 $('.modal').modal();
+            $('#modal2').modal('open');
+		$('#modal2').modal('close');
+		 $('.modal').modal();
+    });
+	</script>
+	
+	<script>
+	 $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+       
+        console.log(modal, trigger);
+      },
+      complete: function() {  } // Callback for Modal close
+    }
+  );
+  $(document).ready(function() {
+    var table = $('#example').DataTable();
+ 
+    $('#example tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    } );
+ 
+    $('#button').click( function () {
+        table.row('.selected').remove().draw( false );
+    } );
+} );
+
+ // Initialize collapse button
+  $(".button-collapse").sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  //$('.collapsible').collapsible();
+
+$("#l").click(function(){
+	      $(".dropdown-button").removeClass("hide");
+	      $("#l").addClass("hide");
+      });
+
+      $("#l1").click(function(){
+	      $("#cambiar").addClass("hide");
+	      $("#l").removeClass("hide");
+      });
+
+$(document).ready(function() {
+
+$( "#listar" ).on( "click", function() {
+   location.href = "buzon_entrada_modulo_general_consulta.html";
+});
+$( "#guardar" ).on( "click", function() {
+   location.href = "buzon_entrada_modulo_general_consulta.html";
+});
+
+$( "#ver" ).on( "click", function() {
+   location.href = "buzon_entrada_actualizar_Requerimiento.html";
+});	
+
+     $("#to1").click(function(){
+	     location.href = "gestion_cliente_contacto.html";
+      });
+
+      $("#to2").click(function(){
+	      location.href = "gestion_cliente_ficha_tecnica.html";
+      });
+
+      $("#to3").click(function(){
+	      location.href = "gestion_cliente_usuario_SPI.html";
+      });
+
+      $("#to4").click(function(){
+	      location.href = "gestion_cliente_historico_cliente.htmll";
+      });
+
+$("#c1").click(function(){
+	     location.href = "configuracion.html";
+      });
+
+      $("#c2").click(function(){
+	      location.href = "configuracion-status.html";
+      });
+
+      $("#c3").click(function(){
+	      location.href = "configuracion-status-modulo.html";
+      });
+
+      $("#c4").click(function(){
+	      location.href = "configuracion-status-modulo-registrar.html";
+      });
+  $("#c5").click(function(){
+	      location.href = "configuracion-mod-status-modulo-registrar.html";
+      });
+
+      $("#c6").click(function(){
+	       location.href = "configuracion-flujo-status-modulo.html";
+      });
+
+      $("#c7").click(function(){
+	      location.href = "configuracion.html";
+      });
+                   
+       });
+
+ $(document).ready(function() {
+    $('select').material_select();
+  });
+
+$(".button-collapse").sideNav();
+   $('.button-collapse').sideNav({
+      menuWidth: 300, 
+      edge: 'right', 
+      closeOnClick: true, 
+      draggable: true, 
+      onOpen: function(el) { }, 
+      onClose: function(el) {  }, 
+    }
+  );
+  
+$('#icon_book').val('Mejoras de desarrollo');
+$('#atencion').val('correo');
+$('#fecha').val('25/10/2017');
+$('#rif').val('V132370890');
+$('#cliente').val('Fama America c.a');  
+$('#segmento').val('Industria/Acero/Hierro'); 
+$('#telefono').val('(0414)1955577');
+$('#correo').val('automatizacion@gmail.com');
+$('#ejecutivo').val('José Altuve');  
+$('#consultor').val('Juan Perez'); 
+$('#fiscal').val('Los cortijos, edificio BOD, Piso 5 oficina 555');  
+$('#comercial').val('Los cortijos, edificio BOD, Piso 5 oficina 555'); 
+
+
+
+
+</script>
+</body>
+</html>

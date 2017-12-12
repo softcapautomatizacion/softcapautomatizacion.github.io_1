@@ -1,0 +1,784 @@
+@font-face {
+  font-family:'Ubuntu Bold';
+  src: url("../font/font-awesome-4.7.0/Ubuntu-B.ttf");  
+}
+
+@font-face {
+  font-family:'Ubuntu Bold Italic';
+  src: url("../font/font-awesome-4.7.0/Ubuntu-BI.ttf");  
+}
+
+@font-face {
+  font-family:'Ubuntu Medium';
+  src: url("../font/font-awesome-4.7.0/Ubuntu-M.ttf");    
+}
+
+@font-face {
+  font-family:'Ubuntu Medium Italic';
+  src: url("../font/font-awesome-4.7.0/Ubuntu-MI.ttf");
+}
+
+@font-face {
+  font-family:'Ubuntu Regular';
+  src: url("../font/font-awesome-4.7.0/Ubuntu-R.ttf");
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/material-design-icons-master/iconfont/MaterialIcons-Regular.eot"); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url("../font/material-design-icons-master/iconfont/MaterialIcons-Regular.woff2") format('woff2'),
+    url("../font/material-design-icons-master/iconfont/MaterialIcons-Regular.woff") format('woff'),
+    url("../font/material-design-icons-master/iconfont/MaterialIcons-Regular.ttf") format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+body{
+	font-family: 'Ubuntu Regular' !important;
+}
+
+#top {
+    position: absolute;
+    background-color: #3898b2;
+    color: white;
+    height: 100px;
+    width: 100%;
+    font: 30px arial;
+    line-height: normal;
+    direction: inherit;
+    left: 0%;
+    top: 0%;
+}
+
+.top {
+    position: absolute;
+    background-color: #3898b2;
+    color: white;
+    height: 100px;
+    width: 100%;
+    font: 30px arial;
+    line-height: normal;
+    direction: inherit;
+    left: 0%;
+    top: 0%;
+}
+
+#content {
+    background-color: white;
+    width: 100%;
+    height: 700px;
+    top: 10%;
+    left: 20%;
+}
+
+#left {
+    float: left;
+    color: white;
+    background-color: aqua;
+    height: 700px;
+    width: 20%;
+    position: absolute;
+    top: 100px;
+    left: 0%;
+}
+
+#header {
+    clear: right;
+    background-image: url(img/bg_home_1.jpg);
+    background-repeat: repeat-x;
+}
+
+#contexto {
+    vertical-align: bottom;
+    width: 310px;
+}
+
+#fondo {
+    background-image: url(img/picture.png);
+}
+
+#portal {
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.ButtonStyle {
+    background-image: url(img/ui-bg_highlight-soft_75_cde7e4_1x100.png);
+    background-repeat: repeat-x;
+}
+
+.imagen {
+    background-image: url(img/banner_pro_spi.jpg);
+}
+
+.centered {
+    margin: 0px auto !important;
+}
+
+.margen {
+    border-color: transparent;
+}
+
+#sin_border {
+    border-color: transparent;
+}
+
+.ui-picklist-list-source {
+    width: 700px;
+}
+
+.ui-picklist-source-controls {
+    width: 700px;
+}
+
+.titulo {
+    font-weight: bold;
+}
+
+
+
+
+.card-list {
+	padding: 34px 0 0 34px;
+}
+
+.card.panel.panel-default{
+	padding: 0;
+	background-color: #ffffff;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.4);
+}
+
+.card.panel.panel-default .panel-footer{
+	text-align: center;
+	background-color: #ffffff;
+}
+.card.panel.panel-default:hover .panel-footer {
+	background-color: #4ec2bf;
+	color: #ffffff;
+}
+
+.card.panel.panel-default .panel-body {
+	padding: 0;
+}
+
+.opcion-menu {
+    background: rgba(78,194,191,1);    
+    text-align: left;
+    height: 44px;   
+    width: 200px;
+}
+
+.sub-spi {      
+    height: 290px;
+    width: 100%;  
+    position: relative;
+    -webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
+}
+
+.sub-spi:hover {        
+    background-image: rgba(255,255,255,0);
+}
+
+.formato-img {
+    height: 290px;
+    width: 100%;    
+}
+
+.titulo-sub-spi .ui-panel-footer {
+    color: rgba(0,0,0,0.87);   
+    text-align: center; 
+    height: 48px;
+    width: 100%;     
+}
+
+.titulo-sub-spi:hover .ui-panel-footer {
+    color: #ffffff;
+}
+
+
+.card.panel.panel-default:hover .panel-footer .titulo-sub-spi {
+	background-color: #4ec2bf;
+	color: #ffffff;
+}
+
+.card.panel.panel-default .panel-body {
+	position: relative;
+}
+
+.hover-effect {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	color: #ffffff;
+}
+
+.card.panel.panel-default:hover .hover-effect {
+	background: rgba(255, 255, 255, 0.04);
+	background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.04) 0%, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.04) 79%, rgba(0, 0, 0, 0.20) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.04)), color-stop(0%, rgba(0, 0, 0, 0.04)), color-stop(79%, rgba(0, 0, 0, 0.04)), color-stop(100%, rgba(0, 0, 0, 0.20)));
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.04) 0%, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.04) 79%, rgba(0, 0, 0, 0.20) 100%);
+	background: -o-linear-gradient(top, rgba(255, 255, 255, 0.04) 0%, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.04) 79%, rgba(0, 0, 0, 0.20) 100%);
+	background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.04) 0%, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.04) 79%, rgba(0, 0, 0, 0.20) 100%);
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 0%, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.04) 79%, rgba(0, 0, 0, 0.20) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0);
+}
+
+.bg-cuerpo {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+
+/* ---------- BACKGROUND ---------- */
+.bg-img-archivo {
+    background-image: url(img/bg_archivo.jpg);
+}
+
+.bg-img-login {
+    background-image: url(img/bg_login.jpg);
+}
+
+.bg-img-mail {
+	padding: 2%;
+	height: 100%;
+    background-image: url(img/bg_mail.jpg);
+}
+
+.bg-img-organizacion {
+	padding: 2%;
+	height: 100%;
+    background-image: url(img/bg_organizacion.jpg);    
+}
+
+.bg-img-seguridad {
+	padding: 2%;
+	height: 100%;
+    background-image: url(img/bg_seguridad.jpg);
+}
+
+.bg-img-talento {
+	padding: 2%;
+	height: 100%;
+    background-image: url(img/bg_talento.jpg);
+}
+
+
+/* ---------- PORTAL ---------- */
+.fondo-portal {
+	background-color: #f6f5f9;
+	margin: 0;
+}
+
+.navbar row{
+	margin: 0;
+}
+
+.nav-shadow{
+	-webkit-box-shadow: 0px 5px 16px 2px rgba(0,0,0,0.24);
+	-moz-box-shadow: 0px 5px 16px 2px rgba(0,0,0,0.24);
+	box-shadow: 0px 5px 16px 2px rgba(0,0,0,0.24);
+}
+
+#top_1 {
+    background: rgba(78,194,191,1);
+	align-content: center;
+	display: grid;
+	justify-content: center;
+	overflow:hidden;     
+}
+
+#top_2 {
+    background: #545b61; 
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    padding-left: 2%;
+}
+
+#top_3 {
+    background: #545b61; 
+    text-align: right;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    padding-right: 2%;
+}
+
+#top_4, #top_5, #top_6 {
+    background: #545b61; 
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    border-left: 0.25px solid #ffffff;
+}
+
+#top_4:hover, #top_5:hover, #top_6:hover { 
+    color: #4ec2bf !important;
+}
+
+.olvidoclave {
+	width: auto;	
+	text-decoration: none !important;
+	color: rgba(0, 0, 0, 0.87) !important;	
+}
+
+.olvidoclave:hover {
+	color: #22b3af !important;
+}
+
+
+/* ---------- FOOTER ---------- */
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #dbdbdb;
+    height: 25px;
+    width: 100%;    
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.margen-footer {
+    margin-left: 34px;
+}
+
+/* -------------------------------------------- */
+/* -------------- conexion.xhtml -------------- */
+/* -------------------------------------------- */
+.pgLogin {
+    overflow: hidden !important; 
+    text-align:center !important; 
+    background:rgba(255,255,255,0.9) !important; 
+    height:460px !important;
+    width: 400px !important;
+}
+
+.centrar-login {    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.btn-login {    
+    background: #4ec2bf !important;    
+    margin-bottom:15px;
+	height: 32px;
+	width: 100%;	
+	cursor: pointer;
+	color: #ffffff !important;
+	text-align: center; 
+	padding:0;
+}
+
+.btn-login:hover {
+    background: #3b928f !important;
+    color: #ffffff !important;
+}
+
+.pgLogin.ui-panel .ui-panel-content{
+	padding: 0.5em 4em;
+}
+
+/* -------------------------------------------- */
+/* ---------------- header.xhtml -------------- */
+/* -------------------------------------------- */
+.icon-light { 
+    color: #ffffff !important;
+    text-decoration: none;    
+}
+
+.icon-light:hover {
+    color: #4ec2bf !important;
+    text-decoration: none;
+}
+
+/* -------------------------------------------- */
+/* ---------------- TIPOGRAFÍA ---------------- */
+/* -------------------------------------------- */
+.ubuntu-bold-12 {   
+    font-family: 'Ubuntu Bold' !important;
+    font-size: 12px !important;        
+}
+
+.ubuntu-bold-14 {
+    font-family: 'Ubuntu Bold' !important;
+    font-size: 14px !important;        
+}
+
+.ubuntu-bold-26 {
+    font-family: 'Ubuntu Bold' !important;
+    font-size: 26px !important;        
+}
+
+.ubuntu-bold-italic-20 {
+    font-family: 'Ubuntu Bold Italic' !important;
+    font-size: 20px !important; 
+    font-style: italic !important;
+}
+
+.ubuntu-bold-italic-24 {
+    font-family: 'Ubuntu Bold Italic' !important;
+    font-size: 24px !important; 
+    font-style: italic !important;
+}
+
+.ubuntu-medium-12 {
+    font-family: 'Ubuntu Medium' !important;
+    font-size: 12px !important;    
+}
+
+.ubuntu-medium-14 {
+    font-family: 'Ubuntu Medium' !important;
+    font-size: 14px !important;    
+}
+
+.ubuntu-medium-16 {
+    font-family: 'Ubuntu Medium' !important;
+    font-size: 16px !important; 
+}
+
+.ubuntu-medium-italic-13 {
+    font-family: 'Ubuntu Medium Italic' !important;
+    font-size: 13px !important; 
+    font-style: italic !important; 
+}
+
+.ubuntu-medium-italic-15 {
+    font-family: 'Ubuntu Medium Italic' !important;   
+    font-size: 15px !important;
+    font-style: italic !important;     
+}
+
+.ubuntu-regular-italic-24 {
+    font-family: 'Ubuntu Regular Italic' !important;   
+    font-size: 24px !important;
+    font-style: italic !important;     
+}
+
+.ubuntu-regular-12 {
+    font-family: 'Ubuntu Regular' !important;
+    font-size: 12px !important;
+}
+
+.ubuntu-regular-13 {
+    font-family: 'Ubuntu Regular' !important;
+    font-size: 13px !important;
+}
+
+.ubuntu-regular-14 {
+    font-family: 'Ubuntu Regular' !important;
+    font-size: 14px !important;
+}
+
+.ubuntu-regular-18 {
+    font-family: 'Ubuntu Regular' !important;
+    font-size: 18px !important; 
+}
+
+.ubuntu-regular-24 {
+    font-family: 'Ubuntu Regular' !important;
+    font-size: 24px !important; 
+}
+
+
+/* -------------------------------------------- */
+/* ------------- COLORES FUENTES -------------- */
+/* -------------------------------------------- */
+.color-white { 
+    color: #ffffff !important; 
+}
+
+.color-054 { 
+    color: rgba(0,0,0,0.54) !important; 
+}
+
+.color-087 { 
+    color: rgba(0,0,0,0.87) !important; 
+}
+
+.color-034 { 
+    color: rgba(0,0,0,0.34) !important; 
+}
+
+.color-black { 
+    color: #000000 !important; 
+}
+
+
+
+.pos-left {
+    float: left !important;
+}
+
+.pos-right {
+    float: right !important;
+}
+
+.div-estilo {
+    padding: 10px;      
+}
+
+
+
+/* -------------------------------------------- */
+/* ------------- MEDIA QUERIES -------------- */
+/* -------------------------------------------- */
+
+@media ( min-width : 1024px) and (max-width: 1300px) {
+	.navbar .col-md-1 {
+		width: 10%;
+	}
+	.navbar .col-md-5 {
+		width: 36%;
+	}
+}
+
+#pgsistema {
+	margin-bottom:15px;
+}
+
+#pgusuario, #pgclave, #pgconexion {
+	text-align: left;
+	margin-bottom:10px;
+}
+
+#pgmensaje {
+	text-align: center;
+	margin-bottom:5px;
+}
+
+
+
+/* -------------------------------------------- */
+/* ----------- OVERRIDE PRIMEFACES ------------ */
+/* -------------------------------------------- */
+
+.ui-messages-error, .ui-message-error {
+	color: #af0b2c;
+    background-color: #fac5d0;
+    border-color: 1px solid #df9dab;	
+}
+
+.ui-messages-info, .ui-message-info {
+    color: #2364a5;
+    background-color: #a3c9ec;
+    border-color: 1px solid #2f85dc;
+}
+
+.ui-messages-warn, .ui-message-warn {
+	color: #bf7f00;
+    background-color: #ffcb66;
+    border-color: 1px solid #ffa900;	    
+}
+
+.ui-messages-error-icon {
+	background: url(icon/fa-times-circle.png);
+}
+
+.ui-messages-info-icon {
+	background: url(icon/fa-info-circle.png);
+}
+
+.ui-messages-warn-icon {
+	background: url(icon/fa-exclamation-circle.png);
+}
+
+.ui-messages-info, .ui-messages-warn, .ui-messages-error, .ui-messages-fatal {
+    font-family: 'Ubuntu Regular' !important;
+    font-size: 13px !important;
+    text-align: left !important;
+	height: 24px !important;
+    padding: 0.769em 0 0 0;
+}
+
+.ui-messages-error-icon, .ui-messages-info-icon, .ui-messages-warn-icon, .ui-messages-fatal-icon {
+    left: 0.9%;
+}
+
+#forma .ui-messages-info, .ui-messages-warn, .ui-messages-error, .ui-messages-fatal {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+#forma .ui-inputfield, .ui-selectonemenu{
+	width: 100%;
+	height: 30px;
+	padding: 0;	
+}
+
+#panelmenu .ui-layout-unit-content.ui-widget-content {
+	background: #EBEBEE;
+}
+
+#forma1 .ui-panelmenu-panel .ui-panelmenu-header {
+	height: 44px;
+	/* padding: 8px 0; */
+	border-radius: 0;
+	background: #EBEBEE;
+    background-image: url(icon/fa-chevron-down.png);
+    background-position: 97% 50%; /* opened position */
+    background-repeat: no-repeat;		
+}
+
+#forma1 .ui-panelmenu .ui-panelmenu-header a {
+	font-family: 'Ubuntu Medium' !important;
+	font-size: 14px !important;
+	color: rgba(0, 0, 0, 0.7) !important;
+	text-transform: uppercase;
+	text-decoration: none;
+	position: relative;
+    top: 15%;		
+}
+
+#forma1 .ui-panelmenu .ui-panelmenu-header.ui-state-active {
+	background: rgba(78, 194, 191, 1);
+	text-shadow: none;
+    background-image: url(icon/fa-chevron-up.png);
+    background-position: 97% 50%; /* opened position */
+    background-repeat: no-repeat;	
+}
+
+#forma1 .ui-panelmenu .ui-panelmenu-header.ui-state-active a {
+	color: #ffffff !important;
+	text-shadow: none;
+}
+
+#forma1 .ui-panelmenu .ui-menuitem {
+	height: 40px;
+	font-family: 'Ubuntu Medium' !important;
+	font-size: 14px !important;
+	color: rgba(0, 0, 0, 0.7) !important;
+	background: #E2E3E6;
+	text-decoration: none;
+	margin: 0;
+	border-radius: 0;
+	padding: 5px 0;
+}
+
+#forma1 .ui-panelmenu .ui-panelmenu-content {
+	padding: 0;
+}
+
+#forma-header .ui-panelgrid {
+	border-collapse: separate;
+	height: 77px;
+	width: 100%;
+}
+
+#forma-header .ui-panelgrid .ui-panelgrid-cell {
+	padding: 0;
+}
+
+.ui-g {
+    -ms-flex-wrap: wrap;
+}
+
+#row-header .ui-lg-12 {
+	height: 100%;
+}
+
+#forma2 .ui-widget-content {
+	border: none;
+}
+
+#forma2 img {
+	border: none;
+}
+
+#forma2 .ui-panel .ui-panel-content {
+	padding: 0;
+	display: grid;
+	display: -ms-grid;
+}
+
+#forma2 .ui-panel .ui-panel-footer {
+	height: 48px;
+    border-width: 1px 0 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    align-content: center;
+    display: grid;
+}
+
+#forma2 .ui-panel {
+	padding: 0 34px 17px 0;
+    background-color: transparent !important;
+}
+
+#forma2 .ui-panel:hover .ui-panel-footer,
+#forma2 .ui-panel-footer:hover .ui-panel-content.ui-widget-content {
+	background-color: #4ec2bf;
+	color: #ffffff;
+}
+
+#forma2 .ui-panel-content.ui-widget-content, .ui-panel-footer {
+	-webkit-box-shadow: 0px 5px 16px 2px rgba(0,0,0,0.24);
+	-moz-box-shadow: 0px 5px 16px 2px rgba(0,0,0,0.24);
+	box-shadow: 0px 5px 16px 2px rgba(0,0,0,0.24);
+}
+
+#forma2 .ui-panel-content.ui-widget-content:hover,
+#forma2 .ui-panel-content.ui-widget-content:focus,
+#forma2 .ui-panel-content.ui-widget-content:active,
+#forma2 .ui-panel-footer:hover {
+    opacity: 1;
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.4)));
+    -webkit-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    -moz-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+}
+
+.quitar-padding-panel {
+	padding: 0;
+}

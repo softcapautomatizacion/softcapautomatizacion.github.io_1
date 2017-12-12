@@ -1,0 +1,463 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>SIAC- Crear Reporte - Menu - Contrato </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+ <link href="css/icon.css" rel="stylesheet">
+ <link type="text/css" rel="stylesheet" href="css/estilos.css"  media="screen,projection"/>
+
+      <link href="css/materialize.min.css" rel="stylesheet" >
+      <link rel="stylesheet" href="css/materialize.min.css">
+      <script src="js/jquery-2.1.4.js"></script>
+      <link href="css/jquery.dataTables.min.css" rel="stylesheet"/>
+      <script src="js/jquery.dataTables.min.js"></script>
+      <script src="js/materialize1.min.js"></script>
+	  <link rel="stylesheet" href="css/style.css">
+ <style>
+
+
+
+.collection {margin-top:0; margin-left:-10px; width:350px;}
+ table {margin-left:35px; font-size: small}
+#modal1 {margin-left:300px; }
+#modal2 {margin-left:300px; }
+.modal-footer{margin-left:-450px;}
+#logo {
+ width:350px;
+ height:63px;
+}
+
+
+#guardar{margin-right:90px;}
+#reporte{height:3px;  display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;}
+.chip{margin-top:20px; margin-bottom:40px}
+
+.tabs .indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: gray;
+    will-change: left, right;
+}
+
+
+form input:required {
+ border:1px solid gray;
+ /* otras propiedades */
+}
+
+#tabla-reporte{   height:1px;  display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+margin-top:5px;}
+
+table.dataTable thead th, table.dataTable thead td {    
+    border-bottom: 1px solid white;
+}
+td, th {
+  
+     border-radius: 0px; 
+}
+.cambiar{width:10px; padding-left:5px;}
+
+.cambiar1{width:10px; margin-bottom:10px; margin-right:1px; padding-left:5px;}
+#popup1 {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+.content1-popup1 {
+    margin:0px auto;
+    margin-top:200px;
+	margin-left:20px;
+    position:relative;
+    padding:10px;
+    width:300px;
+    min-height:400px;
+    border-radius:4px;
+    background-color:#FFFFFF;
+    box-shadow: 0 2px 5px #666666;
+}
+
+.content1-popup1 h2 {
+    color:#48484B;
+    border-bottom: 1px solid #48484B;
+    margin-top: 0;
+    padding-bottom: 4px;
+}
+
+.popup1-overlay {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display:none;
+    background-color: #777777;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.close11 {
+    position: absolute;
+    right: 15px;
+}
+table {
+    width: 85%;
+    margin-left: 0;
+}
+ </style>
+
+ 
+</head>
+<body>
+<div class="row">  
+     
+       <div  id="to_1"  class="col s2 ubuntu-medium-12 top_20">           
+          <i class="small material-icons">closed_caption</i>            
+          Cuentas por Cobrar       
+        </div>
+
+        <div id="to_2"  class="col s2 ubuntu-medium-12 top_20"> 
+          <i class="small material-icons">add_shopping_cart</i>          
+          Productos Adquiridos
+        </div>
+         <div  id="to_3" class="col s2 ubuntu-medium-12 top_20">           
+          <i class="material-icons">local_grocery_store</i>       
+	  Proceso de Ventas        
+        </div>
+
+        <div id="to_4"  class="col s2 ubuntu-medium-12 top_20"> 
+          <i class="material-icons">assignment</i>Forma de Pago
+        </div>
+
+        <div  id="top_20" class="col s2 ubuntu-medium-12 top_20">          
+          <i class="material-icons">check</i>
+         Contrato
+        </div>  </div> 
+	<a  id="bo" class="waves-effect waves-light btn cambiar"><i class="material-icons left">add</i></a>
+		<a id="bo1" class="waves-effect waves-light btn cambiar"><i class="material-icons left">local_printshop</i></a>
+             
+<p>
+
+             
+            <table id="example2" class="striped" cellspacing="0" width="100%">
+               <thead class=" #ffffff black-text card-content #4db6ac teal lighten-2 white-text">
+                  <div class="row ">
+                     <tr>
+                        <th>N°</th>                       
+                        <th>Producto</th>
+                        <th>Firmado</th>
+                        <th>Cedula</th>                  
+                        <th>Fecha Envio</th>
+                        <th>Recepcion</th>
+                        <th>Estandar</th> 
+                        <th>Correo</th>
+                        <th>Select</th>						
+                     </tr>
+                  </div>
+               </thead>
+               <tbody>
+                  <tr>                    
+                     <td>Ser-2013-10-5530</td>
+                     <td>SPI Organizacion </td>
+                     <td>Alejandra Rodríguez</td>
+                      <td>13.237.089</td>                      
+                     <td >01/11/2013</td>
+                     <td >05/11/2013</td>                   
+                     <td><input type="checkbox" class="filled-in" id="filled-1"  checked="checked"  /> <label class="label-t" for="filled-1"></label></td>    
+                     <td><input type="checkbox" class="filled-in" id="filled-in-1"  checked="checked"  /> <label class="label-t" for="filled-in-1"></label></td>
+                     <td><input type="checkbox" class="filled-in" id="filled-in-box1"  /> <label class="label-t" for="filled-in-box1"></label></td>    
+                  </tr>
+                  <tr>                   
+                     <td>Ser-2015-10-812</td>
+                     <td>SPI Seguridad </td> 
+                     <td>Juana Perez</td>
+                     <td>14.238.345</td>
+                     <td >15/11/2015</td>
+                     <td >19/11/2015</td>                        
+                     <td><input type="checkbox" class="filled-in" id="filled-2"  /> <label class="label-t" for="filled-2"></label></td>    
+                     <td><input type="checkbox" class="filled-in" id="filled-in-2"  checked="checked"  /> <label class="label-t" for="filled-in-2"></label></td> 
+                   <td><input type="checkbox" class="filled-in" id="filled-in-box2"  /> <label class="label-t" for="filled-in-box2"></label></td>    
+                  </tr>
+                    <tr> 
+
+                     <td>Ser-1997-10-001</td>
+                     <td>SPI Talento </td>
+                      <td>Luisa Rojas</td>
+                     <td>10.009.877</td>  
+                    <td >13/02/1997</td>                                                          
+                    <td >23/02/1997</td>
+                     <td><input type="checkbox" class="filled-in" id="filled-3"  checked="checked"   /> <label class="label-t" for="filled-3"></label></td>    
+                     <td><input type="checkbox" class="filled-in" id="filled-in-3"  /> <label class="label-t" for="filled-in-3"></label></td>
+                   <td><input type="checkbox" class="filled-in" id="filled-in-box3"  /> <label class="label-t" for="filled-in-box3"></label></td>    
+                   
+                  </tr>
+                          <tr>
+                   
+
+                     <td>Ser-2016-10-511</td>
+                     <td>SPI Autoservicio </td>
+                     <td>Luisa Rojas</td>
+                     <td>10.009.877</td>
+                     <td >11/11/2016</td>                     
+                     <td >11/11/2016</td>                     
+                     <td><input type="checkbox" class="filled-in" id="filled-4"  checked="checked"   /> <label class="label-t" for="filled-4"></label></td>    
+                     <td><input type="checkbox" class="filled-in" id="filled-in-4"  checked="checked"  /> <label class="label-t" for="filled-in-4"></label></td>
+                    <td><input type="checkbox" class="filled-in" id="filled-in-box4"  /> <label class="label-t" for="filled-in-box4"></label></td>    
+                </tr>
+                  <tr>                   
+                    
+                     <td>Ser-2017-10-515</td>
+                     <td>SPI Autoservicio Avanzado </td>
+                     <td>Martin Carvajal</td>
+                     <td>2.500.159</td>
+                     <td >03/03/2017</td>                     
+                     <td >13/03/2017</td>                     
+                     <td><input type="checkbox" class="filled-in" id="filled-5"  checked="checked"  /> <label class="label-t" for="filled-5"></label></td>    
+                     <td><input type="checkbox" class="filled-in" id="filled-in-5"  /> <label class="label-t" for="filled-in-5"></label></td>
+                   <td><input type="checkbox" class="filled-in" id="filled-in-box5"  /> <label class="label-t" for="filled-in-box5"></label></td>    
+                 </tr>
+                    <tr>
+                   
+                     <td>Ser-2014-10-4321</td>
+                     <td>SPI Nomina </td>
+                     <td>Martin Rodriguez</td>
+                     <td>12.500.899</td>
+                     <td >06/07/2014</td>                     
+                    <td >06/08/2014</td> 
+                     <td><input type="checkbox" class="filled-in" id="filled-6"  /> <label class="label-t" for="filled-6"></label></td>    
+                     <td><input type="checkbox" class="filled-in" id="filled-in-6"  checked="checked"  /> <label class="label-t" for="filled-in-6"></label></td>
+                   <td><input type="checkbox" class="filled-in" id="filled-in-box6"  /> <label class="label-t" for="filled-in-box6"></label></td>    
+                </tr>
+               </tbody>
+            </table>
+ 
+ </div > 
+
+
+<div class="fixed-action-btn horizontal">
+    <a id="pol1" class="btn-floating btn-large po #757575 grey darken-1">
+      <i class="large material-icons">store</i>
+    </a>
+   
+</div>
+      <div class="fixed-action-btn horizontal">
+    <a id="pol3" class="btn-floating btn-large po1 #757575 grey darken-1">
+      <i class="large material-icons">book</i>
+    </a>
+  
+  </div>
+      <div class="fixed-action-btn horizontal">
+    <a  id="pol4" class="btn-floating btn-large po2 #757575 grey darken-1">
+      <i class="large material-icons">mood</i>
+    </a>
+  
+  </div>
+      <div id="pol5" class="fixed-action-btn horizontal">
+    <a  class="btn-floating btn-large po3 #757575 grey darken-1">
+      <i class="large material-icons">subject</i>
+    </a>
+   
+  </div>
+
+
+</body>
+
+  <script src="js/materialize1.min.js"></script>
+	<script>
+$(document).ready(function() {
+				setTimeout(function() {
+			        $('#popup1').fadeIn(1500);
+				},2000);
+				$('.popup1-overlay').fadeIn(1500);
+				},2000);
+
+
+                              $('.popup1-overlay').height($(window).height());
+
+
+				$("#btnCerrar1").click(function () {
+					setTimeout(function() {
+					$(".popup1-overlay").fadeOut(1500);
+				   	},500);
+});
+   $(document).ready(function(){
+      $('.carousel').carousel();
+	  
+	    $('#modal1').modal('open');
+		$('#modal1').modal('close');
+		 $('.modal').modal();
+            $('#modal2').modal('open');
+		$('#modal2').modal('close');
+		 $('.modal').modal();
+    });
+	</script>
+	
+	<script>
+	 $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+       
+        console.log(modal, trigger);
+      },
+      complete: function() {  } // Callback for Modal close
+    }
+  );
+  $(document).ready(function() {
+    var table = $('#example').DataTable();
+ 
+    $('#example tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    } );
+ 
+    $('#button').click( function () {
+        table.row('.selected').remove().draw( false );
+    } );
+} );
+
+ // Initialize collapse button
+  $(".button-collapse").sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  //$('.collapsible').collapsible();
+
+$("#l").click(function(){
+	      $(".dropdown-button").removeClass("hide");
+	      $("#l").addClass("hide");
+      });
+
+      $("#l1").click(function(){
+	      $("#cambiar").addClass("hide");
+	      $("#l").removeClass("hide");
+      });
+
+$(document).ready(function() {
+$("#to_1").click(function(){
+	     location.href = "gestion_cliente_cuentasxcobrar.html";
+      });
+
+      $("#to_2").click(function(){
+	   location.href = "gestion_cliente_producto_adquirido.html";
+      });
+
+      $("#to_3").click(function(){
+	      location.href = "gestion_cliente_proceso_venta.html";
+      });
+
+      $("#to_4").click(function(){
+	      location.href = "gestion_cliente_forma_pago.html";
+      }); 
+
+
+$( "#listar" ).on( "click", function() {
+   location.href = "buzon_entrada_modulo_general_consulta.html";
+});
+$( "#guardar" ).on( "click", function() {
+   location.href = "buzon_entrada_modulo_general_consulta.html";
+});
+
+$( "#ver" ).on( "click", function() {
+   location.href = "buzon_entrada_actualizar_Requerimiento.html";
+});
+ $("#pol1").click(function(){
+	     location.href = "gestion_cliente_empresa.html";
+      });
+
+      $("#pol2").click(function(){
+	      location.href = "gestion_cliente_cuentasxcobrar.html";
+      });
+
+      $("#pol3").click(function(){
+	      location.href = "gestion_cliente_reporte_pendiente.html";
+      });
+
+      $("#pol4").click(function(){
+	      location.href = "gestion_cliente_encuesta.html";
+      });
+
+$("#pol5").click(function(){
+	     location.href = "gestion_cliente_horas.html";
+      });
+	
+
+$("#c1").click(function(){
+	     location.href = "configuracion.html";
+      });
+
+      $("#c2").click(function(){
+	      location.href = "configuracion-status.html";
+      });
+
+      $("#c3").click(function(){
+	      location.href = "configuracion-status-modulo.html";
+      });
+
+      $("#c4").click(function(){
+	      location.href = "configuracion-status-modulo-registrar.html";
+      });
+  $("#c5").click(function(){
+	      location.href = "configuracion-mod-status-modulo-registrar.html";
+      });
+
+      $("#c6").click(function(){
+	       location.href = "configuracion-flujo-status-modulo.html";
+      });
+
+      $("#c7").click(function(){
+	      location.href = "configuracion.html";
+      });
+                   
+       });
+ $(document).ready(function() {
+    $('select').material_select();
+  });
+
+$(".button-collapse").sideNav();
+   $('.button-collapse').sideNav({
+      menuWidth: 300, 
+      edge: 'right', 
+      closeOnClick: true, 
+      draggable: true, 
+      onOpen: function(el) { }, 
+      onClose: function(el) {  }, 
+    }
+  );
+  
+$('#icon_book').val('Mejoras de desarrollo');
+$('#atencion').val('correo');
+$('#fecha').val('25/10/2017');
+$('#rif').val('V132370890');
+$('#cliente').val('Fama America c.a');  
+$('#segmento').val('Industria/Acero/Hierro'); 
+$('#telefono').val('(0414)1955577');
+$('#correo').val('automatizacion@gmail.com');
+$('#ejecutivo').val('José Altuve');  
+$('#consultor').val('Juan Perez'); 
+$('#fiscal').val('Los cortijos, edificio BOD, Piso 5 oficina 555');  
+$('#comercial').val('Los cortijos, edificio BOD, Piso 5 oficina 555'); 
+
+
+
+
+</script>
+</body>
+</html>

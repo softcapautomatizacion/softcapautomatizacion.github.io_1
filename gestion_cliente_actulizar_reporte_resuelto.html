@@ -1,0 +1,789 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>SIAC- Mostrar Reporte - Menu - Reporte Resuelto </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+ <link href="css/icon.css" rel="stylesheet">
+ <link type="text/css" rel="stylesheet" href="css/estilos.css"  media="screen,projection"/>
+
+      <link href="css/materialize.min.css" rel="stylesheet" >
+      <link rel="stylesheet" href="css/materialize.min.css">
+      <script src="js/jquery-2.1.4.js"></script>
+      <link href="css/jquery.dataTables.min.css" rel="stylesheet"/>
+      <script src="js/jquery.dataTables.min.js"></script>
+      <script src="js/materialize1.min.js"></script>
+	  <link rel="stylesheet" href="css/style.css">
+ <style>
+
+
+
+.collection {margin-top:0; margin-left:-10px; width:350px;}
+ table {margin-left:0px; font-size: small}
+#modal1 {margin-left:300px; }
+#modal2 {margin-left:300px; }
+.modal-footer{margin-left:-450px;}
+#logo {
+ width:350px;
+ height:63px;
+}
+.po{margin-top:-700px; }
+
+.po1{margin-top:-550px;}
+.po2{margin-top:-400px;}
+.po3{margin-top:-250px;}
+.po4{margin-top:-850px;}
+
+#guardar{margin-right:90px;}
+#reporte{height:3px;  display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;}
+.chip{margin-top:20px; margin-bottom:40px}
+
+.tabs .indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: gray;
+    will-change: left, right;
+}
+
+
+form input:required {
+ border:1px solid gray;
+ /* otras propiedades */
+}
+
+a {font-weight: bold;  cursor: hand; cursor:pointer}
+#tabla-reporte{   height:1px;  display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+margin-top:5px;}
+
+table.dataTable thead th, table.dataTable thead td {    
+    border-bottom: 1px solid white;
+}
+td, th {
+  
+     border-radius: 0px; 
+}
+.cambiar{width:10px; padding-left:5px;}
+
+.cambiar1{width:10px; margin-bottom:10px; margin-right:1px; padding-left:5px;}
+ </style>
+
+ 
+</head>
+<body>
+
+<div class="col s3 ">
+	<div class="row">  
+        <div id="top_1" class="col s1 m1">                              
+           <img  src="img/logoindex2.png"  alt="" height="90%" width="90%"/>
+        </div>
+
+       
+        
+        <div id="top_2" class="col s2 m2 l2 lx3">
+
+          <div class="ubuntu-bold-26">Sistema SIAC</div>
+		
+          <div class="ubuntu-medium-14-26">Versión V1.0.0</div>
+        </div>
+
+        <div id="top_3" class="col s1 m1">        
+          <div class="ubuntu-medium-14">Usuario: INFOCENT</div>                    
+        </div>
+
+        <div id="top_4" class="col s1 m1  ubuntu-medium-12">           
+          <i class="small material-icons">home</i>            
+          Inicio         
+        </div>
+
+        <div id="top_5" class="col s1 m1  ubuntu-medium-12"> 
+          <i class="small material-icons">person</i>          
+          Mi perfil
+        </div>
+         <div id="top_6" class="col s1 m1 l1 xl1  ubuntu-medium-12">           
+          <i class="material-icons">store</i>
+        <div id="l" >
+    infocent   
+  </div>      
+        </div>
+
+        <div id="top_7" class="col s1 m1  ubuntu-medium-12"> 
+         <a  href="#" data-activates="slide-out" class="button-collapse"> <i class="material-icons">dehaze</i>Automatizacion</br> </a> 
+        </div>
+
+        <div id="top_8" class="col s1 m1 ubuntu-medium-12">          
+          <i class="material-icons">close</i>
+          Cerrar sesión
+        </div>
+      </div>
+		 
+        
+     </div>
+
+
+<div class="row">  
+ 
+
+   
+	  <div class="col s3 ">
+            <div class="row">
+               <div class="collection">
+                  <a href="#!" id="crear"  class="collection-item active"><i class="material-icons prefix waves-effect waves-light-blue lighten-1 ">work</i>  Gestión de Cliente</a>
+                  <a href="#!" id="listar" class="collection-item "><i class="material-icons prefix waves-effect waves-light-blue lighten-1">email</i>  Gestión General</a>    
+               </div>
+         
+
+ 	 <a class='dropdown-button btn transparent  black-text hide' id="cambiar" href='#' data-activates='dropdown1'>Cambiar Empresa</a> 
+
+  <!-- Dropdown Structure -->
+ 
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><a id="l1" href="#!">infocent</a></li>
+    <li><a href="#!">nomisistemas</a></li>
+    <li class="divider">softcap</li>
+   
+  </ul>	 
+	   <div class="fixed-action-btn horizontal">
+    <a id="pol1" class="btn-floating btn-large po4 #757575 grey darken-1">
+      <i class="large material-icons">store</i>
+    </a>
+    
+  </div>
+    <div class="fixed-action-btn horizontal">
+    <a id="pol2" class="btn-floating btn-large po #757575 grey darken-1">
+      <i class="large material-icons">phone</i>
+    </a>
+   
+  </div>
+      <div class="fixed-action-btn horizontal">
+    <a id="pol3" class="btn-floating btn-large po1 #757575 grey darken-1">
+      <i class="large material-icons">book</i>
+    </a>
+  
+  </div>
+      <div class="fixed-action-btn horizontal">
+    <a  id="pol4" class="btn-floating btn-large po2 #757575 grey darken-1">
+      <i class="large material-icons">mood</i>
+    </a>
+  
+  </div>
+      <div id="pol5" class="fixed-action-btn horizontal">
+    <a  class="btn-floating btn-large po3 #757575 grey darken-1">
+      <i class="large material-icons">subject</i>
+    </a>
+   
+  </div>
+   </div>
+ 
+   </div>     
+  
+
+ 	
+  <div class="col s9"> 
+<div class="row">
+<div class="col s11">
+
+<div class="row">
+        
+
+       
+        <div id="to_1" class="col s2 ubuntu-medium-12 top_20">           
+          <i class="small material-icons">book</i>            
+         Reporte Pendiente       
+        </div>
+
+        <div id="top_20" class="col s2 ubuntu-medium-12 top_20"> 
+          <i class="small material-icons">photo_album</i>          
+          Reportes Resuelto
+        </div>
+        <div  id="to_2" class="col s2 ubuntu-medium-12 top_20">           
+          <i class="material-icons">phonelink_setup</i>       
+	Reporte Asociados         
+        </div>
+
+       
+<ul id="slide-out" class="side-nav ">             
+            <li><div class="chip" onclick="alert('¡No tienes permiso para este modulo!')">  Modulo: Venta </div> 
+            <li><div id="auto" class="chip">  Modulo: Automatización </div> 
+            <li><div class="chip">  Modulo: Logistica </div> 
+            <li><div class="chip">  Modulo: Proceso </div>
+            <li><div class="chip">  Modulo: Automatización </div>
+            <li><div class="chip">  Modulo: Gestión de Ambiente </div>
+            <li><div class="chip">  Modulo: General de Consulta </div> 
+            <li><div class="chip">  Modulo: Venta </div> 
+            <li><div class="chip">  Modulo: Atención telefonica </div> 
+            <li><div class="chip">  Modulo: Logistica </div> 
+            <li><div class="chip">  Modulo: Proceso </div>
+            <li><div class="chip">  Modulo: Automatización </div>
+            <li><div class="chip">  Modulo: Gestión de Ambiente </div>
+            <li><div class="chip">  Modulo: General de Consulta </div> 
+            <li><div class="chip">  Modulo: Venta </div> 
+            <li><div class="chip">  Modulo: Atención telefonica </div> 
+            <li><div class="chip">  Modulo: Logistica </div> 
+            <li><div class="chip">  Modulo: Proceso </div>
+            <li><div class="chip">  Modulo: Automatización </div>
+            <li><div class="chip">  Modulo: Gestión de Ambiente </div>
+            </ul>
+   
+
+<div class="row">
+<div class="col s10">
+	  <div class="card">
+         
+	    <div id="reporte" class="card-content #424242 grey darken-3 white-text">
+	     Reporte Resulto
+	    </div>
+	    
+ 
+<form >
+     
+   <a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">cached</i></a>
+		<a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">add</i></a>
+		<a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">local_printshop</i></a>
+                <a  class="waves-effect waves-light btn cambiar"><i class="material-icons left">mode_edit</i></a><p>
+           <div id="tabla-reporte" class="card-content #00897b teal darken-1 white-text"></p>
+	       Buzon de Casos: Fama de America - Ficha: 1261
+	    </div>
+              <table id="example" class="striped" cellspacing="0" width="100%">
+               <thead class=" #ffffff black-text card-content #4db6ac teal lighten-2 white-text">
+                  <div class="row ">
+                     <tr>
+                        <th>Orden</th>                      
+                        <th>Fecha</th>
+                        <th>Tipo de Reporte</th>
+                        <th>Fecha de Cierre</th>
+                        <th>Persona Contacto</th>
+                        <th>Consultor</th>
+                        <th>Activar Reporte</th>						
+                     </tr>
+                  </div>
+               </thead>
+               <tbody>
+                  <tr>
+                    <td ><a >140636 </a></td> 
+                     <td>25/10/2017</td>
+                     <td>Mejora de desarrollo e Innovaciones</td>
+                     <td>01/11/2017           </td>
+                     <td>Raul Jardines Morales</td>
+                     <td>Luisana Pedrozo</td>
+                      <td><a id="activar"  class="waves-effect btn left">Activar</a></td>
+                  </tr>
+                  <tr>
+                     <td><a>744447</a></td>                     
+                     <td>15/09/2017</td>
+                     <td>Incidencia Técnica Funcional </td>
+                     <td>20/09/2017</td>
+                     <td>Leudis Velasquez</td>
+	             <td>Luisana Pedrozo</td>
+                     <td><a id="activar1"  class="waves-effect btn left">Activar</a></td>
+                  </tr>
+                  <tr>
+                     <td><a>189754</a></td>                     
+                     <td>10/11/2017</td>
+                     <td>Soporte</td>
+                     <td>11/11/2017</td>
+                     <td>Juan Perez</td>
+		     <td>Luisana Velasquez</td>
+                     <td><a id="activar2"  class="waves-effect btn left">Activar</a></td>
+                  </tr>
+                  <tr>
+                     <td><a>105426</a></td>                    
+                     <td>01/10/2017</td>
+                     <td>Desarrollo</td>
+                     <td>03/10/2017</td>
+                     <td>Jaime de Abreu</td>
+	             <td>Luisana Pedrozo</td>
+                     <td><a id="activar3"  class="waves-effect btn left">Activar</a></td>
+                  </tr>
+                   <tr>
+                   
+                     <td ><a>139553 </a></td> 
+                     <td>21/10/2017</td>
+                     <td>Error siac </td>
+                     <td>22/10/2017</td>
+                     <td>Luis Angel Rodriguez Velasquez</td>
+                     <td>Luisana Pedrozo</td>
+                     <td><a id="activar4"  class="waves-effect btn left">Activar</a></td>
+                  </tr>
+                  <tr>
+                      <td><a>744447</a></td>                     
+                     <td>15/09/2017</td>
+                     <td>Soporte</td>
+                     <td>26/09/2017</td>
+                     <td>Lucia Abreu</td>
+		     <td>Luisana Pedrozo</td>
+                     <td><a id="activar5"  class="waves-effect btn left">Activar</a></td>
+                  </tr>
+                  <tr>
+                    <td><a>189755</a></td>                     
+                     <td>10/11/2017</td>
+                     <td>Soporte</td>
+                     <td>12/11/2017</td>
+                     <td>Julia Mora</td>
+                     <td>Luisana Pedrozo</td>	
+                     <td><a id="activar6"  class="waves-effect btn left">Activar</a></td>
+                  </tr>
+                  <tr>
+                     <td><a>105555<a></td>                    
+                     <td>01/10/2017</td>
+                     <td>Solicitud de soporte</td>
+                     <td>08/10/2017</td>
+                     <td>Jose Aguilar</td>
+		     <td>Morela Pedrozo</td>
+                     <td><a id="activar7"  class="waves-effect btn left">Activar</a></td>
+                  </tr>
+                    <tr>                   
+                     <td ><a>22222 </a></td> 
+                     <td>01/10/2017</td>
+                     <td>Error siac  </td>
+                     <td>02/10/2017</td>
+                     <td>Juana Paz</td>                   
+                      <td>Luisana Pedrozo</td>
+                     <td><a id="activar8"  class="waves-effect btn left">Activar</a></td>
+                  </tr>
+                  <tr>
+                      <td><a>222211</a></td>                     
+                     <td>15/09/2017</td>
+                     <td>Error siac</td>
+                     <td>15/09/2017</td>
+                     <td>Edison Flores</td>
+		     <td>Luisana Pedrozo</td>
+                     <td><a id="activar9"  class="waves-effect btn left">Activar</a></td>
+                  </tr>
+                  <tr>
+                    <td><a>166666</a></td>                    
+                     <td>10/11/2017</td>
+                     <td>Error siac</td>
+                     <td>13/11/2017</td>                     
+                     <td>Juana Mora</td>
+		     <td>Luisana Pedrozo</td>
+                     <td><a id="activar10"  class="waves-effect btn left">Activar</a></td>
+                  </tr>
+                  <tr>
+                 <td><a>165555</a></td>                    
+                     <td>10/11/2017</td>
+                     <td>Error siac</td>
+                     <td>01/12/2017</td>                     
+                     <td>Juana Mora</td>
+		     <td>Luisana Pedrozo</td>
+                     <td><a id="activar11"  class="waves-effect btn left">Activar</a></td>
+                  </tr>
+                     <tr>
+                   
+                     <td><a>7895214</a></td>                    
+                     <td>10/11/2017</td>
+                     <td>Error siac</td>
+                     <td>11/11/2017</td>                     
+                     <td>Juana Mora</td>
+		     <td>Luisana Pedrozo</td>
+                     <td><a id="activar12"  class="waves-effect btn left">Activar</a></td>
+                  </tr>
+                  <tr>
+                      <td><a>1000000</a></td>                    
+                     <td>10/11/2017</td>
+                     <td>Error siac</td>
+                     <td>05/12/2017</td>                     
+                     <td>Juana Mora</td>
+		     <td>Luisana Pedrozo</td>
+                     <td><a id="activar13"  class="waves-effect btn left">Activar</a></td>
+                  </tr>
+                  <tr>
+                    <td><a>1000045</a></td>                    
+                     <td>10/11/2017</td>
+                     <td>Error siac</td>
+                     <td>30/11/2017</td>
+                     <td>Revisando la Solicitud</td>                     
+                     <td>Juana Mora</td>
+		     <td>Luisana Pedrozo</td>
+                     <td><a id="activar14"  class="waves-effect btn left">Activar</a></td>
+                  </tr>
+                  <tr>
+                   <td><a>1010234</a></td>                    
+                     <td>10/11/2017</td>
+                     <td>Error siac</td>
+                     <td>25/11/2017</td>                     
+                     <td>Juana Mora</td>
+		     <td>Luisana Pedrozo</td>
+                     <td><a id="activar15"  class="waves-effect btn left">Activar</a></td>
+                  </tr>
+                   <tr>                   
+                     <td><a>15100</a></td>                    
+                     <td>10/11/2017</td>
+                     <td>Error siac</td>
+                     <td>02/12/2017</td>                     
+                     <td>Juana Mora</td>
+		     <td>Luisana Pedrozo</td>
+                     <td><a id="activar16"  class="waves-effect btn left">Activar</a></td>
+                  </tr>
+                  <tr>
+                     <td><a>101234</a></td>                    
+                     <td>10/11/2017</td>
+                     <td>Error siac</td>
+                     <td>25/11/2017</td>                     
+                     <td>Juana Mora</td>
+		     <td>Luisana Pedrozo</td>
+                     <td><a id="activar17"  class="waves-effect btn left">Activar</a></td>
+                  </tr>
+                  <tr>
+                  <td><a>108771</a></td>                    
+                     <td>10/11/2017</td>
+                     <td>Error siac</td>
+                     <td>21/11/2017</td>                     
+                     <td>Juana Mora</td>
+		     <td>Luisana Pedrozo</td>
+                     <td><a id="activar18"  class="waves-effect btn left">Activar</a></td>
+                  </tr>
+                  <tr>
+                      <td><a>111118</a></td>                    
+                     <td>10/11/2017</td>
+                     <td>Error siac</td>
+                     <td>10/11/2017</td>                     
+                     <td>Juana Mora</td>
+		     <td>Luisana Pedrozo</td>
+                     <td><a id="activar19"  class="waves-effect btn left">Activar</a></td>
+                  </tr>
+                  
+               </tbody>
+            </table>
+      
+      <div class="row">
+        <div class="col s12">
+          
+         
+        </div>
+      </div>
+  
+
+</div > 
+	   <div class="row">
+<div class="col s12">
+	  <div class="card">
+         
+	    <div id="reporte" class="card-content #424242 grey darken-3 white-text">
+	      Detalle del Reporte 7895214
+	    </div>
+	   
+	    <div class="card-content grey lighten-4 ">
+	     
+	      <div id="test5">
+   <div id="tabla-reporte" class="card-content #00897b teal darken-1 white-text"></p>
+	      Reporte 15100 - Agregar una funcionalidad en la sección "Relación puesto" donde genere el historial del cargo, unidad y puesto del trabajador.Dias de reporte: 10. Intalación: SPI Nomina . Solitado por: Luisana Perez Atendido: Francisco Andaluz
+	    </div>
+              <table id="example1" class="striped" cellspacing="0" width="100%">
+               <thead class=" #ffffff black-text card-content #4db6ac teal lighten-2 white-text">
+                  <div class="row ">
+                     <tr>
+                        <th>Fecha</th>
+                        <th>Modulo</th>
+                        <th>Dias</th>
+                        <th>Status</th>
+                        <th>Seguimiento</th>
+                     </tr>
+                  </div>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>15/10/2017</td>
+                     <td>Atención Telefonica</td>
+                     <td>2</td>
+                     <td>Por Definir</td>
+                     <td>Creación de Reporte para evaluar la factibilidad del desarrollo</td>
+                  </tr>
+                  <tr>                                       
+                     <td>17/10/2017</td>
+                     <td>Atención Telefonica</td>
+                     <td>2</td>
+                     <td>No Clasificado</td>
+                     <td>Inicio de Reporte para evaluar la factibilidad del desarrollo</td>
+                  </tr>
+                  <tr>
+                     <td>19/11/2017</td>
+                     <td>Soporte Técnico</td>
+                     <td>10</td>
+                     <td>Creación de la Propuesta</td>
+		     <td>Se esta elaborado el proyecto de desarrollo</td>
+                  </tr>
+                  <tr>
+                     <td>29/11/2017</td>
+                     <td>Soporte Técnico</td>
+                     <td>15</td>
+                     <td>Evaluación del proyecto</td>
+	             <td>El técnico Luis Perez esta certificado la fatibilidad</td>
+                  </tr>
+                   <tr>           
+                     <td>14/12/2017</td>
+                     <td>Soporte Técnico</td>
+                     <td>2</td>
+                     <td>Proyecto Factible</td>
+                     <td>Luisana Pedrozo</td>
+                  </tr>
+                  <tr>
+                     <td>16/12/2017</td>
+                     <td>Soporte Técnico</td>
+                     <td>5</td>
+                     <td>Enviado al Cliente</td>
+		     <td>Proyecto aprobado por el Cliente</td>
+                  </tr>
+                  <tr>
+                     <td>21/12/2017</td>
+                     <td>Soporte Técnico</td>
+                     <td>20</td>
+                     <td>Cerrado - Se activa otro flujo</td>
+                     <td>Reporte cerrado se activa otro flujo para el desarrollo del proyecto</td>
+
+                  </tr>
+               </tbody>
+            </table>
+      </div>
+	    
+	    
+           </div>	      
+	    </div>
+	  </div>
+
+</div>
+</div>        
+	 
+  </div>
+
+ 
+   </div> 
+
+
+</div>        
+	 
+  </div>
+
+ 
+   </div> 
+
+
+
+  
+   
+  <!-- Modal Structure -->
+
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h5>Seleccionar el Modulo</h5>     
+	  <div class="col s2 "> 
+	<div class="row">     
+
+	  <div class="collection">
+	  
+		<a href="#!" class="collection-item active">Atención Telefonica</a>
+		<a href="#!" class="collection-item">Control de Mantenimiento</a>
+		<a href="#!" class="collection-item">Control de Horas de Asesoría</a>
+		<a href="#!" class="collection-item">Control de Proyecto</a>	
+        <a href="#!" class="collection-item ">General de Consulta</a>
+		<a href="#!" class="collection-item">Automatización</a>
+		<a href="#!" class="collection-item">Control de Calidad</a>
+		<a href="#!" class="collection-item">Atención al Cliente</a>			
+	  </div>       
+        </div>     
+   
+ </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close  waves-effect waves-light btn"> <i class="Tiny material-icons">close</i></a>
+    </div>
+  </div>
+ 
+
+
+ <div id="modal2" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h5>Seleccionar el Cliente</h5>     
+	  <div class="col s2 "> 
+	<div class="row">     
+
+	  <div class="collection">
+	  
+		<a href="#!" class="collection-item active">Buscar Cliente</a>
+			
+	  </div>       
+        </div>     
+   
+ </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close  waves-effect waves-light btn"> <i class="Tiny material-icons">close</i></a>
+    </div>
+  </div>
+ 
+</div>
+ </div>
+
+
+</body>
+
+  <script src="js/materialize1.min.js"></script>
+	<script>
+   $(document).ready(function(){
+      $('.carousel').carousel();
+	  
+	    $('#modal1').modal('open');
+		$('#modal1').modal('close');
+		 $('.modal').modal();
+            $('#modal2').modal('open');
+		$('#modal2').modal('close');
+		 $('.modal').modal();
+    });
+	</script>
+	
+	<script>
+	 $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+       
+        console.log(modal, trigger);
+      },
+      complete: function() {  } // Callback for Modal close
+    }
+  );
+  $(document).ready(function() {
+    var table = $('#example').DataTable();
+ 
+    $('#example tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    } );
+ 
+    $('#button').click( function () {
+        table.row('.selected').remove().draw( false );
+    } );
+} );
+
+ // Initialize collapse button
+  $(".button-collapse").sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  //$('.collapsible').collapsible();
+
+$("#l").click(function(){
+	      $(".dropdown-button").removeClass("hide");
+	      $("#l").addClass("hide");
+      });
+
+      $("#l1").click(function(){
+	      $("#cambiar").addClass("hide");
+	      $("#l").removeClass("hide");
+      });
+
+$(document).ready(function() {
+
+$( "#listar" ).on( "click", function() {
+   location.href = "buzon_entrada_modulo_general_consulta.html";
+});
+$( "#guardar" ).on( "click", function() {
+   location.href = "buzon_entrada_modulo_general_consulta.html";
+});
+
+$( "#ver" ).on( "click", function() {
+   location.href = "buzon_entrada_actualizar_Requerimiento.html";
+});	
+
+
+$("#to_1").click(function(){
+	     location.href = "gestion_cliente_reporte_pendiente.html";
+      });
+
+    
+      $("#update").click(function(){
+	      location.href = "gestion_cliente_reporte_resuelto.html";
+      });
+ $("#pol1").click(function(){
+	     location.href = "gestion_cliente_empresa.html";
+      });
+
+      $("#pol2").click(function(){
+	      location.href = "gestion_cliente_cuentasxcobrar.html";
+      });
+
+      $("#pol3").click(function(){
+	      location.href = "gestion_cliente_reporte_pendiente.html";
+      });
+
+      $("#pol4").click(function(){
+	      location.href = "gestion_cliente_encuesta.html";
+      });
+
+$("#pol5").click(function(){
+	     location.href = "gestion_cliente_horas.html";
+      });
+
+
+$("#c1").click(function(){
+	     location.href = "configuracion.html";
+      });
+
+      $("#c2").click(function(){
+	      location.href = "configuracion-status.html";
+      });
+
+      $("#c3").click(function(){
+	      location.href = "configuracion-status-modulo.html";
+      });
+
+      $("#c4").click(function(){
+	      location.href = "configuracion-status-modulo-registrar.html";
+      });
+  $("#c5").click(function(){
+	      location.href = "configuracion-mod-status-modulo-registrar.html";
+      });
+
+      $("#c6").click(function(){
+	       location.href = "configuracion-flujo-status-modulo.html";
+      });
+
+      $("#c7").click(function(){
+	      location.href = "configuracion.html";
+      });
+                   
+       });
+ $(document).ready(function() {
+    $('select').material_select();
+  });
+
+$(".button-collapse").sideNav();
+   $('.button-collapse').sideNav({
+      menuWidth: 300, 
+      edge: 'right', 
+      closeOnClick: true, 
+      draggable: true, 
+      onOpen: function(el) { }, 
+      onClose: function(el) {  }, 
+    }
+  );
+  
+$('#icon_book').val('Mejoras de desarrollo');
+    $('#atencion').val('correo');
+   $('#fecha').val('25/10/2017');
+  $('#rif').val('V132370890');
+  $('#cliente').val('Fama America c.a');  
+ $('#segmento').val('Industria/Acero/Hierro'); 
+ $('#telefono').val('(0414)1955577');
+  $('#correo').val('automatizacion@gmail.com');
+  $('#ejecutivo').val('José Altuve');  
+ $('#consultor').val('Juan Perez'); 
+  $('#fiscal').val('Los cortijos, edificio BOD, Piso 5 oficina 555');  
+ $('#comercial').val('Los cortijos, edificio BOD, Piso 5 oficina 555'); 
+
+</script>
+</body>
+</html>
