@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>SIAC- Crear Reporte - Menu - Usuario SPI </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+ <link href="css/icon.css" rel="stylesheet">
+ <link type="text/css" rel="stylesheet" href="css/estilos.css"  media="screen,projection"/>
+
+      <link href="css/materialize.min.css" rel="stylesheet" >
+      <link rel="stylesheet" href="css/materialize.min.css">
+      <script src="js/jquery-2.1.4.js"></script>
+      <link href="css/jquery.dataTables.min.css" rel="stylesheet"/>
+      <script src="js/jquery.dataTables.min.js"></script>
+      <script src="js/materialize1.min.js"></script>
+	  <link rel="stylesheet" href="css/style.css">
+ <style>
+
+
+
+.collection {margin-top:0; margin-left:-10px; width:350px;}
+ table {margin-left:35px; font-size: small}
+#modal1 {margin-left:300px; }
+#modal2 {margin-left:300px; }
+.modal-footer{margin-left:-450px;}
+#logo {
+ width:350px;
+ height:63px;
+}
+
+
+#guardar{margin-right:90px;}
+#reporte{height:3px;  display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;}
+.chip{margin-top:20px; margin-bottom:40px}
+
+.tabs .indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: gray;
+    will-change: left, right;
+}
+
+
+form input:required {
+ border:1px solid gray;
+ /* otras propiedades */
+}
+
+#tabla-reporte{   height:1px;  display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+margin-top:5px;}
+
+table.dataTable thead th, table.dataTable thead td {    
+    border-bottom: 1px solid white;
+}
+td, th {
+  
+     border-radius: 0px; 
+}
+.cambiar{width:10px; padding-left:5px;}
+
+.cambiar1{width:10px; margin-bottom:10px; margin-right:1px; padding-left:5px;}
+#popup1 {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+.content1-popup1 {
+    margin:0px auto;
+    margin-top:200px;
+	margin-left:20px;
+    position:relative;
+    padding:10px;
+    width:300px;
+    min-height:400px;
+    border-radius:4px;
+    background-color:#FFFFFF;
+    box-shadow: 0 2px 5px #666666;
+}
+
+.content1-popup1 h2 {
+    color:#48484B;
+    border-bottom: 1px solid #48484B;
+    margin-top: 0;
+    padding-bottom: 4px;
+}
+
+.popup1-overlay {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display:none;
+    background-color: #777777;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.close11 {
+    position: absolute;
+    right: 15px;
+}
+example {
+    width: 80%;
+    margin-left: 0;
+}
+ </style>
+
+ 
+</head>
+<body>
+<div class="row">
+<div class="col s11">
+	  <div class="card">
+ <div class="row">  
+     
+        <div  id="to_1"  class="col s1 ubuntu-medium-12 top_20 ">           
+          <i class="small material-icons">store</i>            
+          Datos de la Empresa        
+        </div>
+
+        <div  id="to_2" class="col s1 ubuntu-medium-12 top_20"> 
+          <i class="small material-icons">person</i>          
+          Contacto
+        </div>
+         <div id="to_3"  class="col s1 ubuntu-medium-12 top_20">           
+          <i class="material-icons">people</i>       
+		Ficha Técnica         
+        </div>
+
+        <div  id="top_20"  class="col s1 ubuntu-medium-12 top_20"> 
+          <i class="material-icons">assignment</i>Usuario SPI
+        </div>
+
+        <div  id="to_4" class="col s1 ubuntu-medium-12 top_20">          
+          <i class="material-icons">check</i>
+         Historico de cliente
+</div> </div> 
+	<a  id="bo" class="waves-effect waves-light btn cambiar"><i class="material-icons left">add</i></a>
+		<a id="bo1" class="waves-effect waves-light btn cambiar"><i class="material-icons left">local_printshop</i></a>
+             
+  <p>
+   
+            <table id="example" class="striped" cellspacing="0">
+               <thead class=" #ffffff black-text card-content #4db6ac teal lighten-2 white-text">
+                  <div class="row ">
+                     <tr>
+                                          
+                        <th>Tipo de Usuario</th>
+                        <th>Nombre del Usuario</th>
+                       	<th>Comentarios</th>				
+                     </tr>
+                  </div>
+               </thead>
+               <tbody>
+                  
+               </tbody>
+            </table>
+            </table>
+  </div > 
+
+<div class="fixed-action-btn horizontal">
+    <a id="pol1" class="btn tooltipped btn-floating btn-large po4 #757575 grey darken-1 " data-position="bottom" data-delay="50" data-tooltip="Menu empresa">
+      <i class="large material-icons">store</i>
+    </a>
+    
+</div>
+<div class="fixed-action-btn horizontal">
+    <a id="pol2" class="btn-floating btn-large po #757575 grey darken-1">
+      <i class="large material-icons">phone</i>
+    </a>
+   
+</div>
+      <div class="fixed-action-btn horizontal">
+    <a id="pol3" class="btn-floating btn-large po1 #757575 grey darken-1">
+      <i class="large material-icons">book</i>
+    </a>
+  
+  </div>
+      <div class="fixed-action-btn horizontal">
+    <a  id="pol4" class="btn-floating btn-large po2 #757575 grey darken-1">
+      <i class="large material-icons">mood</i>
+    </a>
+  
+  </div>
+      <div id="pol5" class="fixed-action-btn horizontal">
+    <a  class="btn-floating btn-large po3 #757575 grey darken-1">
+      <i class="large material-icons">subject</i>
+    </a>
+   
+  </div>
+
+</body>
+
+  <script src="js/materialize1.min.js"></script>
+	<script>
+$(document).ready(function() {
+				setTimeout(function() {
+			        $('#popup1').fadeIn(1500);
+				},2000);
+				$('.popup1-overlay').fadeIn(1500);
+				},2000);
+
+
+                              $('.popup1-overlay').height($(window).height());
+
+
+				$("#btnCerrar1").click(function () {
+					setTimeout(function() {
+					$(".popup1-overlay").fadeOut(1500);
+				   	},500);
+});
+   $(document).ready(function(){
+      $('.carousel').carousel();
+	  
+	    $('#modal1').modal('open');
+		$('#modal1').modal('close');
+		 $('.modal').modal();
+            $('#modal2').modal('open');
+		$('#modal2').modal('close');
+		 $('.modal').modal();
+    });
+	</script>
+	
+	<script>
+	 $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+       
+        console.log(modal, trigger);
+      },
+      complete: function() {  } // Callback for Modal close
+    }
+  );
+  $(document).ready(function() {
+    var table = $('#example').DataTable();
+ 
+    $('#example tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    } );
+ 
+    $('#button').click( function () {
+        table.row('.selected').remove().draw( false );
+    } );
+} );
+
+ // Initialize collapse button
+  $(".button-collapse").sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  //$('.collapsible').collapsible();
+
+$("#l").click(function(){
+	      $(".dropdown-button").removeClass("hide");
+	      $("#l").addClass("hide");
+      });
+
+      $("#l1").click(function(){
+	      $("#cambiar").addClass("hide");
+	      $("#l").removeClass("hide");
+      });
+
+$(document).ready(function() {
+
+$( "#listar" ).on( "click", function() {
+   location.href = "buzon_entrada_modulo_general_consulta.html";
+});
+$( "#guardar" ).on( "click", function() {
+   location.href = "buzon_entrada_modulo_general_consulta.html";
+});
+
+$( "#ver" ).on( "click", function() {
+   location.href = "buzon_entrada_actualizar_Requerimiento.html";
+});	
+
+ $("#to_1").click(function(){
+	     location.href = "gestion_cliente_empresa.html";
+      });
+
+      $("#to_2").click(function(){
+	      location.href = "gestion_cliente_iframe_contacto.html";
+      });
+
+      $("#to_3").click(function(){
+	      location.href = "gestion_cliente_ficha_tecnica.html";
+      });
+
+      $("#to_4").click(function(){
+	      location.href = "gestion_cliente_historico_cliente.html";
+      });
+
+ $("#pol1").click(function(){
+	     location.href = "gestion_cliente_empresa.html";
+      });
+
+      $("#pol2").click(function(){
+	      location.href = "gestion_cliente_cuentasxcobrar.html";
+      });
+
+      $("#pol3").click(function(){
+	      location.href = "gestion_cliente_reporte_pendiente.html";
+      });
+
+      $("#pol4").click(function(){
+	      location.href = "gestion_cliente_encuesta.html";
+      });
+
+$("#pol5").click(function(){
+	     location.href = "gestion_cliente_horas.html";
+      });
+    
+$("#c1").click(function(){
+	     location.href = "configuracion.html";
+      });
+
+      $("#c2").click(function(){
+	      location.href = "configuracion-status.html";
+      });
+
+      $("#c3").click(function(){
+	      location.href = "configuracion-status-modulo.html";
+      });
+
+      $("#c4").click(function(){
+	      location.href = "configuracion-status-modulo-registrar.html";
+      });
+  $("#c5").click(function(){
+	      location.href = "configuracion-mod-status-modulo-registrar.html";
+      });
+
+      $("#c6").click(function(){
+	       location.href = "configuracion-flujo-status-modulo.html";
+      });
+
+      $("#c7").click(function(){
+	      location.href = "configuracion.html";
+      });
+                   
+       });
+ $(document).ready(function() {
+    $('select').material_select();
+  });
+
+$(".button-collapse").sideNav();
+   $('.button-collapse').sideNav({
+      menuWidth: 300, 
+      edge: 'right', 
+      closeOnClick: true, 
+      draggable: true, 
+      onOpen: function(el) { }, 
+      onClose: function(el) {  }, 
+    }
+  );
+  
+$('#icon_book').val('Mejoras de desarrollo');
+$('#atencion').val('correo');
+$('#fecha').val('25/10/2017');
+$('#rif').val('V132370890');
+$('#cliente').val('Fama America c.a');  
+$('#segmento').val('Industria/Acero/Hierro'); 
+$('#telefono').val('(0414)1955577');
+$('#correo').val('automatizacion@gmail.com');
+$('#ejecutivo').val('José Altuve');  
+$('#consultor').val('Juan Perez'); 
+$('#fiscal').val('Los cortijos, edificio BOD, Piso 5 oficina 555');  
+$('#comercial').val('Los cortijos, edificio BOD, Piso 5 oficina 555'); 
+
+
+
+
+</script>
+</body>
+</html>

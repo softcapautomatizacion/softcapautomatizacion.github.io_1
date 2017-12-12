@@ -1,0 +1,662 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>SIAC- Crear Reporte - Menu - Agregar Contacto </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+ <link href="css/icon.css" rel="stylesheet">
+ <link type="text/css" rel="stylesheet" href="css/estilos.css"  media="screen,projection"/>
+
+      <link href="css/materialize.min.css" rel="stylesheet" >
+      <link rel="stylesheet" href="css/materialize.min.css">
+      <script src="js/jquery-2.1.4.js"></script>
+      <link href="css/jquery.dataTables.min.css" rel="stylesheet"/>
+      <script src="js/jquery.dataTables.min.js"></script>
+      <script src="js/materialize1.min.js"></script>
+	  <link rel="stylesheet" href="css/style.css">
+ <style>
+
+
+
+.collection {margin-top:0; margin-left:-10px; width:350px;}
+ table {margin-left:35px; font-size: small}
+#modal1 {margin-left:300px; }
+#modal2 {margin-left:300px; }
+.modal-footer{margin-left:-450px;}
+#logo {
+ width:350px;
+ height:63px;
+}
+.po{margin-top:-700px; }
+
+.po1{margin-top:-550px;}
+.po2{margin-top:-400px;}
+.po3{margin-top:-250px;}
+.po4{margin-top:-850px;}
+
+#guardar{margin-right:90px;}
+#reporte{height:3px;  display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;}
+.chip{margin-top:20px; margin-bottom:40px}
+
+.tabs .indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: gray;
+    will-change: left, right;
+}
+
+
+form input:required {
+ border:1px solid gray;
+ /* otras propiedades */
+}
+a {font-weight: bold;  cursor: hand; cursor:pointer}
+#tabla-reporte{   height:1px;  display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+margin-top:5px;}
+
+table.dataTable thead th, table.dataTable thead td {    
+    border-bottom: 1px solid white;
+}
+td, th {
+  
+     border-radius: 0px; 
+}
+.cambiar{width:10px; padding-left:5px;}
+
+.cambiar1{width:10px; margin-bottom:10px; margin-right:1px; padding-left:5px;}
+#popup1 {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+.content1-popup1 {
+    margin:0px auto;
+    margin-top:200px;
+	margin-left:20px;
+    position:relative;
+    padding:10px;
+    width:300px;
+    min-height:400px;
+    border-radius:4px;
+    background-color:#FFFFFF;
+    box-shadow: 0 2px 5px #666666;
+}
+
+.content1-popup1 h2 {
+    color:#48484B;
+    border-bottom: 1px solid #48484B;
+    margin-top: 0;
+    padding-bottom: 4px;
+}
+
+.popup1-overlay {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display:none;
+    background-color: #777777;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.close11 {
+    position: absolute;
+    right: 15px;
+}
+{
+    font-family:Gill Sans MT;
+    padding:0px;
+}
+fieldset
+{
+    border: solid 1px #000;
+    padding:10px;
+    display:block;
+    clear:both;
+    margin:5px 0px;
+}
+legend
+{
+    padding:0px 10px;
+    background:black;
+    color:#FFF;
+}
+input.add
+{
+    float:right;
+}
+input.fieldname
+{
+    float:left;
+    clear:left;
+    display:block;
+    margin:5px;
+}
+select.fieldtype
+{
+    float:left;
+    display:block;}
+  
+input.remove
+{
+    float:left;
+    display:block;
+    margin:5px;
+}
+#yourform label
+{
+    float:left;
+    clear:left;
+    display:block;
+    margin:5px;
+}
+#yourform input, #yourform textarea
+{
+    float:left;
+    display:block;
+    margin:5px;
+}
+
+.cambiar {
+    width: 35px !important;
+    padding-left: 5px !important;
+    margin-left: 10px !important;
+}
+
+.cambiar1 {
+    width: 100px !important;
+    padding-left: 5px !important;
+    margin-left: 10px !important;
+}
+
+.cambiar1 {
+    width: 200px !important;
+    padding-left: 5px !important;
+    margin-left: 10px !important;
+}
+.chip {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ .textbox
+  {
+  border: 1px solid #DBE1EB;
+  font-size: 8px;
+  font-family: Arial, Verdana;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+    
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  background: #FFFFFF;
+  background: linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -moz-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -webkit-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -o-linear-gradient(left, #FFFFFF, #F7F9FA);
+  color: #2E3133;
+  }
+.fieldtype {
+       height: 25px;
+    font-size: 9px;
+    font-weight: 700;
+}
+.input-field {
+ margin-top:0;
+}
+
+#iframe{
+margin-left: 270px;
+}
+
+.side-nav.fixed.right-aligned {
+    left: 0;}
+
+    @media only screen and (max-width : 992px) {
+      header, main, footer {
+        padding-left:0;
+       
+      }
+     .side-nav.fixed.right-aligned {
+        left: auto;
+     }
+
+    #iframe{
+margin-left: 10px;
+}
+    }
+
+
+ </style>
+
+ 
+</head>
+<body>
+
+<div class="col s3">
+<ul id="slide-out" class="side-nav fixed ">
+      <li><a href="#!">First Sidebar Link</a></li>
+      <li><a href="#!">Second Sidebar Link</a></li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse  show-on-large"><i class="material-icons">menu</i></a>
+</div>
+ <div class="col s9">         
+      <iframe id="iframe" width="1280" height="400" src="gestion_cliente_iframe_contacto.html" frameborder="0" allowfullscreen></iframe>     
+ </div>
+          
+
+
+</body>
+
+  <script src="js/materialize1.min.js"></script>
+	<script>
+
+$(".button-collapse").sideNav();
+ 
+
+ $(document).ready(function() {
+    $("#add").click(function() {
+        var intId = $("#buildyourform div").length + 1;
+        var fieldWrapper = $("<div class=\"fieldwrapper input-field col s12  \" id=\"field" + intId + "\"/>");
+        var fName = $("<input type=\"text\" class=\"fieldnamen input-field col s6\" />");
+		var fName1 = $("<input type=\"text\" class=\"fieldname\" />");
+        var fType = $("<select class=\"fieldtype input-field col s10\"><option value=\"checkbox\">Automatizacion</option><option value=\"checkbox\">Soporte Técnico</option><option value=\"checkbox\">Calidad</option><option value=\"checkbox\">Ambientes</option><option value=\"checkbox\">Automatizacion</option><option value=\"textbox\">Venta</option><option value=\"textarea\">Mercadeo</option></select>");
+        var removeButton = $("<button type=\"button\" class=\"waves-effect waves-light btn input-field col s1 cambiar\" value=\"\" ><i class=\"material-icons left\">delete_forever</i></button>");
+        removeButton.click(function() {
+            $(this).parent().remove();
+        });
+     
+        fieldWrapper.append(fName);
+        fieldWrapper.append(removeButton);
+        $("#buildyourform").append(fieldWrapper);
+    });
+    $("#preview").click(function() {
+        $("#yourform").remove();
+        var fieldSet = $("<fieldset class=\"row\" id=\"yourform\"><legend>Your Form</legend></fieldset>");
+        $("#buildyourform div").each(function() {
+            var id = "input" + $(this).attr("id").replace("field","");
+            var label = $("<label for=\"" + id + "\">" + $(this).find("input.fieldname").first().val() + "</label>");
+            var input;
+            switch ($(this).find("select.fieldtype").first().val()) {
+                case "checkbox":
+                    input = $("<input type=\"checkbox\" id=\"" + id + "\" name=\"" + id + "\" />");
+                    break;
+                case "textbox":
+                    input = $("<input type=\"text\" id=\"" + id + "\" name=\"" + id + "\" />");
+                    break;
+                case "textarea":
+                    input = $("<textarea id=\"" + id + "\" name=\"" + id + "\" ></textarea>");
+                    break;    
+            }
+			
+            fieldSet.append(label);
+            fieldSet.append(input);
+        });
+        $("body").append(fieldSet);
+    });
+
+
+
+
+
+   $("#add1").click(function() {
+        var intId = $("#buildyourform1 div").length + 1;
+        var fieldWrapper = $("<div class=\"fieldwrapper input-field col s12  \" id=\"field" + intId + "\"/>");
+        var fName = $("<input type=\"text\" class=\"fieldnamen input-field col s6\" />");
+		var fName1 = $("<input type=\"text\" class=\"fieldname\" />");
+        var fType = $("<select class=\"fieldtype input-field col s10\"><option value=\"checkbox\">Automatico</option><option value=\"checkbox\">Automatizacion</option><option value=\"checkbox\">Soporte Técnico</option><option value=\"checkbox\">Calidad</option><option value=\"checkbox\">Ambientes</option><option value=\"checkbox\">Automatizacion</option><option value=\"textbox\">Venta</option><option value=\"textarea\">Mercadeo</option></select>");
+        var removeButton = $("<button type=\"button\" class=\"waves-effect waves-light btn input-field col s1 cambiar\" value=\"\" ><i class=\"material-icons left\">delete_forever</i></button>");
+        removeButton.click(function() {
+            $(this).parent().remove();
+        });
+     
+        fieldWrapper.append(fName);
+        fieldWrapper.append(removeButton);
+        $("#buildyourform1").append(fieldWrapper);
+    });
+    $("#preview").click(function() {
+        $("#yourform").remove();
+        var fieldSet = $("<fieldset class=\"row\" id=\"yourform\"><legend>Your Form</legend></fieldset>");
+        $("#buildyourform div").each(function() {
+            var id = "input" + $(this).attr("id").replace("field","");
+            var label = $("<label for=\"" + id + "\">" + $(this).find("input.fieldname").first().val() + "</label>");
+            var input;
+            switch ($(this).find("select.fieldtype").first().val()) {
+                case "checkbox":
+                    input = $("<input type=\"checkbox\" id=\"" + id + "\" name=\"" + id + "\" />");
+                    break;
+                case "textbox":
+                    input = $("<input type=\"text\" id=\"" + id + "\" name=\"" + id + "\" />");
+                    break;
+                case "textarea":
+                    input = $("<textarea id=\"" + id + "\" name=\"" + id + "\" ></textarea>");
+                    break;    
+            }
+			
+            fieldSet.append(label);
+            fieldSet.append(input);
+        });
+        $("body").append(fieldSet);
+    });
+
+
+
+$("#add2").click(function() {
+        var intId = $("#buildyourform2 div").length + 1;
+        var fieldWrapper = $("<div class=\"fieldwrapper input-field col s12  \" id=\"field" + intId + "\"/>");
+        var fName = $("<input type=\"text\" class=\"fieldname\" />");
+		var fName1 = $("<input type=\"text\" class=\"fieldname\" />");
+       
+        var fType = $("<select id=\"tipo_reporte\" class=\"fieldtype input-field col s3\"><option value=\"checkbox\">Automatizacion</option><option value=\"checkbox\">Soporte Técnico</option><option value=\"checkbox\">Implementación Técnica</option><option value=\"checkbox\">Ambientes</option><option value=\"checkbox\">Automatizacion</option><option value=\"textbox\">Venta</option><option value=\"textarea\">Mercadeo</option></select>");
+       var fType1 = $("<select class=\"fieldtype input-field col s3\"><option value=\"checkbox\">No Clasificado</option><option value=\"checkbox\">Es Factible</option><option value=\"checkbox\">No Aplica</option><option value=\"textbox\">En revisión</option><option value=\"checkbox\">Falta Soporte</option><option value=\"checkbox\">Revisado por el cliente</option><option value=\"textarea\">enviado para su aprobación</option><option value=\"checkbox\">Cerrado</option></select>");
+var fType2 = $("<select class=\"fieldtype input-field col s3\"><option value=\"checkbox\">Automatizacion</option><option value=\"checkbox\">Soporte Técnico</option><option value=\"checkbox\">Implementación Técnica</option><option value=\"checkbox\">Ambientes</option><option value=\"checkbox\">Automatizacion</option><option value=\"textbox\">Venta</option><option value=\"textarea\">Mercadeo</option></select>");
+      var fType3 = $("<select class=\"fieldtype input-field col s3\"><option value=\"checkbox\">No Clasificado</option><option value=\"checkbox\">Es Factible</option><option value=\"checkbox\">No Aplica</option><option value=\"textbox\">En revisión</option><option value=\"checkbox\">Falta Soporte</option><option value=\"checkbox\">Revisado por el cliente</option><option value=\"textarea\">enviado para su aprobación</option><option value=\"checkbox\">Cerrado</option></select>");   		
+        var addButton = $("<button data-target=\"modal1\" type=\"button\" class=\"modal-trigger waves-effect waves-light btn input-field col s1 cambiar\" value=\"\" ><i class=\"material-icons left\">add</i></button>");
+        var removeButton = $("<button type=\"button\" class=\"waves-effect waves-light btn input-field col s1 cambiar\" value=\"\" ><i class=\"material-icons left\">delete_forever</i></button>");
+        removeButton.click(function() {
+            $(this).parent().remove();
+        });
+     
+        fieldWrapper.append(fType);
+        fieldWrapper.append(fType1);
+        fieldWrapper.append(fType2);
+        fieldWrapper.append(fType3);
+        fieldWrapper.append(addButton);
+        fieldWrapper.append(removeButton);
+        $("#buildyourform2").append(fieldWrapper);
+    });
+    $("#preview").click(function() {
+        $("#yourform").remove();
+        var fieldSet = $("<fieldset class=\"row\" id=\"yourform\"><legend>Your Form</legend></fieldset>");
+        $("#buildyourform2 div").each(function() {
+            var id = "input" + $(this).attr("id").replace("field","");
+            var label = $("<label for=\"" + id + "\">" + $(this).find("input.fieldname").first().val() + "</label>");
+            var input;
+            switch ($(this).find("select.fieldtype").first().val()) {
+                case "checkbox":
+                    input = $("<input type=\"checkbox\" id=\"" + id + "\" name=\"" + id + "\" />");
+                    break;
+                case "textbox":
+                    input = $("<input type=\"text\" id=\"" + id + "\" name=\"" + id + "\" />");
+                    break;
+                case "textarea":
+                    input = $("<textarea id=\"" + id + "\" name=\"" + id + "\" ></textarea>");
+                    break;    
+            }
+			
+            fieldSet.append(label);
+            fieldSet.append(input);
+        });
+        $("body").append(fieldSet);
+    });
+
+
+
+$("#add3").click(function() {
+        var intId = $("#buildyourform3 div").length + 1;
+        var fieldWrapper = $("<div class=\"fieldwrapper input-field col s12  \" id=\"field" + intId + "\"/>");
+        var fName = $("<input type=\"text\" class=\"fieldname fieldtype input-field col s3\" />");
+		var fName1 = $("<input type=\"text\" class=\"fieldname fieldtype input-field col s4\" />");
+       
+        var fType = $("<select class=\"fieldtype input-field col s3\"><option value=\"checkbox\">Condición Especial - Contrato Mantenimiento</option><option value=\"checkbox\">Condición Especial - Insolvencia de Pago</option><option value=\"checkbox\">Solictud cancelada por el cliente</option><option value=\"checkbox\">No Clasificado</option><option value=\"checkbox\">Reporte Asignado</option><option value=\"textbox\">Venta</option><option value=\"textarea\">Reporte Clasificado</option></select>");
+        var fType1 = $("<select class=\"fieldtype input-field col s4\"><option value=\"checkbox\">No renovado contrato 'o' falta ingresar facturacion</option><option value=\"checkbox\">Retraso en la facturación</option><option value=\"checkbox\">Indicar que el cliente cliente ha cancelado su solictud</option><option value=\"textbox\">Dar inicio a un nuevo caso e informar el aera repsonsable</option><option value=\"checkbox\">Informar que el caso fue asignado para su atención</option><option value=\"checkbox\">Informar que el caso se ha clasificadoen unos de los tipos de reporte existentes en el sistema</option><option value=\"textarea\">enviado para su aprobación</option><option value=\"checkbox\">Cerrado</option></select>");   		
+var fType2 = $("<select class=\"fieldtype input-field col s2\"><option value=\"checkbox\">Automatico</option><option value=\"checkbox\">Automatizacion</option><option value=\"checkbox\">Soporte Técnico</option><option value=\"checkbox\">Implementación Técnica</option><option value=\"checkbox\">Ambientes</option><option value=\"checkbox\">Centro de Soporte</option><option value=\"textbox\">Venta</option><option value=\"textarea\">Mercadeo</option></select>");
+      var fType3 = $("<select class=\"fieldtype input-field col s2\"><option value=\"checkbox\">Automatico</option><option value=\"checkbox\">Automatizacion</option><option value=\"checkbox\">Soporte Técnico</option><option value=\"checkbox\">Implementación Técnica</option><option value=\"checkbox\">Ambientes</option><option value=\"checkbox\">Centro de oporte</option><option value=\"textbox\">Venta</option><option value=\"textarea\">Mercadeo</option></select>");	
+        var addButton = $("<button data-target=\"modal1\" type=\"button\" class=\"modal-trigger waves-effect waves-light btn input-field col s1 cambiar\" value=\"\" ><i class=\"material-icons left\">add</i></button>");
+        var removeButton = $("<button type=\"button\" class=\"waves-effect waves-light btn input-field col s1 cambiar\" value=\"\" ><i class=\"material-icons left\">delete_forever</i></button>");
+        removeButton.click(function() {
+            $(this).parent().remove();
+        });
+     
+        fieldWrapper.append(fType);
+        fieldWrapper.append(fType1);
+        fieldWrapper.append(fType2);
+        fieldWrapper.append(fType3);
+       
+        fieldWrapper.append(removeButton);
+        $("#buildyourform3").append(fieldWrapper);
+    });
+    $("#preview").click(function() {
+        $("#yourform").remove();
+        var fieldSet = $("<fieldset class=\"row\" id=\"yourform\"><legend>Your Form</legend></fieldset>");
+        $("#buildyourform3 div").each(function() {
+            var id = "input" + $(this).attr("id").replace("field","");
+            var label = $("<label for=\"" + id + "\">" + $(this).find("input.fieldname").first().val() + "</label>");
+            var input;
+            switch ($(this).find("select.fieldtype").first().val()) {
+                case "checkbox":
+                    input = $("<input type=\"checkbox\" id=\"" + id + "\" name=\"" + id + "\" />");
+                    break;
+                case "textbox":
+                    input = $("<input type=\"text\" id=\"" + id + "\" name=\"" + id + "\" />");
+                    break;
+                case "textarea":
+                    input = $("<textarea id=\"" + id + "\" name=\"" + id + "\" ></textarea>");
+                    break;    
+            }
+			
+            fieldSet.append(label);
+            fieldSet.append(input);
+        });
+        $("body").append(fieldSet);
+    });
+
+
+    
+
+});
+
+
+
+   $(document).ready(function(){
+      $('.carousel').carousel();
+	  
+	    $('#modal1').modal('open');
+		$('#modal1').modal('close');
+		 $('.modal').modal();
+            $('#modal2').modal('open');
+		$('#modal2').modal('close');
+		 $('.modal').modal();
+    });
+	</script>
+	
+	<script>
+	 $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+       
+        console.log(modal, trigger);
+      },
+      complete: function() {  } // Callback for Modal close
+    }
+  );
+  $(document).ready(function() {
+    var table = $('#example').DataTable();
+ 
+    $('#example tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    } );
+ 
+    $('#button').click( function () {
+        table.row('.selected').remove().draw( false );
+    } );
+} );
+
+$(document).ready(function() {
+    var table1 = $('#example1').DataTable();
+ 
+    $('#example1 tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    } );
+ 
+    $('#button').click( function () {
+        table.row('.selected').remove().draw( false );
+    } );
+} );
+
+
+ // Initialize collapse button
+  $(".button-collapse").sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  //$('.collapsible').collapsible();
+
+$("#l").click(function(){
+	      $(".dropdown-button").removeClass("hide");
+	      $("#l").addClass("hide");
+      });
+
+      $("#l1").click(function(){
+	      $("#cambiar").addClass("hide");
+	      $("#l").removeClass("hide");
+      });
+
+$(document).ready(function() {
+
+$( "#listar" ).on( "click", function() {
+   location.href = "buzon_entrada_modulo_general_consulta.html";
+});
+$( "#guardar" ).on( "click", function() {
+   location.href = "buzon_entrada_modulo_general_consulta.html";
+});
+
+$( "#ver" ).on( "click", function() {
+   location.href = "buzon_entrada_actualizar_Requerimiento.html";
+});	
+
+     $("#to_1").click(function(){
+	     location.href = "gestion_cliente_empresa.html";
+      });
+
+      $("#to_2").click(function(){
+	      location.href = "gestion_cliente_ficha_tecnica.html";
+      });
+
+      $("#to_3").click(function(){
+	      location.href = "gestion_cliente_usuario_SPI.html";
+      });
+
+      $("#to_4").click(function(){
+	      location.href = "gestion_cliente_historico_cliente.html";
+      }); 
+
+ $("#pol1").click(function(){
+	     location.href = "gestion_cliente_empresa.html";
+      });
+
+      $("#pol2").click(function(){
+	      location.href = "gestion_cliente_cuentasxcobrar.html";
+      });
+
+      $("#pol3").click(function(){
+	      location.href = "gestion_cliente_reporte_pendiente.html";
+      });
+
+      $("#pol4").click(function(){
+	      location.href = "gestion_cliente_encuesta.html";
+      });
+
+$("#pol5").click(function(){
+	     location.href = "gestion_cliente_horas.html";
+      });
+
+$("#bo1").click(function(){
+	     location.href = "gestion_cliente_contacto.html";
+      });
+$("#bo2").click(function(){
+	     location.href = "gestion_cliente_contacto.html";
+      });
+
+$("#c1").click(function(){
+	     location.href = "configuracion.html";
+      });
+
+      $("#c2").click(function(){
+	      location.href = "configuracion-status.html";
+      });
+
+      $("#c3").click(function(){
+	      location.href = "configuracion-status-modulo.html";
+      });
+
+      $("#c4").click(function(){
+	      location.href = "configuracion-status-modulo-registrar.html";
+      });
+  $("#c5").click(function(){
+	      location.href = "configuracion-mod-status-modulo-registrar.html";
+      });
+
+      $("#c6").click(function(){
+	       location.href = "configuracion-flujo-status-modulo.html";
+      });
+
+      $("#c7").click(function(){
+	      location.href = "configuracion.html";
+      });
+                   
+       });
+ $(document).ready(function() {
+    $('select').material_select();
+  });
+
+$(".button-collapse").sideNav();
+   $('.button-collapse').sideNav({
+      menuWidth: 300, 
+      edge: 'right', 
+      closeOnClick: true, 
+      draggable: true, 
+      onOpen: function(el) { }, 
+      onClose: function(el) {  }, 
+    }
+  );
+  
+$('#icon_book').val('Mejoras de desarrollo');
+$('#atencion').val('correo');
+$('#fecha').val('25/10/2017');
+$('#rif').val('V132370890');
+$('#cliente').val('Fama America c.a');  
+$('#segmento').val('Industria/Acero/Hierro'); 
+$('#telefono').val('(0414)1955577');
+$('#correo').val('automatizacion@gmail.com');
+$('#ejecutivo').val('José Altuve');  
+$('#consultor').val('Juan Perez'); 
+$('#fiscal').val('Los cortijos, edificio BOD, Piso 5 oficina 555');  
+$('#comercial').val('Los cortijos, edificio BOD, Piso 5 oficina 555'); 
+
+
+
+
+</script>
+</body>
+</html>

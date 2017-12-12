@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>SIAC- Crear Reporte - Menu - Contacto </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+ <link href="css/icon.css" rel="stylesheet">
+ <link type="text/css" rel="stylesheet" href="css/estilos.css"  media="screen,projection"/>
+
+      <link href="css/materialize.min.css" rel="stylesheet" >
+      <link rel="stylesheet" href="css/materialize.min.css">
+      <script src="js/jquery-2.1.4.js"></script>
+      <link href="css/jquery.dataTables.min.css" rel="stylesheet"/>
+      <script src="js/jquery.dataTables.min.js"></script>
+      <script src="js/materialize1.min.js"></script>
+	  <link rel="stylesheet" href="css/style.css">
+ <style>
+
+
+
+.collection {margin-top:0; margin-left:-10px; width:350px;}
+ table {margin-left:35px; font-size: small}
+#modal1 {margin-left:300px; }
+#modal2 {margin-left:300px; }
+.modal-footer{margin-left:-450px;}
+#logo {
+ width:350px;
+ height:63px;
+}
+.po{margin-top:-700px; }
+
+.po1{margin-top:-550px;}
+.po2{margin-top:-400px;}
+.po3{margin-top:-250px;}
+.po4{margin-top:-850px;}
+
+#guardar{margin-right:90px;}
+#reporte{height:3px;  display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;}
+.chip{margin-top:20px; margin-bottom:40px}
+
+.tabs .indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: gray;
+    will-change: left, right;
+}
+
+
+form input:required {
+ border:1px solid gray;
+ /* otras propiedades */
+}
+
+#tabla-reporte{   height:1px;  display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+margin-top:5px;}
+
+table.dataTable thead th, table.dataTable thead td {    
+    border-bottom: 1px solid white;
+}
+td, th {
+  
+     border-radius: 0px; 
+}
+.cambiar{width:10px; padding-left:5px;}
+
+.cambiar1{width:10px; margin-bottom:10px; margin-right:1px; padding-left:5px;}
+#popup1 {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+.content1-popup1 {
+    margin:0px auto;
+    margin-top:200px;
+	margin-left:20px;
+    position:relative;
+    padding:10px;
+    width:300px;
+    min-height:400px;
+    border-radius:4px;
+    background-color:#FFFFFF;
+    box-shadow: 0 2px 5px #666666;
+}
+
+.content1-popup1 h2 {
+    color:#48484B;
+    border-bottom: 1px solid #48484B;
+    margin-top: 0;
+    padding-bottom: 4px;
+}
+
+.popup1-overlay {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display:none;
+    background-color: #777777;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.close11 {
+    position: absolute;
+    right: 15px;
+}
+input[type=text]{
+  height: 20px;
+}
+ .textbox
+  {
+  border: 1px solid #DBE1EB;
+  font-size: 8px;
+  font-family: Arial, Verdana;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+    
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  background: #FFFFFF;
+  background: linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -moz-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -webkit-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -o-linear-gradient(left, #FFFFFF, #F7F9FA);
+  color: #2E3133;
+  }
+
+.chip {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ </style>
+
+ 
+</head>
+<body>
+
+   
+<div class="row">
+<div class="col s8">
+	  <div class="card">
+ <div class="row">  
+
+<div class="chip po #757575 grey darken-1 white-text">
+    <img src="img/modulo.jpg" alt="Contact Person">
+ Modulo
+  </div> 
+<div class="chip po #757575 grey darken-1 white-text">
+    <img src="img/status.png" alt="Contact Person">
+ Status
+  </div> 
+
+  </div> 
+ 
+      <div class="input-field col s12"> 
+      <i class="material-icons prefix">dehaze</i>
+          <input id="icon_telephone" type="tel" class="validate">
+          <label for="icon_telephone">  Agregar Modulo</label>
+        </div>
+
+      <div class="row">
+ <div class="input-field col s12"> 
+
+ <div class="input-field col s5"> 
+ 
+		 <a id="bo1"  class="waves-effect btn left"><i class="material-icons left">save</i>Guardar</a>
+  </div>   
+ 
+  </div>     
+</div>
+ <div class="row"> 
+ </div> 
+ 
+  </div> 
+ 
+</div> 	
+
+ </div>
+</body>
+
+  <script src="js/materialize1.min.js"></script>
+	<script>
+$(document).ready(function() {
+				setTimeout(function() {
+			        $('#popup1').fadeIn(1500);
+				},2000);
+				$('.popup1-overlay').fadeIn(1500);
+				},2000);
+
+
+                              $('.popup1-overlay').height($(window).height());
+
+
+				$("#btnCerrar1").click(function () {
+					setTimeout(function() {
+					$(".popup1-overlay").fadeOut(1500);
+				   	},500);
+});
+   $(document).ready(function(){
+      $('.carousel').carousel();
+	  
+	    $('#modal1').modal('open');
+		$('#modal1').modal('close');
+		 $('.modal').modal();
+            $('#modal2').modal('open');
+		$('#modal2').modal('close');
+		 $('.modal').modal();
+    });
+	</script>
+	
+	<script>
+	 $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+       
+        console.log(modal, trigger);
+      },
+      complete: function() {  } // Callback for Modal close
+    }
+  );
+  $(document).ready(function() {
+    var table = $('#example').DataTable();
+ 
+    $('#example tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    } );
+ 
+    $('#button').click( function () {
+        table.row('.selected').remove().draw( false );
+    } );
+} );
+
+ // Initialize collapse button
+  $(".button-collapse").sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  //$('.collapsible').collapsible();
+
+$("#l").click(function(){
+	      $(".dropdown-button").removeClass("hide");
+	      $("#l").addClass("hide");
+      });
+
+      $("#l1").click(function(){
+	      $("#cambiar").addClass("hide");
+	      $("#l").removeClass("hide");
+      });
+
+$(document).ready(function() {
+
+$( "#listar" ).on( "click", function() {
+   location.href = "buzon_entrada_modulo_general_consulta.html";
+});
+$( "#guardar" ).on( "click", function() {
+   location.href = "buzon_entrada_modulo_general_consulta.html";
+});
+
+$( "#ver" ).on( "click", function() {
+   location.href = "buzon_entrada_actualizar_Requerimiento.html";
+});	
+
+     $("#to_1").click(function(){
+	     location.href = "gestion_cliente_empresa.html";
+      });
+
+      $("#to_2").click(function(){
+	      location.href = "gestion_cliente_ficha_tecnica.html";
+      });
+
+      $("#to_3").click(function(){
+	      location.href = "gestion_cliente_usuario_SPI.html";
+      });
+
+      $("#to_4").click(function(){
+	      location.href = "gestion_cliente_historico_cliente.html";
+      }); 
+
+ $("#pol1").click(function(){
+	     location.href = "gestion_cliente_empresa.html";
+      });
+
+      $("#pol2").click(function(){
+	      location.href = "gestion_cliente_cuentasxcobrar.html";
+      });
+
+      $("#pol3").click(function(){
+	      location.href = "gestion_cliente_reporte_pendiente.html";
+      });
+
+      $("#pol4").click(function(){
+	      location.href = "gestion_cliente_encuesta.html";
+      });
+
+$("#pol5").click(function(){
+	     location.href = "gestion_cliente_horas.html";
+      });
+$("#bo").click(function(){
+	     location.href = "gestion_cliente_contacto_agregar.html";
+      });
+$("#bo1").click(function(){
+	     location.href = "listado_contacto.pdf";
+      });
+
+$("#c1").click(function(){
+	     location.href = "configuracion.html";
+      });
+
+      $("#c2").click(function(){
+	      location.href = "configuracion-status.html";
+      });
+
+      $("#c3").click(function(){
+	      location.href = "configuracion-status-modulo.html";
+      });
+
+      $("#c4").click(function(){
+	      location.href = "configuracion-status-modulo-registrar.html";
+      });
+  $("#c5").click(function(){
+	      location.href = "configuracion-mod-status-modulo-registrar.html";
+      });
+
+      $("#c6").click(function(){
+	       location.href = "configuracion-flujo-status-modulo.html";
+      });
+
+      $("#c7").click(function(){
+	      location.href = "configuracion.html";
+      });
+                   
+       });
+ $(document).ready(function() {
+    $('select').material_select();
+  });
+
+$(".button-collapse").sideNav();
+   $('.button-collapse').sideNav({
+      menuWidth: 300, 
+      edge: 'right', 
+      closeOnClick: true, 
+      draggable: true, 
+      onOpen: function(el) { }, 
+      onClose: function(el) {  }, 
+    }
+  );
+  
+$('#icon_book').val('Mejoras de desarrollo');
+$('#atencion').val('correo');
+$('#fecha').val('25/10/2017');
+$('#rif').val('V132370890');
+$('#cliente').val('Fama America c.a');  
+$('#segmento').val('Industria/Acero/Hierro'); 
+$('#telefono').val('(0414)1955577');
+$('#correo').val('automatizacion@gmail.com');
+$('#ejecutivo').val('José Altuve');  
+$('#consultor').val('Juan Perez'); 
+$('#fiscal').val('Los cortijos, edificio BOD, Piso 5 oficina 555');  
+$('#comercial').val('Los cortijos, edificio BOD, Piso 5 oficina 555'); 
+
+
+
+
+</script>
+</body>
+</html>
