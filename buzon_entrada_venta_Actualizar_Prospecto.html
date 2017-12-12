@@ -1,0 +1,625 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>SIAC- Manejo de Reporte, por el Buzon de Entrada - Venta - Actualizar Prospecto</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+ <link href="css/icon.css" rel="stylesheet">
+ <link type="text/css" rel="stylesheet" href="css/estilos.css"  media="screen,projection"/>
+
+      <link href="css/materialize.min.css" rel="stylesheet" >
+      <link rel="stylesheet" href="css/materialize.min.css">
+      <script src="js/jquery-2.1.4.js"></script>
+      <link href="css/jquery.dataTables.min.css" rel="stylesheet"/>
+      <script src="js/jquery.dataTables.min.js"></script>
+      <script src="js/materialize1.min.js"></script>
+	  <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.maskedinput.min.js" type="text/javascript"></script>
+
+ <style>
+
+
+
+.collection {margin-top:0; margin-left:-10px; width:200px;}
+ table {margin-left:35px; font-size: small}
+#modal1 {margin-left:300px; }
+#modal2 {margin-left:300px; }
+.modal-footer{margin-left:-450px;}
+#logo {
+ width:350px;
+ height:63px;
+}
+
+
+#guardar{margin-right:90px;}
+#reporte{height:3px;  display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;}
+.chip{margin-top:20px; margin-bottom:40px}
+
+.tabs .indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: gray;
+    will-change: left, right;
+}
+
+
+form input:required {
+ border:1px solid gray;
+ /* otras propiedades */
+}
+
+#tabla-reporte{   height:1px;  display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+margin-top:5px;}
+
+table.dataTable thead th, table.dataTable thead td {    
+    border-bottom: 1px solid white;
+}
+td, th {
+  
+     border-radius: 0px; 
+}
+.cambiar{width:10px; padding-left:5px;}
+
+.cambiar1{width:10px; margin-bottom:10px; margin-right:1px; padding-left:5px;}
+#popup1 {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+.content1-popup1 {
+    margin:0px auto;
+    margin-top:200px;
+	margin-left:20px;
+    position:relative;
+    padding:10px;
+    width:300px;
+    min-height:400px;
+    border-radius:4px;
+    background-color:#FFFFFF;
+    box-shadow: 0 2px 5px #666666;
+}
+
+.content1-popup1 h2 {
+    color:#48484B;
+    border-bottom: 1px solid #48484B;
+    margin-top: 0;
+    padding-bottom: 4px;
+}
+
+.popup1-overlay {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display:none;
+    background-color: #777777;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.close11 {
+    position: absolute;
+    right: 15px;
+}
+input[type=text]{
+  height: 20px;
+}
+
+.dataTables_wrapper .dataTables_filter{
+margin-right:0px !important;
+}
+
+
+.dataTables_wrapper .dataTables_paginate {
+    
+    margin-right: 250px   !important;
+}
+#example1{ width: 85%;}
+table{margin:0 !important;     }
+ .textbox
+  {
+  border: 1px solid #DBE1EB;
+  font-size: 8px;
+  font-family: Arial, Verdana;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+    
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  background: #FFFFFF;
+  background: linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -moz-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -webkit-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -o-linear-gradient(left, #FFFFFF, #F7F9FA);
+  color: #2E3133;
+  }
+
+a:link {}
+a:visited {color: #00FF00; }
+a:active {}
+a:hover {font-size:20px; color:#100;}
+
+ </style>
+
+ 
+</head>
+<body>
+
+<div class="col s2 ">
+	<div class="row">  
+         <div id="top_1" class="col s1 m1">                              
+           <img  src="img/logoindex2.png"  alt="" height="90%" width="50%"/>
+        </div>
+
+       
+        
+        <div id="top_2" class="col s2 m2 l2 lx3">
+
+          <div class="ubuntu-bold-26">Sistema SIAC</div>
+		
+          <div class="ubuntu-medium-14-26">Versión V1.0.0</div>
+        </div>
+
+        <div id="top_3" class="col s1 m1">        
+          <div class="ubuntu-medium-14">Usuario: INFOCENT</div>                    
+        </div>
+
+        <div id="top_4" class="col s1 m1  ubuntu-medium-12">           
+          <i class="small material-icons">home</i>            
+          Inicio         
+        </div>
+
+        <div id="top_5" class="col s1 m1  ubuntu-medium-12"> 
+          <i class="small material-icons">person</i>          
+          Mi perfil
+        </div>
+         <div id="top_6" class="col s1 m1 l1 xl1  ubuntu-medium-12">           
+          <i class="material-icons">store</i>
+        <div id="l" >
+    infocent   
+  </div>      
+        </div>
+
+        <div id="top_7" class="col s1 m1  ubuntu-medium-12"> 
+         <a  href="#" data-activates="slide-out" class="button-collapse"> <i class="material-icons">dehaze</i>Automatizacion</br> </a> 
+        </div>
+
+        <div id="top_8" class="col s1 m1 ubuntu-medium-12">          
+          <i class="material-icons">close</i>
+          Cerrar sesión
+        </div>
+      </div>
+		 
+        
+     </div>
+  
+<div class="row">  
+ 
+
+   
+	  <div class="col s2 ">
+            <div class="row">
+               <div class="collection">
+                  <a href="#!" id="crear"  class="collection-item "><i class="material-icons prefix waves-effect waves-light-blue lighten-1 ">work</i>  Gestión de Cliente</a>
+                  <a href="#!" id="listar" class="collection-item active"><i class="material-icons prefix waves-effect waves-light-blue lighten-1">email</i>  Gestión General</a>    
+               </div>
+      
+
+
+
+ 	 <a class='dropdown-button btn transparent  black-text hide' id="cambiar" href='#' data-activates='dropdown1'>Cambiar Empresa</a> 
+
+  <!-- Dropdown Structure -->
+ 
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><a id="l1" href="#!">infocent</a></li>
+    <li><a href="#!">nomisistemas</a></li>
+    <li class="divider">softcap</li>
+   
+  </ul>	 
+
+
+ 
+   </div>
+ 
+   </div>     
+  
+
+ 	
+  <div class="col s10"> 
+<div class="row">
+<div class="col s11">
+
+<div class="row">
+        
+
+       
+     
+<ul id="slide-out" class="side-nav ">             
+            <li><div class="chip" onclick="alert('¡No tienes permiso para este modulo!')">  Modulo: Venta </div> 
+            <li><div id="auto" class="chip">  Modulo: Automatización </div> 
+            <li><div class="chip">  Modulo: Logistica </div> 
+            <li><div class="chip">  Modulo: Proceso </div>
+            <li><div class="chip">  Modulo: Automatización </div>
+            <li><div class="chip">  Modulo: Gestión de Ambiente </div>
+            <li><div class="chip">  Modulo: General de Consulta </div> 
+            <li><div class="chip">  Modulo: Venta </div> 
+            <li><div class="chip">  Modulo: Atención telefonica </div> 
+            <li><div class="chip">  Modulo: Logistica </div> 
+            <li><div class="chip">  Modulo: Proceso </div>
+            <li><div class="chip">  Modulo: Automatización </div>
+            <li><div class="chip">  Modulo: Gestión de Ambiente </div>
+            <li><div class="chip">  Modulo: General de Consulta </div> 
+            <li><div class="chip">  Modulo: Venta </div> 
+            <li><div class="chip">  Modulo: Atención telefonica </div> 
+            <li><div class="chip">  Modulo: Logistica </div> 
+            <li><div class="chip">  Modulo: Proceso </div>
+            <li><div class="chip">  Modulo: Automatización </div>
+            <li><div class="chip">  Modulo: Gestión de Ambiente </div>
+            </ul>
+
+<div class="col s11">
+  <div class="card">
+         
+  <div id="reporte" class="card-content #424242 grey darken-3 white-text">
+	      Actualizar Prospecto
+	    </div>
+<form >
+ <div class="input-field col s3"> 
+      <i class="material-icons prefix">date_range</i>
+          <input id="fecha" type="tel" class="validate" placeholder="20-08-2015">
+          <label for="fecha">  Fecha de Registro*</label>
+   </div>
+ <div class="input-field col s3"> 
+      <i class="material-icons prefix">store</i>
+          <input id="rif" type="tel" class="validate" placeholder="V-132370890">
+          <label for="rif">  Rif*</label>
+   </div>
+   <div class="input-field  col s3">      
+	  
+    <select>
+      <option value="" >Pagina Web</option>
+      <option value="1">Pagina Web</option>
+      <option value="2">Telefono</option>
+      <option value="3">Correo</option>
+      <option value="4">Recomendación</option>
+      <option value="5">Visita</option>
+      
+    </select>
+    <label>Medio de Captación*</label>
+ 
+  </div>
+      
+	 <div class="input-field col s2">
+	  <i class="material-icons prefix">linear_scale</i>
+    <select>
+      <option value="" >401-500</option>
+      <option value="1">1-50</option>
+      <option value="2">51-100</option>
+      <option value="3">101-200</option>
+      <option value="4">201-300</option>
+      <option value="2">301-400</option>
+      <option value="3">401-500</option>
+      <option value="1">501-1000</option>     
+    </select>
+    <label>Rango*</label>
+  </div>
+
+        <div class="input-field col s3">
+<i class="material-icons prefix">domain</i>
+    <select>
+      <option value="" >Industria</option>
+      <option value="1">Industria</option>
+      <option value="2">Comercio</option>
+      <option value="3">Salud</option>
+	<option value="4">Seguro</option>
+     
+    </select>
+    <label>Sector*</label>
+  </div>
+ <div class="input-field col s4">
+	  <i class="material-icons prefix">copyright</i>
+    <select>
+      <option value="" >Construcción</option>
+      <option value="1">Clinica Y Hospital</option>
+      <option value="2">Telecomunicaciones</option>
+      <option value="3">Consumo Masivo</option>
+    </select>
+    <label>Categoria*</label>
+  </div>
+<div class="input-field col s6"> 
+      <i class="material-icons prefix">http</i>
+          <input id="web" type="tel" class="validate">
+          <label for="web">  Pagina Web</label>
+   </div> 
+ <div class="input-field col s3">
+	  <i class="material-icons prefix">bubble_chart</i>
+    <select>
+      <option value="" >Distrito Capital</option>
+      <option value="1">Distrito Capital</option>
+      <option value="2">Carabobo</option>
+      <option value="3">Lara</option>
+      <option value="4">Aragua</option>
+    </select>
+    <label>Estado*</label>
+  </div>
+ <div class="input-field col s3">
+	 
+    <select>
+      <option value="" >Caracas</option>
+      <option value="1">Caracas</option>
+      <option value="2">Valencia</option>
+      <option value="3">Barquisimeto</option>
+      <option value="4">Maracay</option>
+    </select>
+    <label>Ciudad*</label>
+  </div>
+<div class="input-field col s12"> 
+      <i class="material-icons prefix">place</i>
+          <input id="direccion" type="tel"  class="validate">
+          <label for="direccion"> Dirección</label>
+   </div> 
+<div class="input-field col s3"> 
+      <i class="material-icons prefix">local_phone</i>
+          <input id="telefono" type="tel"  class="validate" placeholder="2124337386">
+          <label for="telefono">  Telefono*</label>
+   </div> 
+<div class="input-field col s2"> 
+      <i class="material-icons prefix">phonelink</i>
+          <input id="ext" type="tel" class="validate">
+          <label for="ext">  Ext</label>
+   </div> 
+<div class="input-field col s3"> 
+      <i class="material-icons prefix">phone_iphone</i>
+          <input id="movil" type="tel" class="validate"> 
+          <label for="movil">  Celular</label>
+   </div> 
+<div class="input-field col s12"> 
+      <i class="material-icons prefix">chat</i>
+          <input id="observacion" type="tel"  class="validate">
+          <label for="observacion"> Observación</label>
+   </div>
+<div class="input-field col s3">  
+<a id="actualizar"   class="btn waves-effect waves-light"  name="action">Guardar
+    <i class="material-icons right">save</i>
+  </a>
+  </div>
+<div class="input-field col s3">
+
+<a id="actualizar1" class="btn waves-effect waves-light" name="action">Regresar
+    <i class="material-icons right">close</i>
+  </a>
+  </div>
+</form >	
+</div> 
+</div> 
+
+
+
+  <!-- Modal Structure -->
+  <div id="modal7" class="modal bottom-sheet">
+    <div class="modal-content">
+      <a  id="bo" class="waves-effect waves-light btn cambiar"><i class="material-icons left">add</i></a>
+		<a id="bo1" class="waves-effect waves-light btn cambiar"><i class="material-icons left">local_printshop</i></a>
+             
+<p>
+
+
+            <table id="example2" class="striped" cellspacing="0" width="50%">
+               <thead class=" #ffffff black-text card-content #4db6ac teal lighten-2 white-text">
+                        
+                    
+                     <tr>
+					
+                        <th>  Nombre </th>						
+                        <th>  Area</th>
+                        <th> Correo</th>						
+                        <th>Act</th>                   
+                       					
+                     </tr>
+
+               </thead>
+               <tbody>
+               <tr>                   
+                     <td  >María Alejandra Diaz</td>
+                     <td>Tecnologia</td>
+                     <td>automatizacion@gmail.com</td>
+                     <td>Si</td>                  
+
+                  </tr>
+                 
+   </tbody>
+            </table>
+      </div>
+    </div>
+    
+  </div>
+          
+
+  
+   
+  <!-- Modal Structure -->
+
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h5>Seleccionar el Modulo</h5>     
+	  <div class="col s2 "> 
+	<div class="row">     
+
+	  <div class="collection">
+	  
+		<a href="#!" class="collection-item active">Atención Telefonica</a>
+		<a href="#!" class="collection-item">Control de Mantenimiento</a>
+		<a href="#!" class="collection-item">Control de Horas de Asesoría</a>
+		<a href="#!" class="collection-item">Control de Proyecto</a>	
+        <a href="#!" class="collection-item ">General de Consulta</a>
+		<a href="#!" class="collection-item">Automatización</a>
+		<a href="#!" class="collection-item">Control de Calidad</a>
+		<a href="#!" class="collection-item">Atención al Cliente</a>			
+	  </div>       
+        </div>     
+   
+ </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close  waves-effect waves-light btn"> <i class="Tiny material-icons">close</i></a>
+    </div>
+  </div>
+ 
+
+
+
+ </div>
+
+
+</body>
+
+  <script src="js/materialize1.min.js"></script>
+	<script>
+ jQuery(function($){
+ $("#movil").mask("999 9999999"); 
+ $("#telefono").mask("999 9999999");
+ $("#ext").mask("999");  });
+
+
+$(document).ready(function() {
+				setTimeout(function() {
+			        $('#popup1').fadeIn(1500);
+				},2000);
+				$('.popup1-overlay').fadeIn(1500);
+				},2000);
+
+
+                              $('.popup1-overlay').height($(window).height());
+
+
+				$("#btnCerrar1").click(function () {
+					setTimeout(function() {
+					$(".popup1-overlay").fadeOut(1500);
+				   	},500);
+});
+   $(document).ready(function(){
+      $('.carousel').carousel();
+	  
+	    $('#modal1').modal('open');
+		$('#modal1').modal('close');
+		 $('.modal').modal();
+            $('#modal2').modal('open');
+		$('#modal2').modal('close');
+		 $('.modal').modal();
+    });
+	</script>
+	
+	<script>
+	 $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+       
+        console.log(modal, trigger);
+      },
+      complete: function() {  } // Callback for Modal close
+    }
+  );
+$(document).ready(function() {
+    var table = $('#example1').DataTable();
+ 
+    $('#example1 tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    } );
+ 
+    $('#button').click( function () {
+        table.row('.selected').remove().draw( false );
+    });
+
+});
+
+ // Initialize collapse button
+  $(".button-collapse").sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  //$('.collapsible').collapsible();
+
+$("#l").click(function(){
+	      $(".dropdown-button").removeClass("hide");
+	      $("#l").addClass("hide");
+      });
+
+      $("#l1").click(function(){
+	      $("#cambiar").addClass("hide");
+	      $("#l").removeClass("hide");
+      });
+
+$(document).ready(function() {
+
+
+
+
+
+$( "#listar" ).on( "click", function() {
+   location.href = "buzon_entrada.html";
+});
+$( "#guardar" ).on( "click", function() {
+   location.href = "buzon_entrada_modulo_general_consulta.html";
+});
+
+$( "#ver" ).on( "click", function() {
+   location.href = "buzon_entrada_actualizar_Requerimiento.html";
+});	
+
+     $("#actualizar").click(function(){
+	     location.href = "buzon_entrada_venta_Listado_Prospecto.html";
+      });
+
+      $("#actualizar1").click(function(){
+	      location.href = "buzon_entrada_venta_Listado_Prospecto.html";
+      });
+        
+  });   
+ $(document).ready(function() {
+    $('select').material_select();
+  });
+
+$(".button-collapse").sideNav();
+   $('.button-collapse').sideNav({
+      menuWidth: 300, 
+      edge: 'right', 
+      closeOnClick: true, 
+      draggable: true, 
+      onOpen: function(el) { }, 
+      onClose: function(el) {  }, 
+    }
+  );
+  
+
+
+
+
+
+</script>
+</body>
+</html>
